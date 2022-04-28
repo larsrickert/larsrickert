@@ -2,12 +2,18 @@
 
 ## Computer science student [@SchwarzIT](https://github.com/SchwarzIT)
 
-I've been in web development since 2019 and web design since 2017. I started with WordPress, but quickly found a passion for frontend and backend development. Especially, I love working on not just a single app or API, but a cool complete project that helps people get things done faster.
+I've been in web development since 2019 and web design since 2017. I started with WordPress, but quickly found a passion for frontend and backend development with TypeScript. Especially, I love working on not just a single app or API, but a cool complete project that helps people get things done faster.
 
 - 🌍 I'm based in Heilbronn, Germany
 - 🖥️ See my portfolio on [GitHub](https://github.com/larsrickert?tab=repositories)
 - ✉️ You can contact me at [dev@lars-rickert.de](mailto:dev@lars-rickert.de)
 - 🤝 I'm open to collaborating on cool web related projects
+
+### Recent projects
+
+- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my university DHBW Mosbach, [see it live](https://vorlesungsplan.lars-rickert.de/)
+- [Discord bot](https://github.com/larsrickert/discord-bot) - Discord bot for playing music
+- [nginx-proxy](https://github.com/larsrickert/nginx-proxy) - Guide and CLI for deploying dockerized applications on your self hosted linux server, [check out the documentation](https://nginxproxy.lars-rickert.de/)
 
 ### Skills
 
