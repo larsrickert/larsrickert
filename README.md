@@ -33,5 +33,7 @@ I've been in web development since 2019 and web design since 2017. I started wit
 
 <b>My GitHub Stats</b>
 
-<a href="http://www.github.com/larsrickert"><img src="https://github-readme-stats.vercel.app/api?username=larsrickert&show_icons=true&hide=&count_private=true&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&show_icons=true" alt="larsrickert's GitHub stats" /></a>
-<a href="https://github.com/larsrickert" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=larsrickert&langs_count=10&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&locale=en&layout=compact" alt="Top Languages" /></a>
+<p>
+<a href="http://www.github.com/larsrickert"><img align="left" src="https://github-readme-stats.vercel.app/api?username=larsrickert&show_icons=true&hide=&count_private=true&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&show_icons=true" alt="larsrickert's GitHub stats" /></a>
+<a href="https://github.com/larsrickert"><img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=larsrickert&langs_count=10&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&locale=en&layout=compact" alt="Top Languages" /></a>
+</p>
