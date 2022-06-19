@@ -12,7 +12,7 @@ I've been in web development since 2019 and web design since 2017. I started wit
 ### Recent projects
 
 - [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my university DHBW Mosbach, [see it live](https://vorlesungsplan.lars-rickert.de/)
-- [Discord bot](https://github.com/larsrickert/discord-bot) - Discord bot for playing music
+- [discord-player-plus](https://github.com/larsrickert/discord-player-plus) - Library for creating discord music bots, [check out the documentation](https://discordplayerplus.lars-rickert.de/)
 - [nginx-proxy](https://github.com/larsrickert/nginx-proxy) - Guide and CLI for deploying dockerized applications on your self hosted linux server, [check out the documentation](https://nginxproxy.lars-rickert.de/)
 
 ### Skills
