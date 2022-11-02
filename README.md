@@ -1,10 +1,10 @@
 # Hi 👋 My name is Lars Rickert
 
-## Computer science student [@SchwarzIT](https://github.com/SchwarzIT)
+## Frontend Web Developer [@SchwarzIT](https://github.com/SchwarzIT)
 
-I've been in web development since 2019 and web design since 2017. I started with WordPress, but quickly found a passion for frontend and backend development with TypeScript. Especially, I love working on not just a single app or API, but a cool complete project that helps people get things done faster.
+I've been in web development since 2019 and web design since 2017. I started with WordPress, but quickly found a passion for frontend and backend development with TypeScript and Vue.js. Especially, I love working on not just a single app or API, but a cool complete project that helps people get things done faster.
 
-- 🌍 I'm based in Heilbronn, Germany
+- 🌍 I'm based in Bad Friedrichshall, Germany
 - 🖥️ See my portfolio on [GitHub](https://github.com/larsrickert?tab=repositories)
 - ✉️ You can contact me at [dev@lars-rickert.de](mailto:dev@lars-rickert.de)
 - 🤝 I'm open to collaborating on cool web related projects
