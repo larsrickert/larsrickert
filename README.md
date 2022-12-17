@@ -11,6 +11,7 @@ I've been in web development since 2019 and web design since 2017. I started wit
 
 ### Recent projects
 
+- [:fire: Budget App](https://budget-app.de) - App for managing personal finances and checking per-day available budget 
 - [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my university DHBW Mosbach, [see it live](https://vorlesungsplan.lars-rickert.de/)
 - [discord-player-plus](https://discordplayerplus.lars-rickert.de/) - Library for creating discord music bots
 - [nginx-proxy](https://nginxproxy.lars-rickert.de/) - Guide and CLI for deploying dockerized applications on your self hosted linux server
