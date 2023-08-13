@@ -1,37 +1,45 @@
 # Hi 👋 My name is Lars Rickert
 
-## Frontend Web Developer [@SchwarzIT](https://github.com/SchwarzIT)
+## Web Developer [@Schwarz IT](https://it.schwarz) and part time freelancer
 
-I've been in web development since 2019 and web design since 2017. I started with WordPress, but quickly found a passion for frontend and backend development with TypeScript and Vue.js. Especially, I love working on not just a single app or API, but a cool complete project that helps people get things done faster.
-
-- 🌍 I'm based in Bad Friedrichshall, Germany
+- :de: / :us: I'm based in Bad Friedrichshall, Germany
 - 🖥️ See my portfolio on [GitHub](https://github.com/larsrickert?tab=repositories)
 - ✉️ You can contact me at [dev@lars-rickert.de](mailto:dev@lars-rickert.de)
-- 🤝 I'm open to collaborating on cool web related projects
 
-### Recent projects
+I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster. My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress. Besides that, I have also experiences in AI / machine learning which was core of my bachelor thesis and some student research projects.
 
-- [:fire: Budget App](https://budget-app.de) - App for managing personal finances and checking per-day available budget 
-- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my university DHBW Mosbach, [see it live](https://vorlesungsplan.lars-rickert.de/)
-- [discord-player-plus](https://discordplayerplus.lars-rickert.de/) - Library for creating discord music bots
-- [nginx-proxy](https://nginxproxy.lars-rickert.de/) - Guide and CLI for deploying dockerized applications on your self hosted linux server
+Whether building large scale web applications for Lidl and Kaufland at [Schwarz IT](https://it.schwarz) or helping smaller companies accelerate their productivity at [MediaBees](https://mediabees.de). I'd be happy to guide you along your next project.
+
+If you'd like to collaborate on any of the following services, feel free to leave me a message to the above email address:
+
+- Vue.js frontend development
+- Custom web applications (standalone or integrated in e.g. an existing WordPress website)
+- WordPress plugin / theme development
+- Creating a UI component library
+- CI/CD
+
+### Recent side projects
+
+- [:fire: Budget App](https://budget-app.de) - App for managing personal finances and checking per-day available budget
+- [discord-player-plus](https://discordplayerplus.lars-rickert.de/) - JavaScript/TypeScript library for creating discord music bots with ease
+- [nginx-proxy](https://nginxproxy.lars-rickert.de/) - Documentation and CLI for deploying dockerized applications on your self hosted linux server
+- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my old university DHBW Mosbach. [See it live](https://vorlesungsplan.lars-rickert.de)
 
 ### Skills
 
 <p align="left">
+<a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg" width="36" height="36" alt="Vue" /></a>
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="Typescript" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
-<a href="https://www.php.net/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="36" height="36" alt="PHP" /></a>
-<a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg" width="36" height="36" alt="Vue" /></a>
-<a href="https://angular.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/angularjs-colored.svg" width="36" height="36" alt="Angular" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
 <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="Sass" /></a>
+<a href="https://www.php.net/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="36" height="36" alt="PHP" /></a>
+<a href="https://wordpress.org/" target="_blank" rel="noreferrer"><img src="https://s.w.org/style/images/about/WordPress-logotype-simplified.png" width="36" height="36" alt="WordPress" /></a>
+<a href="https://go.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/go-colored.svg" width="36" height="36" alt="Golang" /></a>
+<a href="https://angular.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/angularjs-colored.svg" width="36" height="36" alt="Angular" /></a>
 <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
-<a href="https://nestjs.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nestjs-colored.svg" width="36" height="36" alt="NestJS" /></a>
-<a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored.svg" width="36" height="36" alt="Express" /></a>
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" width="36" height="36" alt="Docker" /></a>
 <a href="https://semantic-release.gitbook.io/semantic-release/" target="_blank" rel="noreferrer"><img src="https://avatars.githubusercontent.com/u/12867925" width="36" height="36" alt="Semantic release" /></a>
-<a href="https://wordpress.org/" target="_blank" rel="noreferrer"><img src="https://s.w.org/style/images/about/WordPress-logotype-simplified.png" width="36" height="36" alt="WordPress" /></a>
 </p>
 
 ### Socials
