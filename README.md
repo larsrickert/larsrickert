@@ -2,7 +2,7 @@
 
 ## Web Developer [@Schwarz IT](https://it.schwarz) and part time freelancer
 
-- :de: / :us: I'm based in Bad Friedrichshall, Germany
+- 🌍 I'm based in Bad Friedrichshall, Germany
 - 🖥️ See my portfolio on [GitHub](https://github.com/larsrickert?tab=repositories)
 - ✉️ You can contact me at [dev@lars-rickert.de](mailto:dev@lars-rickert.de)
 
