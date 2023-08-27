@@ -21,7 +21,7 @@ const route = useRoute();
             :to="item.href"
             class="nav__item"
             :class="{
-              'nav__item--active': item.href === (route.hash || route.path),
+              'nav__item--active': item.href === route.fullPath,
               'nav__item--light': props.light,
             }"
           >

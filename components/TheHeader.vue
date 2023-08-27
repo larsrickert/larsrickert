@@ -3,15 +3,17 @@ import { NavItem } from "./NavigationMolecule.vue";
 
 const navItems: NavItem[] = [
   { label: "Nav item 1", href: "/" },
-  { label: "Nav item 2", href: "#section-1" },
-  { label: "Nav item 3", href: "#section-2" },
+  { label: "Nav item 2", href: "/#section-1" },
+  { label: "Nav item 3", href: "/#section-2" },
 ];
 </script>
 
 <template>
   <header class="header">
     <div class="header__content">
-      <img src="~/assets/images/logo.svg" alt="Logo" class="header__logo" />
+      <nuxt-link to="/">
+        <img src="~/assets/images/logo.svg" alt="Logo" class="header__logo" />
+      </nuxt-link>
       <NavigationMolecule :nav-items="navItems" />
     </div>
   </header>
