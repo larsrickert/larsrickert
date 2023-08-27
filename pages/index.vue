@@ -11,7 +11,7 @@
           business and the services you offer... A short description introducing
           visitors to your business and the services you offer...
         </p>
-        <ButtonAtom class="main__button" text="Test 123" />
+        <ButtonAtom class="main__button" text="Test 123" href="#section-1" />
       </div>
 
       <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
@@ -28,7 +28,7 @@
           business and the services you offer... A short description introducing
           visitors to your business and the services you offer...
         </p>
-        <ButtonAtom class="main__button" text="Test 123" />
+        <ButtonAtom class="main__button" text="Test 123" href="#section-2" />
       </div>
     </section>
 

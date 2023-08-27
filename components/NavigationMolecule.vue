@@ -16,16 +16,18 @@ const route = useRoute();
   <nav>
     <ul class="nav">
       <li v-for="item of navItems" :key="item.href">
-        <nuxt-link
-          :to="item.href"
-          class="nav__item"
-          :class="{
-            'nav__item--active': item.href === (route.hash || route.path),
-            'nav__item--light': props.light,
-          }"
-        >
-          {{ item.label }}
-        </nuxt-link>
+        <ClientOnly>
+          <nuxt-link
+            :to="item.href"
+            class="nav__item"
+            :class="{
+              'nav__item--active': item.href === (route.hash || route.path),
+              'nav__item--light': props.light,
+            }"
+          >
+            {{ item.label }}
+          </nuxt-link>
+        </ClientOnly>
       </li>
     </ul>
   </nav>
