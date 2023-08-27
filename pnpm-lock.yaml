@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@fontsource/nunito':
+    specifier: ^5.0.8
+    version: 5.0.8
   nuxt:
     specifier: ^3.7.0
     version: 3.7.0(sass@1.66.1)
@@ -715,6 +718,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/nunito@5.0.8:
+    resolution: {integrity: sha512-Sb5uROR+aiS6T0CshbDAkjHmLXyWkWXCkDnx4K8fbRFPfmLpw6vKCu4iwb0+RuJDX519o98H/Qouk6p1umkFEQ==}
+    dev: true
 
   /@ioredis/commands@1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}

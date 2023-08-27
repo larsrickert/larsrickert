@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@fontsource/nunito": "^5.0.8",
     "nuxt": "^3.7.0",
     "sass": "^1.66.1"
   }

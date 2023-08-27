@@ -6,4 +6,9 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", href: "/favicon.svg" }],
     },
   },
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
 });

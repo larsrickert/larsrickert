@@ -1,5 +1,24 @@
+@use "@fontsource/nunito/latin" as *;
+@use "layouts.scss" as *;
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
 body {
+  font-family: Nunito, sans-serif;
   margin: 0;
+  background-color: var(--lr-color-background);
+  color: var(--lr-color-font);
+}
+
+html {
+  font-size: 18px;
+}
+
+html,
+body,
+#__nuxt,
+main {
+  height: 100%;
 }
 
 h1,
@@ -11,9 +30,11 @@ h6 {
   margin: 0;
 }
 
-html,
-body,
-#__nuxt,
-main {
-  height: 100%;
+h1 {
+  font-size: 3.5rem;
+}
+
+p {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

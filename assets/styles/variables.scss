@@ -1,0 +1,16 @@
+:root {
+  --lr-color-primary: #50a7c2;
+  --lr-color-secondary: #b7f8db;
+  --lr-color-background: #fff;
+  --lr-color-font: #444;
+
+  --lr-border-radius: 4px;
+  --lr-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+  --lr-max-page-width: 1400px;
+
+  &.dark {
+    --lr-color-background: #1a1a1a;
+    --lr-color-font: #fff;
+  }
+}
