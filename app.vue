@@ -4,4 +4,6 @@
   <main>
     <NuxtPage />
   </main>
+
+  <TheFooter />
 </template>
