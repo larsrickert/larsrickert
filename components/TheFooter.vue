@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
 
 <style lang="scss" scoped>
 .footer {
-  background-color: #444;
+  background-color: var(--lr-color-background-accent);
   color: #fff;
   padding: 16px 32px;
   font-size: 0.9rem;

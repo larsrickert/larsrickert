@@ -19,3 +19,14 @@ $breakpoints: (
     }
   }
 }
+
+@mixin text-gradient {
+  background: linear-gradient(
+    to right,
+    var(--lr-color-primary),
+    var(--lr-color-secondary)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: max-content;
+}

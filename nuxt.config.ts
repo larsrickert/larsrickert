@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [{ rel: "icon", href: "/favicon.svg" }],
+      htmlAttrs: {
+        class: "dark",
+      },
     },
   },
   router: {

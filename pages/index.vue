@@ -1,51 +1,55 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="page sections">
-    <section class="main">
-      <div>
-        <h1>Hello World!</h1>
-        <p>
-          A short description introducing visitors to your business and the
-          services you offer... A short description introducing visitors to your
-          business and the services you offer... A short description introducing
-          visitors to your business and the services you offer...
-        </p>
-        <ButtonAtom class="main__button" text="Test 123" href="#section-1" />
-      </div>
+  <div>
+    <TheHero />
 
-      <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
-    </section>
+    <div class="page sections">
+      <section class="main">
+        <div>
+          <h1>Hello World!</h1>
+          <p>
+            A short description introducing visitors to your business and the
+            services you offer... A short description introducing visitors to
+            your business and the services you offer... A short description
+            introducing visitors to your business and the services you offer...
+          </p>
+          <ButtonAtom class="main__button" text="Test 123" href="#section-1" />
+        </div>
 
-    <section class="main" id="section-1">
-      <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
+        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
+      </section>
 
-      <div>
-        <h1>Hello World!</h1>
-        <p>
-          A short description introducing visitors to your business and the
-          services you offer... A short description introducing visitors to your
-          business and the services you offer... A short description introducing
-          visitors to your business and the services you offer...
-        </p>
-        <ButtonAtom class="main__button" text="Test 123" href="#section-2" />
-      </div>
-    </section>
+      <section class="main" id="section-1">
+        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
 
-    <section class="main" id="section-2">
-      <div>
-        <h1>Hello World!</h1>
-        <p>
-          A short description introducing visitors to your business and the
-          services you offer... A short description introducing visitors to your
-          business and the services you offer... A short description introducing
-          visitors to your business and the services you offer...
-        </p>
-        <ButtonAtom class="main__button" text="Test 123" />
-      </div>
+        <div>
+          <h1>Hello World!</h1>
+          <p>
+            A short description introducing visitors to your business and the
+            services you offer... A short description introducing visitors to
+            your business and the services you offer... A short description
+            introducing visitors to your business and the services you offer...
+          </p>
+          <ButtonAtom class="main__button" text="Test 123" href="#section-2" />
+        </div>
+      </section>
 
-      <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
-    </section>
+      <section class="main" id="section-2">
+        <div>
+          <h1>Hello World!</h1>
+          <p>
+            A short description introducing visitors to your business and the
+            services you offer... A short description introducing visitors to
+            your business and the services you offer... A short description
+            introducing visitors to your business and the services you offer...
+          </p>
+          <ButtonAtom class="main__button" text="Test 123" />
+        </div>
+
+        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
+      </section>
+    </div>
   </div>
 </template>
 

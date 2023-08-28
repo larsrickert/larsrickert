@@ -1,5 +1,5 @@
 <template>
-  <TheHeader />
+  <TheHeader v-if="false" />
 
   <main>
     <NuxtPage />
