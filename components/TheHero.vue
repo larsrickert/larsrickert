@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const swappingWords = [
-  "Web Developer",
+  "Web Developer @Schwarz IT",
+  "Part time freelancer",
   "Technic enthusiast",
   "Dog lover",
-  "Word 4",
-  "Word 5",
+  "Based in Bad Friedrichshall, Germany",
 ];
 </script>
 
@@ -18,13 +18,22 @@ const swappingWords = [
       </h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
+        I've started with web development in 2017 and have quickly found my
+        passion for full-stack web development. Especially, I love working on
+        cool complete projects that help people get things done faster.
+      </p>
+
+      <p>
+        My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang,
+        PHP and WordPress.
       </p>
     </div>
+
+    <img
+      class="hero__avatar"
+      src="https://avatars.githubusercontent.com/u/67898185?v=4"
+      alt="Portrait"
+    />
   </section>
 </template>
 
@@ -32,16 +41,25 @@ const swappingWords = [
 @use "@/assets/styles/mixins.scss" as *;
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--lr-color-background-accent);
   padding: 128px;
   box-sizing: border-box;
+
+  display: flex;
+  gap: 64px 128px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 512px;
+
+    @include breakpoint(xl, min) {
+      width: 512px;
+    }
   }
 
   &__title {
@@ -63,6 +81,12 @@ const swappingWords = [
       content: " </> ";
       padding-right: 8px;
     }
+  }
+
+  &__avatar {
+    max-height: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
   }
 }
 </style>
