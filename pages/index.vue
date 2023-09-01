@@ -1,53 +1,73 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import budgetAppDark from "~/assets/images/budget-app-dark.png";
+import budgetAppLight from "~/assets/images/budget-app-light.png";
+import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.png";
+import discordPlayerPlusLight from "~/assets/images/discord-player-plus-light.png";
+import friedhofsgaertnereiBell from "~/assets/images/friedhofsgaertnerei-bell.png";
+import pgHerne from "~/assets/images/pg-herne.png";
+import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.png";
+import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.png";
+
+const projects = [
+  {
+    name: "Budget App",
+    image: budgetAppLight,
+    darkImage: budgetAppDark,
+    href: "https://budget-app.de",
+  },
+  {
+    name: "Discord Player Plus",
+    image: discordPlayerPlusLight,
+    darkImage: discordPlayerPlusDark,
+    href: "https://discordplayerplus.lars-rickert.de",
+  },
+  {
+    name: "Vorlesungsplan+",
+    image: vorlesungsplanPlusLight,
+    darkImage: vorlesungsplanPlusDark,
+    href: "https://vorlesungsplan.lars-rickert.de",
+  },
+  {
+    name: "Friedhofsgärtnerei Bell",
+    image: friedhofsgaertnereiBell,
+    href: "https://www.friedhofsgaertnerei-bell.de",
+  },
+  {
+    name: "Pestalozzi Gymnasium Herne",
+    image: pgHerne,
+    href: "https://pgherne.de",
+  },
+];
+
+const isProjectsDark = ref(false);
+</script>
 
 <template>
   <div>
-    <TheHero />
+    <TheHero>
+      <ButtonAtom text="See my projects" href="#projects" />
+    </TheHero>
 
     <div class="page sections">
-      <section class="main">
-        <div>
-          <h1>Hello World!</h1>
-          <p>
-            A short description introducing visitors to your business and the
-            services you offer... A short description introducing visitors to
-            your business and the services you offer... A short description
-            introducing visitors to your business and the services you offer...
-          </p>
-          <ButtonAtom class="main__button" text="Test 123" href="#section-1" />
+      <section class="projects" id="projects">
+        <HeadlineAtom headline="My Portfolio" background-text="Projects" />
+
+        <ButtonAtom
+          class="projects__dark-switch"
+          :text="`Turn the lights ${isProjectsDark ? 'ON' : 'OFF'}`"
+          @click="isProjectsDark = !isProjectsDark"
+        />
+
+        <div class="cards">
+          <nuxt-link
+            v-for="project of projects"
+            :key="project.name"
+            :href="project.href"
+            target="_blank"
+          >
+            <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
+          </nuxt-link>
         </div>
-
-        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
-      </section>
-
-      <section class="main" id="section-1">
-        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
-
-        <div>
-          <h1>Hello World!</h1>
-          <p>
-            A short description introducing visitors to your business and the
-            services you offer... A short description introducing visitors to
-            your business and the services you offer... A short description
-            introducing visitors to your business and the services you offer...
-          </p>
-          <ButtonAtom class="main__button" text="Test 123" href="#section-2" />
-        </div>
-      </section>
-
-      <section class="main" id="section-2">
-        <div>
-          <h1>Hello World!</h1>
-          <p>
-            A short description introducing visitors to your business and the
-            services you offer... A short description introducing visitors to
-            your business and the services you offer... A short description
-            introducing visitors to your business and the services you offer...
-          </p>
-          <ButtonAtom class="main__button" text="Test 123" />
-        </div>
-
-        <img src="https://picsum.photos/1024/700" alt="" class="main__image" />
       </section>
     </div>
   </div>
@@ -62,28 +82,18 @@
   gap: 256px;
 }
 
-.main {
+.cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 96px;
-  align-items: center;
-  justify-content: center;
-  scroll-margin-top: 128px;
+  gap: 64px;
+  grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+}
 
-  @include breakpoint(l) {
-    grid-template-columns: 1fr;
-  }
+.projects {
+  scroll-margin-top: 64px;
 
-  &__button {
-    margin-top: 16px;
-  }
-
-  &__image {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: var(--lr-border-radius);
-    box-shadow: var(--lr-box-shadow);
-    display: block;
+  &__dark-switch {
+    display: flex;
+    margin: 48px auto;
   }
 }
 </style>

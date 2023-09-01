@@ -27,6 +27,10 @@ const swappingWords = [
         My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang,
         PHP and WordPress.
       </p>
+
+      <div class="hero__actions">
+        <slot />
+      </div>
     </div>
 
     <img
@@ -65,11 +69,15 @@ const swappingWords = [
   &__title {
     @include text-gradient();
     margin: 0;
-    -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 800;
   }
 
   &__subtitle {
-    margin-bottom: 8px;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
     color: var(--lr-color-font-accent);
   }
 
@@ -84,9 +92,13 @@ const swappingWords = [
   }
 
   &__avatar {
-    max-height: 300px;
+    max-height: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+  }
+
+  &__actions {
+    margin-top: 32px;
   }
 }
 </style>

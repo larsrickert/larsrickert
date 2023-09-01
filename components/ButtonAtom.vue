@@ -37,7 +37,7 @@ const emit = defineEmits<{
 
   &:hover {
     color: var(--lr-color-primary);
-    background-color: #fff;
+    background-color: transparent;
   }
 }
 </style>
