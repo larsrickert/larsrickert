@@ -65,8 +65,8 @@ $transition-duration: 0.5s;
     position: absolute;
     background: linear-gradient(
       to right,
-      var(--lr-color-primary),
-      var(--lr-color-secondary)
+      var(--lr-color-secondary),
+      var(--lr-color-primary)
     );
     width: 100%;
     height: 100%;
