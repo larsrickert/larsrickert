@@ -2,7 +2,10 @@
 
 <template>
   <div class="page">
-    <h1>Datenschutzerklärung</h1>
+    <h1>{{ $t("privacyPolicy.pageName") }}</h1>
+
+    <OnlyGermanNoteAtom />
+
     <h2>1. Datenschutz auf einen Blick</h2>
     <h3>Allgemeine Hinweise</h3>
     <p>

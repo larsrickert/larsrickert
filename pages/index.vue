@@ -8,6 +8,8 @@ import pgHerne from "~/assets/images/pg-herne.webp";
 import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
 import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
 
+const localePath = useLocalePath();
+
 const projects = [
   {
     name: "Budget App",
@@ -45,16 +47,19 @@ const isProjectsDark = ref(false);
 <template>
   <div>
     <TheHero>
-      <ButtonAtom text="See my projects" href="#projects" />
+      <ButtonAtom :text="$t('home.toProjects')" href="#projects" />
     </TheHero>
 
     <div class="page sections">
       <section class="projects" id="projects">
-        <HeadlineAtom headline="My Portfolio" background-text="Projects" />
+        <HeadlineAtom
+          :headline="$t('home.portfolio')"
+          :background-text="$t('home.projects')"
+        />
 
         <ButtonAtom
           class="projects__dark-switch"
-          :text="`Turn the lights ${isProjectsDark ? 'ON' : 'OFF'}`"
+          :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
           @click="isProjectsDark = !isProjectsDark"
         />
 

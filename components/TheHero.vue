@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+const { t } = useI18n();
+
 const swappingWords = [
-  "Web Developer @Schwarz IT",
-  "Part time freelancer",
-  "Technic enthusiast",
-  "Dog lover",
-  "Based in Bad Friedrichshall, Germany",
+  t("home.hero.words.position"),
+  t("home.hero.words.freelancer"),
+  t("home.hero.words.technicEnthusiast"),
+  t("home.hero.words.dogLover"),
+  t("home.hero.words.location"),
 ];
 </script>
 
@@ -13,7 +15,7 @@ const swappingWords = [
     <div class="hero--limited-width">
       <div>
         <div class="hero__wrapper">
-          <h3 class="hero__subtitle">Hello, I'm</h3>
+          <h3 class="hero__subtitle">{{ t("home.hero.subtitle") }}</h3>
           <h1 class="hero__title">Lars Rickert</h1>
           <h2 class="hero__position">
             <SwappingTextAtom :words="swappingWords" />
@@ -21,14 +23,7 @@ const swappingWords = [
         </div>
 
         <p class="hero__text">
-          I've started with web development in 2017 and have quickly found my
-          passion for full-stack web development. Especially, I love working on
-          cool complete projects that help people get things done faster.
-        </p>
-
-        <p class="hero__text">
-          My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang,
-          PHP and WordPress.
+          {{ t("home.hero.description") }}
         </p>
 
         <div class="hero__actions">
@@ -120,6 +115,7 @@ const swappingWords = [
 
   &__text {
     max-width: 600px;
+    white-space: pre-wrap;
   }
 
   &__actions {

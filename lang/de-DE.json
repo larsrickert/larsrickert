@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "description": "Ups! Die Seite \"{url}\" existiert nicht. Suchst du nach etwas anderem?",
+    "pageName": "Seite nicht gefunden",
+    "goHome": "Bring mich nach Hause"
+  },
+  "home": {
+    "toProjects": "Zu meinen Projekten",
+    "portfolio": "Portfolio",
+    "projects": "Projekte",
+    "lights": {
+      "on": "Schalte die Lichter AN",
+      "off": "Schalte die Lichter AUS"
+    },
+    "pageName": "Start",
+    "hero": {
+      "words": {
+        "position": "Webentwickler {'@'}Schwarz IT",
+        "freelancer": "Teilzeit-Freelancer",
+        "technicEnthusiast": "Technik-Enthusiast",
+        "dogLover": "Hundeliebhaber",
+        "location": "Aus Heilbronn, Deutschland"
+      },
+      "subtitle": "Moin! Ich bin",
+      "description": "Seit 2017 arbeite ich als Webentwickler und habe dabei schnell meine Leidenschaft für die Full-Stack-Webentwicklung gefunden. Besonders liebe ich es, an coolen kompletten Projekten zu arbeiten, die Menschen helfen, Dinge schneller zu erledigen.\n\nMeine Expertise liegt in Vue.js, TypeScript und CSS/Sass sowie golang, PHP und WordPress."
+    }
+  },
+  "imprint": {
+    "pageName": "Impressum"
+  },
+  "privacyPolicy": {
+    "pageName": "Datenschutzerklärung"
+  },
+  "global": {
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  }
+}

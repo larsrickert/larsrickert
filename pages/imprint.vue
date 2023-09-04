@@ -2,7 +2,10 @@
 
 <template>
   <div class="page">
-    <h1>Impressum</h1>
+    <h1>{{ $t("imprint.pageName") }}</h1>
+
+    <OnlyGermanNoteAtom />
+
     <h2>Angaben gemäß § 5 TMG</h2>
 
     <p>

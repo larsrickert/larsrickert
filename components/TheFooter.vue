@@ -1,16 +1,22 @@
 <script lang="ts" setup>
 import { NavItem } from "./NavigationMolecule.vue";
 
+const { t } = useI18n();
+const localePath = useLocalePath();
+
 const navItems: NavItem[] = [
-  { label: "Impressum", href: "/impressum" },
-  { label: "Datenschutzerklärung", href: "/datenschutzerklaerung" },
+  { label: t("imprint.pageName"), href: localePath({ name: "imprint" }) },
+  {
+    label: t("privacyPolicy.pageName"),
+    href: localePath({ name: "privacy-policy" }),
+  },
 ];
 </script>
 
 <template>
   <footer class="footer">
     <div class="footer__content">
-      Lars Rickert © 2023 - All rights reserved
+      Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}
       <NavigationMolecule :nav-items="navItems" light />
     </div>
   </footer>

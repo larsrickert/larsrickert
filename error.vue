@@ -12,9 +12,16 @@ const notFoundMessage = computed(() => {
     <div>
       <TheHeader />
       <main class="page">
-        <h1>Page not found</h1>
-        <p>{{ notFoundMessage }}</p>
-        <ButtonAtom class="action" text="Take me home" href="/" replace />
+        <h1>{{ $t("notFound.pageName") }}</h1>
+        <p v-if="error && 'statusCode' in error">
+          {{ $t("notFound.description", { url: error.url }) }}
+        </p>
+        <ButtonAtom
+          class="action"
+          :text="$t('notFound.goHome')"
+          href="/"
+          replace
+        />
       </main>
     </div>
 
