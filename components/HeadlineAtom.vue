@@ -14,30 +14,35 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 @use "sass:math";
-
-$height: 6rem;
+@use "~/assets/styles/mixins.scss" as *;
 
 .headline {
+  --height: 6rem;
+
+  @include breakpoint(m) {
+    --height: 2.5rem;
+  }
+
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  height: $height;
+  height: var(--height);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   &__front {
-    font-size: math.div($height, 2);
-    line-height: math.div($height, 2);
+    font-size: calc(var(--height) / 2);
+    line-height: calc(var(--height) / 2);
     margin: 0;
     font-weight: 900;
     z-index: 1;
   }
 
   &__back {
-    font-size: $height;
-    line-height: $height;
+    font-size: var(--height);
+    line-height: var(--height);
     position: absolute;
     top: 0;
     left: 0;

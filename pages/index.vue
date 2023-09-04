@@ -86,6 +86,11 @@ const isProjectsDark = ref(false);
   display: grid;
   gap: 64px;
   grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+
+  @include breakpoint(m) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 .projects {

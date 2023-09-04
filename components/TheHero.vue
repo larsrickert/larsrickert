@@ -11,11 +11,13 @@ const swappingWords = [
 <template>
   <section class="hero">
     <div class="hero__content">
-      <h2 class="hero__subtitle">Hello, I'm</h2>
-      <h1 class="hero__title">Lars Rickert</h1>
-      <h2 class="hero__position">
-        <SwappingTextAtom :words="swappingWords" />
-      </h2>
+      <div class="hero__wrapper">
+        <h3 class="hero__subtitle">Hello, I'm</h3>
+        <h1 class="hero__title">Lars Rickert</h1>
+        <h2 class="hero__position">
+          <SwappingTextAtom :words="swappingWords" />
+        </h2>
+      </div>
 
       <p>
         I've started with web development in 2017 and have quickly found my
@@ -47,14 +49,21 @@ const swappingWords = [
 .hero {
   min-height: 100vh;
   background-color: var(--lr-color-background-accent);
-  padding: 128px;
+  padding: 32px;
   box-sizing: border-box;
 
   display: flex;
-  gap: 64px 128px;
+  gap: 32px 128px;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
+
+  @include breakpoint(l) {
+    flex-direction: column-reverse;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
 
   &__content {
     display: flex;
@@ -62,7 +71,12 @@ const swappingWords = [
     justify-content: center;
 
     @include breakpoint(xl, min) {
-      width: 512px;
+      max-width: 512px;
+    }
+
+    @include breakpoint(l) {
+      max-width: 700px;
+      align-items: center;
     }
   }
 
@@ -73,6 +87,11 @@ const swappingWords = [
     font-size: 4rem;
     line-height: 4rem;
     font-weight: 800;
+
+    @include breakpoint(m) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
   }
 
   &__subtitle {
@@ -82,12 +101,24 @@ const swappingWords = [
   }
 
   &__position {
+    $height: 1.5rem;
+
     margin-top: 128px;
+    position: relative;
+    height: $height;
+    font-size: $height;
+    line-height: $height;
 
     &::before {
       @include text-gradient();
       content: " </> ";
       padding-right: 8px;
+
+      @include breakpoint(m) {
+        position: absolute;
+        top: calc(-100% - 8px);
+        left: 0;
+      }
     }
   }
 
@@ -95,6 +126,14 @@ const swappingWords = [
     max-height: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+
+    @include breakpoint(l) {
+      max-height: 300px;
+    }
+
+    @include breakpoint(m) {
+      max-height: 200px;
+    }
   }
 
   &__actions {
