@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import budgetAppDark from "~/assets/images/budget-app-dark.png";
-import budgetAppLight from "~/assets/images/budget-app-light.png";
-import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.png";
-import discordPlayerPlusLight from "~/assets/images/discord-player-plus-light.png";
-import friedhofsgaertnereiBell from "~/assets/images/friedhofsgaertnerei-bell.png";
-import pgHerne from "~/assets/images/pg-herne.png";
-import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.png";
-import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.png";
+import budgetAppDark from "~/assets/images/budget-app-dark.webp";
+import budgetAppLight from "~/assets/images/budget-app-light.webp";
+import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.webp";
+import discordPlayerPlusLight from "~/assets/images/discord-player-plus-light.webp";
+import friedhofsgaertnereiBell from "~/assets/images/friedhofsgaertnerei-bell.webp";
+import pgHerne from "~/assets/images/pg-herne.webp";
+import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
+import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
 
 const projects = [
   {

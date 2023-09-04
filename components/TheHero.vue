@@ -37,7 +37,7 @@ const swappingWords = [
 
     <img
       class="hero__avatar"
-      src="https://avatars.githubusercontent.com/u/67898185?v=4"
+      src="~/assets/images/portrait.webp"
       alt="Portrait"
     />
   </section>
