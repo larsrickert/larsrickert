@@ -2,9 +2,8 @@
 import { NavItem } from "./NavigationMolecule.vue";
 
 const navItems: NavItem[] = [
-  { label: "Nav item 1", href: "/" },
-  { label: "Nav item 2", href: "/#section-1" },
-  { label: "Nav item 3", href: "/#section-2" },
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/#projects" },
 ];
 </script>
 
@@ -26,8 +25,10 @@ const navItems: NavItem[] = [
   top: 0;
 
   box-shadow: var(--lr-box-shadow);
-  padding: 16px 32px;
+  padding: 16px;
   background-color: var(--lr-color-background);
+  z-index: 10;
+  max-width: 100vw;
 
   &__content {
     max-width: var(--lr-max-page-width);
@@ -41,6 +42,7 @@ const navItems: NavItem[] = [
 
   &__logo {
     width: 256px;
+    max-width: 100%;
     display: block;
   }
 }

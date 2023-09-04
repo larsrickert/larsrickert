@@ -94,7 +94,7 @@ const isProjectsDark = ref(false);
 }
 
 .projects {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 128px;
 
   &__dark-switch {
     display: flex;

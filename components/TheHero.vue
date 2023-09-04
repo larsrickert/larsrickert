@@ -10,36 +10,38 @@ const swappingWords = [
 
 <template>
   <section class="hero">
-    <div class="hero__content">
-      <div class="hero__wrapper">
-        <h3 class="hero__subtitle">Hello, I'm</h3>
-        <h1 class="hero__title">Lars Rickert</h1>
-        <h2 class="hero__position">
-          <SwappingTextAtom :words="swappingWords" />
-        </h2>
+    <div class="hero--limited-width">
+      <div>
+        <div class="hero__wrapper">
+          <h3 class="hero__subtitle">Hello, I'm</h3>
+          <h1 class="hero__title">Lars Rickert</h1>
+          <h2 class="hero__position">
+            <SwappingTextAtom :words="swappingWords" />
+          </h2>
+        </div>
+
+        <p class="hero__text">
+          I've started with web development in 2017 and have quickly found my
+          passion for full-stack web development. Especially, I love working on
+          cool complete projects that help people get things done faster.
+        </p>
+
+        <p class="hero__text">
+          My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang,
+          PHP and WordPress.
+        </p>
+
+        <div class="hero__actions">
+          <slot />
+        </div>
       </div>
 
-      <p>
-        I've started with web development in 2017 and have quickly found my
-        passion for full-stack web development. Especially, I love working on
-        cool complete projects that help people get things done faster.
-      </p>
-
-      <p>
-        My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang,
-        PHP and WordPress.
-      </p>
-
-      <div class="hero__actions">
-        <slot />
-      </div>
+      <img
+        class="hero__avatar"
+        src="~/assets/images/portrait.webp"
+        alt="Portrait"
+      />
     </div>
-
-    <img
-      class="hero__avatar"
-      src="~/assets/images/portrait.webp"
-      alt="Portrait"
-    />
   </section>
 </template>
 
@@ -47,37 +49,30 @@ const swappingWords = [
 @use "@/assets/styles/mixins.scss" as *;
 
 .hero {
-  min-height: 100vh;
   background-color: var(--lr-color-background-accent);
-  padding: 32px;
-  box-sizing: border-box;
 
-  display: flex;
-  gap: 32px 128px;
-  align-items: center;
-  justify-content: space-around;
+  &--limited-width {
+    max-width: var(--lr-max-page-width);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 64px 32px;
+    // 96px = top bar height
+    min-height: calc(100vh - 96px);
 
-  @include breakpoint(l) {
-    flex-direction: column-reverse;
+    display: flex;
+    gap: 32px 128px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xl) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 
   &__wrapper {
     width: 100%;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @include breakpoint(xl, min) {
-      max-width: 512px;
-    }
-
-    @include breakpoint(l) {
-      max-width: 700px;
-      align-items: center;
-    }
   }
 
   &__title {
@@ -104,6 +99,7 @@ const swappingWords = [
     $height: 1.5rem;
 
     margin-top: 128px;
+    margin-bottom: 32px;
     position: relative;
     height: $height;
     font-size: $height;
@@ -122,22 +118,30 @@ const swappingWords = [
     }
   }
 
+  &__text {
+    max-width: 600px;
+  }
+
+  &__actions {
+    margin-top: 32px;
+
+    @include breakpoint(xl) {
+      text-align: center;
+    }
+  }
+
   &__avatar {
     max-height: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
 
-    @include breakpoint(l) {
+    @include breakpoint(xl) {
       max-height: 300px;
     }
 
     @include breakpoint(m) {
       max-height: 200px;
     }
-  }
-
-  &__actions {
-    margin-top: 32px;
   }
 }
 </style>

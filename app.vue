@@ -1,9 +1,10 @@
 <template>
-  <TheHeader v-if="false" />
-
-  <main>
-    <NuxtPage />
-  </main>
+  <div>
+    <TheHeader />
+    <main>
+      <NuxtPage />
+    </main>
+  </div>
 
   <TheFooter />
 </template>
