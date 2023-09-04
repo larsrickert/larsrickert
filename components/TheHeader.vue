@@ -19,6 +19,8 @@ const navItems: NavItem[] = [
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/styles/mixins.scss" as *;
+
 .header {
   position: sticky;
   left: 0;
@@ -38,12 +40,20 @@ const navItems: NavItem[] = [
     align-items: center;
     justify-content: space-between;
     gap: 64px;
+
+    @include breakpoint(s) {
+      gap: 32px;
+    }
   }
 
   &__logo {
     width: 256px;
     max-width: 100%;
     display: block;
+
+    @include breakpoint(s) {
+      width: 180px;
+    }
   }
 }
 </style>

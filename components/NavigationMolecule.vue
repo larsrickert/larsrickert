@@ -34,6 +34,8 @@ const route = useRoute();
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/styles/mixins.scss" as *;
+
 .nav {
   list-style: none;
   margin: 0;
@@ -41,6 +43,10 @@ const route = useRoute();
   display: flex;
   gap: 16px 32px;
   flex-wrap: wrap;
+
+  @include breakpoint(s) {
+    gap: 8px 16px;
+  }
 
   &__item {
     color: var(--lr-color-font);
