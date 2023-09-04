@@ -10,7 +10,7 @@ const navItems: NavItem[] = [
 <template>
   <footer class="footer">
     <div class="footer__content">
-      Lars Rickert © 2023 - Alle Rechte vorbehalten
+      Lars Rickert © 2023 - All rights reserved
       <NavigationMolecule :nav-items="navItems" light />
     </div>
   </footer>
