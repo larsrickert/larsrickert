@@ -22,12 +22,16 @@ const navItems: NavItem[] = [
           src="~/assets/images/logo.svg"
           alt="Logo"
           class="header__logo"
+          width="256"
+          height="64"
         />
         <img
           v-else
           src="~/assets/images/logo-en.svg"
           alt="Logo"
           class="header__logo"
+          width="256"
+          height="64"
         />
       </nuxt-link>
       <NavigationMolecule :nav-items="navItems" />
@@ -66,6 +70,7 @@ const navItems: NavItem[] = [
   &__logo {
     width: 256px;
     max-width: 100%;
+    height: auto;
     display: block;
 
     @include breakpoint(s) {

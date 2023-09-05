@@ -35,6 +35,8 @@ const swappingWords = [
         class="hero__avatar"
         src="~/assets/images/portrait.webp"
         alt="Portrait"
+        width="300"
+        height="300"
       />
     </div>
   </section>
@@ -128,6 +130,7 @@ const swappingWords = [
 
   &__avatar {
     max-height: 400px;
+    width: auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
 
