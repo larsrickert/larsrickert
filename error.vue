@@ -1,32 +1,43 @@
 <script lang="ts" setup>
-const error = useError();
+import { UnwrapRef } from "vue";
 
-const notFoundMessage = computed(() => {
-  if (!error.value || !("statusCode" in error.value)) return;
-  return `Ups! The page "${error.value.url}" does not exist. Are you looking for something else?`;
+const props = defineProps<{
+  error: UnwrapRef<ReturnType<typeof useError>>;
+}>();
+
+// the URL is not included in the error when deployed inside
+// a docker container, so we extract it here from the message
+const url = computed(() => {
+  const errorUrl = props.error && "url" in props.error ? props.error.url : "";
+  const extractedUrl = props.error?.message
+    .split("Page not found: ")
+    .at(1)
+    ?.trim();
+  return errorUrl || extractedUrl;
 });
+
+const handleError = () => clearError({ redirect: "/" });
 </script>
 
 <template>
-  <NuxtLayout name="404">
-    <div>
-      <TheHeader />
-      <main class="page">
-        <h1>{{ $t("notFound.pageName") }}</h1>
-        <p v-if="error && 'statusCode' in error">
-          {{ $t("notFound.description", { url: error.url }) }}
-        </p>
-        <ButtonAtom
-          class="action"
-          :text="$t('notFound.goHome')"
-          href="/"
-          replace
-        />
-      </main>
-    </div>
+  <div>
+    <TheHeader />
 
-    <TheFooter />
-  </NuxtLayout>
+    <main class="page">
+      <template v-if="props.error && 'statusCode' in props.error">
+        <h1>{{ $t("notFound.pageName") }}</h1>
+        <p>{{ $t("notFound.description", { url }) }}</p>
+      </template>
+
+      <ButtonAtom
+        class="action"
+        :text="$t('notFound.goHome')"
+        @click="handleError"
+      />
+    </main>
+  </div>
+
+  <TheFooter />
 </template>
 
 <style lang="scss" scoped>

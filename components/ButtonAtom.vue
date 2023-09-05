@@ -2,7 +2,6 @@
 const props = defineProps<{
   text: string;
   href?: string;
-  replace?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -11,12 +10,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <nuxt-link
-    v-if="props.href"
-    class="button"
-    :to="props.href"
-    :replace="props.replace"
-  >
+  <nuxt-link v-if="props.href" class="button" :to="props.href">
     {{ props.text }}
   </nuxt-link>
   <button v-else class="button" @click="emit('click')">
