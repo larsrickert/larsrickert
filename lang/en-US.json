@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "description": "Ups! The page \"{url}\" does not exist. Are you looking for something else?",
+    "pageName": "Page not found",
+    "goHome": "Take me home"
+  },
+  "home": {
+    "toProjects": "See my projects",
+    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "lights": {
+      "on": "Turn the lights ON",
+      "off": "Turn the lights OFF"
+    },
+    "pageName": "Home",
+    "hero": {
+      "words": {
+        "position": "Web Developer {'@'}Schwarz IT",
+        "freelancer": "Part time freelancer",
+        "technicEnthusiast": "Technic enthusiast",
+        "dogLover": "Dog lover",
+        "location": "Based in Heilbronn, Germany"
+      },
+      "subtitle": "Hello, I'm",
+      "description": "I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster.\n\nMy expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress."
+    }
+  },
+  "imprint": {
+    "pageName": "Imprint"
+  },
+  "privacyPolicy": {
+    "pageName": "Privacy policy"
+  },
+  "global": {
+    "allRightsReserved": "All rights reserved"
+  }
+}

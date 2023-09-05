@@ -1,0 +1,19 @@
+:root {
+  --lr-color-primary: #50a7c2;
+  --lr-color-secondary: #b7f8db;
+  --lr-color-background: #fff;
+  --lr-color-background-accent: #f2f2f2;
+  --lr-color-font: #444;
+
+  --lr-border-radius: 4px;
+  --lr-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+  --lr-max-page-width: 1400px;
+
+  &.dark {
+    --lr-color-background: #1b232d;
+    --lr-color-background-accent: #222a36;
+    --lr-color-font: #fff;
+    --lr-color-font-accent: #536275;
+  }
+}

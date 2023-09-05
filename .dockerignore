@@ -1,0 +1,6 @@
+node_modules
+*.local
+.env
+.nuxt
+.output
+dist

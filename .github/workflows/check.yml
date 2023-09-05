@@ -1,0 +1,25 @@
+name: Check
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".node-version"
+          cache: "pnpm"
+      - name: 📦 Install dependencies
+        run: pnpm install
+      - name: ⚒️ Build
+        run: pnpm build
+      - name: ⚒️ Generate static site
+        run: pnpm generate
