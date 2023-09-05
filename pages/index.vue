@@ -5,6 +5,7 @@ import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.webp
 import discordPlayerPlusLight from "~/assets/images/discord-player-plus-light.webp";
 import friedhofsgaertnereiBell from "~/assets/images/friedhofsgaertnerei-bell.webp";
 import pgHerne from "~/assets/images/pg-herne.webp";
+import schreibmentoren from "~/assets/images/schreibmentoren.webp";
 import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
 import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
 
@@ -33,6 +34,11 @@ const projects = [
     name: "Friedhofsgärtnerei Bell",
     image: friedhofsgaertnereiBell,
     href: "https://www.friedhofsgaertnerei-bell.de",
+  },
+  {
+    name: "Die Schreibmentoren",
+    image: schreibmentoren,
+    href: "https://schreibmentoren.de",
   },
   {
     name: "Pestalozzi Gymnasium Herne",
