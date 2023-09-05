@@ -7,8 +7,8 @@ services:
     # ports:
     #   - "80:80"
     environment:
-      VIRTUAL_HOST: "beta.lars-rickert.de"
-      LETSENCRYPT_HOST: "beta.lars-rickert.de"
+      VIRTUAL_HOST: "lars-rickert.de"
+      LETSENCRYPT_HOST: "lars-rickert.de"
 
 networks:
   default:
