@@ -5,8 +5,8 @@ const swappingWords = [
   t("home.hero.words.position"),
   t("home.hero.words.freelancer"),
   t("home.hero.words.technicEnthusiast"),
-  t("home.hero.words.dogLover"),
   t("home.hero.words.location"),
+  t("home.hero.words.dogLover"),
 ];
 </script>
 
@@ -46,8 +46,6 @@ const swappingWords = [
 @use "@/assets/styles/mixins.scss" as *;
 
 .hero {
-  background-color: var(--lr-color-background-accent);
-
   &--limited-width {
     max-width: var(--lr-max-page-width);
     margin: 0 auto;

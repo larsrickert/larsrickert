@@ -1,35 +1,34 @@
 <script lang="ts" setup>
-export type NavItem = {
-  label: string;
-  href: string;
-};
+import { NavItem } from "./NavItemsMolecule.vue";
 
 const props = defineProps<{
   navItems: NavItem[];
-  light?: boolean;
+  /** If true, a burger menu will be display on mobile. */
+  hasBurger?: boolean;
 }>();
 
-const route = useRoute();
+const isBurgerOpen = ref(false);
 </script>
 
 <template>
-  <nav>
-    <ul class="nav">
-      <li v-for="item of navItems" :key="item.href">
-        <ClientOnly>
-          <nuxt-link
-            :to="item.href"
-            class="nav__item"
-            :class="{
-              'nav__item--active': item.href === route.fullPath,
-              'nav__item--light': props.light,
-            }"
-          >
-            {{ item.label }}
-          </nuxt-link>
-        </ClientOnly>
-      </li>
-    </ul>
+  <nav class="nav">
+    <NavItemsMolecule
+      class="nav__items"
+      :class="{ 'nav__items--has-burger': props.hasBurger }"
+      :nav-items="props.navItems"
+    />
+
+    <BurgerMenu
+      v-if="props.hasBurger"
+      class="nav__burger"
+      v-model="isBurgerOpen"
+    >
+      <NavItemsMolecule
+        :nav-items="props.navItems"
+        vertical
+        @nav-item-click="isBurgerOpen = false"
+      />
+    </BurgerMenu>
   </nav>
 </template>
 
@@ -37,33 +36,20 @@ const route = useRoute();
 @use "@/assets/styles/mixins.scss" as *;
 
 .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 16px 32px;
-  flex-wrap: wrap;
-
-  @include breakpoint(s) {
-    gap: 8px 16px;
+  &__items {
+    &--has-burger {
+      @include breakpoint(m) {
+        display: none;
+      }
+    }
   }
 
-  &__item {
-    color: var(--lr-color-font);
-    text-decoration: none;
-    transition: all 0.3s;
+  &__burger {
+    display: none;
+    font-size: 1.25rem;
 
-    &--light {
-      color: #fff;
-    }
-
-    &:hover {
-      color: var(--lr-color-primary);
-    }
-
-    &--active {
-      color: var(--lr-color-primary);
-      font-weight: 700;
+    @include breakpoint(m, max) {
+      display: block;
     }
   }
 }

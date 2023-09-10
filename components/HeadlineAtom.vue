@@ -50,7 +50,6 @@ const props = defineProps<{
     margin: 0;
     font-weight: 800;
     color: rgb(255, 255, 255, 0.07);
-    z-index: -1;
     letter-spacing: 8px;
   }
 }

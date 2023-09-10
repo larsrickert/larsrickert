@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NavItem } from "./NavigationMolecule.vue";
+import { NavItem } from "./NavItemsMolecule.vue";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
   <footer class="footer">
     <div class="footer__content">
       Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}
-      <NavigationMolecule :nav-items="navItems" light />
+      <NavigationMolecule :nav-items="navItems" />
     </div>
   </footer>
 </template>

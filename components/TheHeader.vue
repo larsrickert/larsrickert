@@ -7,6 +7,10 @@ const localePath = useLocalePath();
 const navItems: NavItem[] = [
   { label: t("home.pageName"), href: localePath("/") },
   {
+    label: t("home.about.headline"),
+    href: localePath({ path: "/", hash: "#about" }),
+  },
+  {
     label: t("home.projects"),
     href: localePath({ path: "/", hash: "#projects" }),
   },
@@ -34,7 +38,8 @@ const navItems: NavItem[] = [
           height="64"
         />
       </nuxt-link>
-      <NavigationMolecule :nav-items="navItems" />
+
+      <NavigationMolecule :nav-items="navItems" has-burger />
     </div>
   </header>
 </template>

@@ -9,8 +9,6 @@ import schreibmentoren from "~/assets/images/schreibmentoren.webp";
 import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
 import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
 
-const localePath = useLocalePath();
-
 const projects = [
   {
     name: "Budget App",
@@ -48,6 +46,31 @@ const projects = [
 ];
 
 const isProjectsDark = ref(false);
+const yearsOfExperience = getTimeDiffInYears(new Date(2017, 1, 1));
+
+const allProjects = [
+  "Die Schreibmentoren",
+  "Quaiso (MediaBees)",
+  "Come back (MediaBees)",
+  "h2r Personalberatung (MediaBees)",
+  "Pattberg (MediaBees)",
+  "ZW-eck (MediaBees)",
+  "Budget App",
+  "Discord Player Plus",
+  "Vorlesungsplan+",
+  "Friedhofsgärtnerei Bell",
+  "Pestalozzi Gymnasium Herne",
+  "MH-Solution",
+  "Gitarrenunterricht Helmstadt",
+  "Rauner Stiftung (MediaBees)",
+  "Dental on Tour (MediaBees)",
+  "BoniPlus (MediaBees)",
+  "Goedicke (MediaBees)",
+  "StadtSportBund Herne (MediaBees)",
+  "Denise Iwanek (MediaBees)",
+  "Stapleline (MediaBees)",
+  "nginx proxy",
+];
 </script>
 
 <template>
@@ -56,41 +79,129 @@ const isProjectsDark = ref(false);
       <ButtonAtom :text="$t('home.toProjects')" href="#projects" />
     </TheHero>
 
-    <div class="page sections">
-      <section class="projects" id="projects">
-        <HeadlineAtom
-          :headline="$t('home.portfolio')"
-          :background-text="$t('home.projects')"
-        />
+    <section id="about" class="page about">
+      <HeadlineAtom
+        :headline="$t('home.about.headline')"
+        :background-text="$t('home.about.backgroundHeadline')"
+      />
 
-        <ButtonAtom
-          class="projects__dark-switch"
-          :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
-          @click="isProjectsDark = !isProjectsDark"
-        />
+      <div class="about__content">
+        <div>
+          <i18n-t keypath="home.about.description.text" tag="p">
+            <template #schwarzItLink>
+              <nuxt-link to="https://it.schwarz" target="_blank">
+                Schwarz IT
+              </nuxt-link>
+            </template>
 
-        <div class="cards">
-          <nuxt-link
-            v-for="project of projects"
-            :key="project.name"
-            :href="project.href"
-            target="_blank"
-          >
-            <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
-          </nuxt-link>
+            <template #mediaBeesLink>
+              <nuxt-link to="https://mediabees.de" target="_blank">
+                MediaBees
+              </nuxt-link>
+            </template>
+
+            <template #email>
+              <nuxt-link to="mailto:info@lars-rickert.de">
+                {{ $t("home.about.description.emailText") }}
+              </nuxt-link>
+            </template>
+          </i18n-t>
+
+          <ul>
+            <li>{{ $t("home.about.services.vue") }}</li>
+            <li>{{ $t("home.about.services.api") }}</li>
+            <li>{{ $t("home.about.services.webdesign") }}</li>
+            <li>{{ $t("home.about.services.onlineShops") }}</li>
+            <li>{{ $t("home.about.services.wordPress") }}</li>
+            <li>{{ $t("home.about.services.apps") }}</li>
+            <li>{{ $t("home.about.services.componentLibrary") }}</li>
+            <li>{{ $t("home.about.services.ciCd") }}</li>
+            <li>{{ $t("home.about.services.consulting") }}</li>
+          </ul>
         </div>
-      </section>
-    </div>
+
+        <div>
+          <div class="about__facts">
+            <FactCardMolecule
+              :value="yearsOfExperience"
+              :text="$t('home.about.facts.experience')"
+            />
+            <FactCardMolecule
+              :value="allProjects.length"
+              :text="$t('home.about.facts.completedProjects')"
+            />
+            <FactCardMolecule
+              :value="2"
+              :text="$t('home.about.facts.artificialIntelligence')"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="page projects">
+      <HeadlineAtom
+        :headline="$t('home.portfolio')"
+        :background-text="$t('home.projects')"
+      />
+
+      <ButtonAtom
+        class="projects__dark-switch"
+        :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
+        @click="isProjectsDark = !isProjectsDark"
+      />
+
+      <div class="cards">
+        <nuxt-link
+          v-for="project of projects"
+          :key="project.name"
+          :href="project.href"
+          target="_blank"
+        >
+          <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
+        </nuxt-link>
+      </div>
+    </section>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use "@/assets/styles/mixins.scss" as *;
 
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: 256px;
+section {
+  scroll-margin-top: 96px;
+
+  @include breakpoint(l) {
+    scroll-margin-top: 64px;
+  }
+
+  &:nth-child(odd) {
+    background-color: var(--lr-color-background-accent);
+  }
+}
+
+.about {
+  &__content {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 64px;
+    white-space: pre-wrap;
+
+    @include breakpoint(l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__facts {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    .card {
+      flex: 1 1 200px;
+    }
+  }
 }
 
 .cards {
@@ -105,8 +216,6 @@ const isProjectsDark = ref(false);
 }
 
 .projects {
-  scroll-margin-top: 128px;
-
   &__dark-switch {
     display: flex;
     margin: 48px auto;
