@@ -91,7 +91,7 @@ $transition-duration: 0.4s;
   &__content {
     height: 100vh;
     width: 400px;
-    max-width: 75%;
+    max-width: 70%;
     transform: translateX(-101%);
     transition: transform $transition-duration ease-in-out;
     z-index: 11;

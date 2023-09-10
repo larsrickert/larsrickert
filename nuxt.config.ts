@@ -24,8 +24,8 @@ export default defineNuxtConfig({
       useCookie: false,
     },
     locales: [
-      { code: "de", file: "de-DE.json" },
-      { code: "en", file: "en-US.json" },
+      { code: "de", file: "de-DE.json", name: "Deutsch" },
+      { code: "en", file: "en-US.json", name: "English" },
     ],
     customRoutes: "config",
     pages: {
