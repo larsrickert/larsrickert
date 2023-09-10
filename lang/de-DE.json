@@ -23,6 +23,30 @@
       },
       "subtitle": "Moin! Ich bin",
       "description": "Seit 2017 arbeite ich als Webentwickler und habe dabei schnell meine Leidenschaft für die Full-Stack-Webentwicklung gefunden. Besonders liebe ich es, an coolen kompletten Projekten zu arbeiten, die Menschen helfen, Dinge schneller zu erledigen.\n\nMeine Expertise liegt in Vue.js, TypeScript und CSS/Sass sowie golang, PHP und WordPress."
+    },
+    "about": {
+      "headline": "Über mich",
+      "backgroundHeadline": "Resume",
+      "description": {
+        "text": "Ob groß skalierende Webanwendungen für Lidl und Kaufland bei {schwarzItLink} oder Individuallösungen für kleinere Unternehmen bei {mediaBeesLink}. Egal ob Klein oder Groß: Gerne begleite ich Sie mit meiner Expertise als Freelancer bei Ihrem nächsten Projekt.\n\nWenn Sie an einer Zusammenarbeit bei einer der folgenden Services interessiert sind, {email} gerne:",
+        "emailText": "kontaktieren Sie mich"
+      },
+      "services": {
+        "vue": "Vue.js Frontend-Entwicklung",
+        "api": "API-Entwicklung",
+        "webdesign": "Webdesign / Individuelle Webanwendungen (eigenständig oder integriert in z.B. eine bestehende WordPress-Website)",
+        "onlineShops": "Online Shops",
+        "wordPress": "WordPress Plugin-/Theme-Entwicklung",
+        "apps": "Hybride Windows / Mac / iOS / Android App-Entwicklung",
+        "componentLibrary": "Entwickeln einer UI-Komponentenbibliothek",
+        "ciCd": "CI / CD und Webhosting",
+        "consulting": "IT-Beratung"
+      },
+      "facts": {
+        "completedProjects": "Abgeschlossene Projekte",
+        "experience": "Jahre Erfahrung",
+        "artificialIntelligence": "Arbeiten über künstliche Intelligenz"
+      }
     }
   },
   "imprint": {

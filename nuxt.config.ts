@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ["~/assets/styles/index.scss"],
   app: {
     head: {
-      title: "Webentwicklung Lars Rickert",
+      title: "Lars Rickert | Webentwicklung",
       link: [{ rel: "icon", href: "/favicon.svg" }],
       htmlAttrs: {
         class: "dark",

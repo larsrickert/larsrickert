@@ -23,6 +23,30 @@
       },
       "subtitle": "Hello, I'm",
       "description": "I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster.\n\nMy expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress."
+    },
+    "about": {
+      "headline": "About",
+      "backgroundHeadline": "Resume",
+      "description": {
+        "text": "Whether building large scale web applications for Lidl and Kaufland at {schwarzItLink} or developing individual solutions for smaller companies at {mediaBeesLink}. Whether small or big: I'd be happy to guide you along your next project with my expertise as a freelancer.\n\nIf you'd like to collaborate on any of the following services, feel free to {email}:",
+        "emailText": "leave me a message"
+      },
+      "services": {
+        "vue": "Vue.js frontend development",
+        "api": "API development",
+        "webdesign": "Webdesign / Custom web applications (standalone or integrated in e.g. an existing WordPress website)",
+        "onlineShops": "Online Shops",
+        "wordPress": "WordPress plugin / theme development",
+        "apps": "Hybrid Windows / Mac / iOS / Android app development",
+        "componentLibrary": "Creating a UI component library",
+        "ciCd": "CI / CD and web hosting",
+        "consulting": "IT consulting"
+      },
+      "facts": {
+        "completedProjects": "Completed projects",
+        "experience": "Years of experience",
+        "artificialIntelligence": "Works about artificial intelligence"
+      }
     }
   },
   "imprint": {
