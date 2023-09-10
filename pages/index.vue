@@ -88,7 +88,11 @@ const allProjects = [
 
         <div class="about__content">
           <div>
-            <i18n-t keypath="home.about.description.text" tag="p">
+            <i18n-t
+              keypath="home.about.description.text"
+              tag="p"
+              scope="global"
+            >
               <template #schwarzItLink>
                 <nuxt-link to="https://it.schwarz" target="_blank">
                   Schwarz IT
