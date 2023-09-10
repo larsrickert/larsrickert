@@ -1,20 +1,27 @@
 <script lang="ts" setup>
-import { NavItem } from "./NavigationMolecule.vue";
+import { NavItem } from "./NavItemsMolecule.vue";
 
-const { t, locale } = useI18n();
+const { t, locale, setLocale } = useI18n();
 const localePath = useLocalePath();
 
-const navItems: NavItem[] = [
-  { label: t("home.pageName"), href: localePath("/") },
-  {
-    label: t("home.about.headline"),
-    href: localePath({ path: "/", hash: "#about" }),
-  },
-  {
-    label: t("home.projects"),
-    href: localePath({ path: "/", hash: "#projects" }),
-  },
-];
+const navItems = computed<NavItem[]>(() => {
+  return [
+    { label: t("home.pageName"), href: localePath("/") },
+    {
+      label: t("home.about.headline"),
+      href: localePath({ path: "/", hash: "#about" }),
+    },
+    {
+      label: t("home.projects"),
+      href: localePath({ path: "/", hash: "#projects" }),
+    },
+  ];
+});
+
+const localeModel = computed({
+  get: () => locale.value,
+  set: (value) => setLocale(value),
+});
 </script>
 
 <template>
@@ -39,7 +46,10 @@ const navItems: NavItem[] = [
         />
       </nuxt-link>
 
-      <NavigationMolecule :nav-items="navItems" has-burger />
+      <div class="header__nav">
+        <LanguageSwitchMolecule v-model="localeModel" />
+        <NavigationOrganism :nav-items="navItems" has-burger />
+      </div>
     </div>
   </header>
 </template>
@@ -66,6 +76,17 @@ const navItems: NavItem[] = [
     align-items: center;
     justify-content: space-between;
     gap: 64px;
+
+    @include breakpoint(s) {
+      gap: 32px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 64px;
+    justify-content: flex-end;
+    align-items: center;
 
     @include breakpoint(s) {
       gap: 32px;

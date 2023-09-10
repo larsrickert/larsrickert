@@ -4,20 +4,22 @@ import { NavItem } from "./NavItemsMolecule.vue";
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const navItems: NavItem[] = [
-  { label: t("imprint.pageName"), href: localePath({ name: "imprint" }) },
-  {
-    label: t("privacyPolicy.pageName"),
-    href: localePath({ name: "privacy-policy" }),
-  },
-];
+const navItems = computed<NavItem[]>(() => {
+  return [
+    { label: t("imprint.pageName"), href: localePath({ name: "imprint" }) },
+    {
+      label: t("privacyPolicy.pageName"),
+      href: localePath({ name: "privacy-policy" }),
+    },
+  ];
+});
 </script>
 
 <template>
   <footer class="footer">
     <div class="footer__content">
       Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}
-      <NavigationMolecule :nav-items="navItems" />
+      <NavigationOrganism :nav-items="navItems" />
     </div>
   </footer>
 </template>

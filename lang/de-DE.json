@@ -56,6 +56,7 @@
     "pageName": "Datenschutzerklärung"
   },
   "global": {
-    "allRightsReserved": "Alle Rechte vorbehalten"
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "switchLanguage": "Sprache ändern"
   }
 }

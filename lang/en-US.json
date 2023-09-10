@@ -56,6 +56,7 @@
     "pageName": "Privacy policy"
   },
   "global": {
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "switchLanguage": "Change language"
   }
 }
