@@ -79,87 +79,91 @@ const allProjects = [
       <ButtonAtom :text="$t('home.toProjects')" href="#projects" />
     </TheHero>
 
-    <section id="about" class="page about">
-      <HeadlineAtom
-        :headline="$t('home.about.headline')"
-        :background-text="$t('home.about.backgroundHeadline')"
-      />
+    <section id="about" class="about">
+      <div class="page">
+        <HeadlineAtom
+          :headline="$t('home.about.headline')"
+          :background-text="$t('home.about.backgroundHeadline')"
+        />
 
-      <div class="about__content">
-        <div>
-          <i18n-t keypath="home.about.description.text" tag="p">
-            <template #schwarzItLink>
-              <nuxt-link to="https://it.schwarz" target="_blank">
-                Schwarz IT
-              </nuxt-link>
-            </template>
+        <div class="about__content">
+          <div>
+            <i18n-t keypath="home.about.description.text" tag="p">
+              <template #schwarzItLink>
+                <nuxt-link to="https://it.schwarz" target="_blank">
+                  Schwarz IT
+                </nuxt-link>
+              </template>
 
-            <template #mediaBeesLink>
-              <nuxt-link to="https://mediabees.de" target="_blank">
-                MediaBees
-              </nuxt-link>
-            </template>
+              <template #mediaBeesLink>
+                <nuxt-link to="https://mediabees.de" target="_blank">
+                  MediaBees
+                </nuxt-link>
+              </template>
 
-            <template #email>
-              <nuxt-link to="mailto:info@lars-rickert.de">
-                {{ $t("home.about.description.emailText") }}
-              </nuxt-link>
-            </template>
-          </i18n-t>
+              <template #email>
+                <nuxt-link to="mailto:info@lars-rickert.de">
+                  {{ $t("home.about.description.emailText") }}
+                </nuxt-link>
+              </template>
+            </i18n-t>
 
-          <ul>
-            <li>{{ $t("home.about.services.vue") }}</li>
-            <li>{{ $t("home.about.services.api") }}</li>
-            <li>{{ $t("home.about.services.webdesign") }}</li>
-            <li>{{ $t("home.about.services.onlineShops") }}</li>
-            <li>{{ $t("home.about.services.wordPress") }}</li>
-            <li>{{ $t("home.about.services.apps") }}</li>
-            <li>{{ $t("home.about.services.componentLibrary") }}</li>
-            <li>{{ $t("home.about.services.ciCd") }}</li>
-            <li>{{ $t("home.about.services.consulting") }}</li>
-          </ul>
-        </div>
+            <ul>
+              <li>{{ $t("home.about.services.vue") }}</li>
+              <li>{{ $t("home.about.services.api") }}</li>
+              <li>{{ $t("home.about.services.webdesign") }}</li>
+              <li>{{ $t("home.about.services.onlineShops") }}</li>
+              <li>{{ $t("home.about.services.wordPress") }}</li>
+              <li>{{ $t("home.about.services.apps") }}</li>
+              <li>{{ $t("home.about.services.componentLibrary") }}</li>
+              <li>{{ $t("home.about.services.ciCd") }}</li>
+              <li>{{ $t("home.about.services.consulting") }}</li>
+            </ul>
+          </div>
 
-        <div>
-          <div class="about__facts">
-            <FactCardMolecule
-              :value="yearsOfExperience"
-              :text="$t('home.about.facts.experience')"
-            />
-            <FactCardMolecule
-              :value="allProjects.length"
-              :text="$t('home.about.facts.completedProjects')"
-            />
-            <FactCardMolecule
-              :value="2"
-              :text="$t('home.about.facts.artificialIntelligence')"
-            />
+          <div>
+            <div class="about__facts">
+              <FactCardMolecule
+                :value="yearsOfExperience"
+                :text="$t('home.about.facts.experience')"
+              />
+              <FactCardMolecule
+                :value="allProjects.length"
+                :text="$t('home.about.facts.completedProjects')"
+              />
+              <FactCardMolecule
+                :value="2"
+                :text="$t('home.about.facts.artificialIntelligence')"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="page projects">
-      <HeadlineAtom
-        :headline="$t('home.portfolio')"
-        :background-text="$t('home.projects')"
-      />
+    <section id="projects" class="projects">
+      <div class="page">
+        <HeadlineAtom
+          :headline="$t('home.portfolio')"
+          :background-text="$t('home.projects')"
+        />
 
-      <ButtonAtom
-        class="projects__dark-switch"
-        :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
-        @click="isProjectsDark = !isProjectsDark"
-      />
+        <ButtonAtom
+          class="projects__dark-switch"
+          :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
+          @click="isProjectsDark = !isProjectsDark"
+        />
 
-      <div class="cards">
-        <nuxt-link
-          v-for="project of projects"
-          :key="project.name"
-          :href="project.href"
-          target="_blank"
-        >
-          <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
-        </nuxt-link>
+        <div class="cards">
+          <nuxt-link
+            v-for="project of projects"
+            :key="project.name"
+            :href="project.href"
+            target="_blank"
+          >
+            <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
+          </nuxt-link>
+        </div>
       </div>
     </section>
   </div>
