@@ -3,7 +3,7 @@
 ## Web Developer [@Schwarz IT](https://it.schwarz) and part time freelancer
 
 - 🌍 I'm based in Bad Friedrichshall, Germany
-- 🖥️ See my portfolio on [GitHub](https://github.com/larsrickert?tab=repositories)
+- 🖥️ See my [Portfolio](https://lars-rickert.de)
 - ✉️ You can contact me at [dev@lars-rickert.de](mailto:dev@lars-rickert.de)
 
 I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster. My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress. Besides that, I have also experiences in AI / machine learning which was core of my bachelor thesis and some student research projects.
