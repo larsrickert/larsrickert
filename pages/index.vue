@@ -70,6 +70,7 @@ const allProjects = [
   "Denise Iwanek (MediaBees)",
   "Stapleline (MediaBees)",
   "nginx proxy",
+  "Intersport"
 ];
 </script>
 
