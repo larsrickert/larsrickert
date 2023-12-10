@@ -2,6 +2,7 @@
   "name": "larsrickert",
   "private": true,
   "packageManager": "pnpm@8.11.0",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,8 +11,8 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@fontsource/nunito": "^5.0.15",
-    "@nuxtjs/i18n": "8.0.0-rc.5",
+    "@fontsource/nunito": "^5.0.16",
+    "@nuxtjs/i18n": "8.0.0-rc.9",
     "@nuxtjs/robots": "^3.0.0",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
