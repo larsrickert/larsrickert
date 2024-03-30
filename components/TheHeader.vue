@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NavItem } from "./NavItemsMolecule.vue";
+import type { NavItem } from "./NavItemsMolecule.vue";
 
 const { t, locale, setLocale } = useI18n();
 const localePath = useLocalePath();
