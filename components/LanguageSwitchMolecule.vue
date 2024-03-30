@@ -21,12 +21,7 @@ const handleClick = () => {
         :label="$t('global.switchLanguage')"
         @click="handleClick"
       >
-        <img
-          class="flag"
-          :src="flag"
-          :alt="modelValue"
-          :title="$t('global.switchLanguage')"
-        />
+        <img class="flag" :src="flag" :alt="modelValue" :title="modelValue" />
       </OnyxIconButton>
     </OnyxTooltip>
 
@@ -38,9 +33,9 @@ const handleClick = () => {
 
 <style lang="scss" scoped>
 .flag {
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: var(--onyx-radius-full);
   object-fit: cover;
   cursor: pointer;
 }
