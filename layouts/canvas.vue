@@ -4,9 +4,7 @@ import { OnyxPageLayout } from "sit-onyx";
 
 <template>
   <OnyxPageLayout>
-    <div class="page-content">
-      <slot></slot>
-    </div>
+    <slot></slot>
 
     <TheFooter />
   </OnyxPageLayout>

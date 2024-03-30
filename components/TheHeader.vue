@@ -25,14 +25,13 @@ const localeModel = computed({
 </script>
 
 <template>
-  <header class="header onyx-grid onyx-grid-center">
-    <div class="header__content onyx-grid-span-16">
-      <nuxt-link :to="localePath('/')">
+  <header class="header onyx-grid-center">
+    <div class="header__content">
+      <nuxt-link :to="localePath('/')" class="header__logo">
         <img
           v-if="locale.toLowerCase() === 'de'"
           src="~/assets/images/logo.svg"
           alt="Logo"
-          class="header__logo"
           width="256"
           height="64"
         />
@@ -40,7 +39,6 @@ const localeModel = computed({
           v-else
           src="~/assets/images/logo-en.svg"
           alt="Logo"
-          class="header__logo"
           width="256"
           height="64"
         />
@@ -63,10 +61,11 @@ const localeModel = computed({
   top: 0;
   box-shadow: var(--onyx-shadow-medium-bottom);
   padding: var(--onyx-spacing-md);
+  max-width: var(--onyx-grid-max-width);
+  box-sizing: border-box;
 
   &__content {
     width: 100%;
-    box-sizing: border-box;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -93,10 +92,21 @@ const localeModel = computed({
     width: 14rem;
     max-width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
     @include breakpoint(s) {
       width: 10rem;
+    }
+
+    &:focus-visible {
+      outline: var(--app-outline);
+      border-radius: var(--onyx-radius-sm);
     }
   }
 }

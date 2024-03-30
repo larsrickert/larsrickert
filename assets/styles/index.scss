@@ -3,10 +3,13 @@
 
 :root {
   --onyx-font-family: Nunito, sans-serif;
-}
 
-html {
-  font-size: 18px;
+  --app-outline: 0.25rem solid var(--onyx-color-base-primary-200);
+  --app-gradient: linear-gradient(
+    to right,
+    var(--onyx-color-base-primary-500),
+    var(--onyx-color-base-info-500)
+  );
 }
 
 body {
@@ -16,7 +19,11 @@ body {
   color: var(--onyx-color-text-icons-neutral-intense);
 }
 
-h1,
+h1 {
+  margin-bottom: var(--onyx-spacing-md);
+  word-break: break-word;
+}
+
 h2,
 h3,
 h4,
@@ -30,4 +37,14 @@ h6 {
 p {
   margin-top: var(--onyx-spacing-md);
   margin-bottom: var(--onyx-spacing-md);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.page-content {
+  max-width: var(--onyx-grid-max-width);
+  padding: var(--onyx-grid-margin);
+  margin: 0 auto;
+  box-sizing: border-box;
 }

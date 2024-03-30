@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@sit-onyx/icons": "0.1.0-alpha.0",
     "sit-onyx": "1.0.0-alpha.58"
   },
   "devDependencies": {

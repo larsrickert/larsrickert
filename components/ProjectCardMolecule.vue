@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 const props = defineProps<{
   image: string;
+  name: string;
+  href: string;
   /** Optional image in dark mode */
   darkImage?: string;
   dark?: boolean;
-  name: string;
 }>();
 
 const emit = defineEmits<{
@@ -13,30 +14,46 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="card">
+  <a class="card" :href="props.href" target="_blank" rel="noreferrer">
     <img
+      :tabindex="-1"
       class="card__image"
       :src="props.dark && props.darkImage ? props.darkImage : image"
       :alt="props.name"
     />
-    <span class="card__name">{{ props.name }}</span>
-  </div>
+    <span class="card__name onyx-text--large">{{ props.name }}</span>
+  </a>
 </template>
 
 <style lang="scss" scoped>
-$transition-duration: 0.5s;
+@mixin transition-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-duration;
+}
+
+@mixin transition-visible($opacity: 1) {
+  visibility: visible;
+  opacity: $opacity;
+}
+
+$transition-duration: var(--onyx-duration-sm);
 
 .card {
   cursor: pointer;
-  background-color: var(--lr-color-background-accent);
-  transition: 0.3s;
+  background-color: var(--onyx-color-background-blank);
   position: relative;
   border-radius: var(--onyx-radius-sm);
   box-shadow: var(--onyx-shadow-medium-bottom);
   transition: $transition-duration;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     transform: scale(1.1);
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &__image {
@@ -48,26 +65,11 @@ $transition-duration: 0.5s;
     border-radius: var(--onyx-radius-sm);
   }
 
-  @mixin transition-hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: $transition-duration;
-  }
-
-  @mixin transition-visible($opacity: 1) {
-    visibility: visible;
-    opacity: $opacity;
-  }
-
   &::before {
     @include transition-hidden;
     content: "";
     position: absolute;
-    background: linear-gradient(
-      to right,
-      var(--lr-color-secondary),
-      var(--lr-color-primary)
-    );
+    background: var(--app-gradient);
     width: 100%;
     height: 100%;
     left: 0;
@@ -85,12 +87,11 @@ $transition-duration: 0.5s;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 2;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
     color: #fff;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     &::before {
       @include transition-visible(0.85);
     }

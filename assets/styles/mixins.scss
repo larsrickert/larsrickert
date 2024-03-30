@@ -23,8 +23,8 @@ $breakpoints: (
 @mixin text-gradient {
   background: linear-gradient(
     to right,
-    var(--lr-color-secondary),
-    var(--lr-color-primary)
+    var(--onyx-color-base-primary-500),
+    var(--onyx-color-base-info-500)
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;

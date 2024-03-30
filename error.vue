@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { OnyxAppLayout, OnyxButton } from "sit-onyx";
 import type { UnwrapRef } from "vue";
 
 const props = defineProps<{
@@ -16,32 +17,31 @@ const url = computed(() => {
   return errorUrl || extractedUrl;
 });
 
-const handleError = () => clearError({ redirect: "/" });
+const handleGoHome = () => clearError({ redirect: "/" });
 </script>
 
 <template>
-  <div>
-    <TheHeader />
+  <OnyxAppLayout class="onyx-grid-max-md">
+    <template #navBar> <TheHeader /> </template>
 
-    <main class="page">
+    <NuxtLayout name="default">
       <template v-if="props.error && 'statusCode' in props.error">
         <h1>{{ $t("notFound.pageName") }}</h1>
         <p>{{ $t("notFound.description", { url }) }}</p>
       </template>
 
-      <ButtonAtom
+      <OnyxButton
         class="action"
-        :text="$t('notFound.goHome')"
-        @click="handleError"
+        :label="$t('notFound.goHome')"
+        mode="outline"
+        @click="handleGoHome"
       />
-    </main>
-  </div>
-
-  <TheFooter />
+    </NuxtLayout>
+  </OnyxAppLayout>
 </template>
 
 <style lang="scss" scoped>
 .action {
-  margin-top: 32px;
+  margin-top: var(--onyx-spacing-xl);
 }
 </style>

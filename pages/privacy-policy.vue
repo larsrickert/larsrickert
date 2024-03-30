@@ -1,13 +1,15 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { OnyxHeadline, OnyxLink } from "sit-onyx";
+</script>
 
 <template>
-  <div class="page">
-    <h1>{{ $t("privacyPolicy.pageName") }}</h1>
+  <div>
+    <OnyxHeadline is="h1">{{ $t("privacyPolicy.pageName") }}</OnyxHeadline>
 
     <OnlyGermanNoteAtom />
 
-    <h2>1. Datenschutz auf einen Blick</h2>
-    <h3>Allgemeine Hinweise</h3>
+    <OnyxHeadline is="h2">1. Datenschutz auf einen Blick</OnyxHeadline>
+    <OnyxHeadline is="h3">Allgemeine Hinweise</OnyxHeadline>
     <p>
       Die folgenden Hinweise geben einen einfachen überblick darüber, was mit
       Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
@@ -16,7 +18,7 @@
       Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
       Datenschutzerklärung.
     </p>
-    <h3>Datenerfassung auf dieser Website</h3>
+    <OnyxHeadline is="h3">Datenerfassung auf dieser Website</OnyxHeadline>
     <h4>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
     <p>
       Die Datenverarbeitung auf dieser Website erfolgt durch den
@@ -58,9 +60,9 @@
       Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich
       jederzeit an uns wenden.
     </p>
-    <h2>2. Hosting</h2>
+    <OnyxHeadline is="h2">2. Hosting</OnyxHeadline>
     <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-    <h3>Externes Hosting</h3>
+    <OnyxHeadline is="h3">Externes Hosting</OnyxHeadline>
     <p>
       Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf
       dieser Website erfasst werden, werden auf den Servern des Hosters / der
@@ -100,8 +102,10 @@
       dieser die personenbezogenen Daten unserer Websitebesucher nur nach
       unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
     </p>
-    <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
-    <h3>Datenschutz</h3>
+    <OnyxHeadline is="h2"
+      >3. Allgemeine Hinweise und Pflichtinformationen</OnyxHeadline
+    >
+    <OnyxHeadline is="h3">Datenschutz</OnyxHeadline>
     <p>
       Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten
       sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und
@@ -121,7 +125,7 @@
       lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
       möglich.
     </p>
-    <h3>Hinweis zur verantwortlichen Stelle</h3>
+    <OnyxHeadline is="h3">Hinweis zur verantwortlichen Stelle</OnyxHeadline>
     <p>
       Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website
       ist:
@@ -140,7 +144,7 @@
       ä.) entscheidet.
     </p>
 
-    <h3>Speicherdauer</h3>
+    <OnyxHeadline is="h3">Speicherdauer</OnyxHeadline>
     <p>
       Soweit innerhalb dieser Datenschutzerklärung keine speziellere
       Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei
@@ -152,10 +156,10 @@
       Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach
       Fortfall dieser Gründe.
     </p>
-    <h3>
+    <OnyxHeadline is="h3">
       Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf
       dieser Website
-    </h3>
+    </OnyxHeadline>
     <p>
       Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir
       Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO
@@ -177,7 +181,7 @@
       Rechtsgrundlagen wird in den folgenden Absätzen dieser
       Datenschutzerklärung informiert.
     </p>
-    <h3>Empfänger von personenbezogenen Daten</h3>
+    <OnyxHeadline is="h3">Empfänger von personenbezogenen Daten</OnyxHeadline>
     <p>
       Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen
       externen Stellen zusammen. Dabei ist teilweise auch eine übermittlung von
@@ -192,17 +196,19 @@
       Vertrags über Auftragsverarbeitung weiter. Im Falle einer gemeinsamen
       Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
     </p>
-    <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+    <OnyxHeadline is="h3"
+      >Widerruf Ihrer Einwilligung zur Datenverarbeitung</OnyxHeadline
+    >
     <p>
       Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
       Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
       jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
       Datenverarbeitung bleibt vom Widerruf unberührt.
     </p>
-    <h3>
+    <OnyxHeadline is="h3">
       Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen
       Direktwerbung (Art. 21 DSGVO)
-    </h3>
+    </OnyxHeadline>
     <p>
       WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F
       DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRüNDEN, DIE SICH AUS
@@ -226,7 +232,9 @@
       WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE
       DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
     </p>
-    <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+    <OnyxHeadline is="h3"
+      >Beschwerderecht bei der zuständigen Aufsichtsbehörde</OnyxHeadline
+    >
     <p>
       Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
       Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
@@ -235,7 +243,7 @@
       unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher
       Rechtsbehelfe.
     </p>
-    <h3>Recht auf Datenübertragbarkeit</h3>
+    <OnyxHeadline is="h3">Recht auf Datenübertragbarkeit</OnyxHeadline>
     <p>
       Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder
       in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an
@@ -244,7 +252,7 @@
       Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar
       ist.
     </p>
-    <h3>Auskunft, Berichtigung und Löschung</h3>
+    <OnyxHeadline is="h3">Auskunft, Berichtigung und Löschung</OnyxHeadline>
     <p>
       Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das
       Recht auf unentgeltliche Auskunft über Ihre gespeicherten
@@ -253,7 +261,9 @@
       Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten
       können Sie sich jederzeit an uns wenden.
     </p>
-    <h3>Recht auf Einschränkung der Verarbeitung</h3>
+    <OnyxHeadline is="h3"
+      >Recht auf Einschränkung der Verarbeitung</OnyxHeadline
+    >
     <p>
       Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer
       personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an
@@ -297,7 +307,7 @@
       Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet
       werden.
     </p>
-    <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+    <OnyxHeadline is="h3">SSL- bzw. TLS-Verschlüsselung</OnyxHeadline>
     <p>
       Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
       vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die
@@ -310,7 +320,7 @@
       Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten,
       die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
     </p>
-    <h3>Widerspruch gegen Werbe-E-Mails</h3>
+    <OnyxHeadline is="h3">Widerspruch gegen Werbe-E-Mails</OnyxHeadline>
     <p>
       Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
       Kontaktdaten zur übersendung von nicht ausdrücklich angeforderter Werbung
@@ -319,8 +329,8 @@
       unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails,
       vor.
     </p>
-    <h2>4. Datenerfassung auf dieser Website</h2>
-    <h3>Server-Log-Dateien</h3>
+    <OnyxHeadline is="h2">4. Datenerfassung auf dieser Website</OnyxHeadline>
+    <OnyxHeadline is="h3">Server-Log-Dateien</OnyxHeadline>
     <p>
       Der Provider der Seiten erhebt und speichert automatisch Informationen in
       so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns
@@ -344,7 +354,9 @@
       technisch fehlerfreien Darstellung und der Optimierung seiner Website -
       hierzu müssen die Server-Log-Files erfasst werden.
     </p>
-    <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+    <OnyxHeadline is="h3"
+      >Anfrage per E-Mail, Telefon oder Telefax</OnyxHeadline
+    >
     <p>
       Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre
       Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten
@@ -370,8 +382,8 @@
       gesetzliche Bestimmungen - insbesondere gesetzliche Aufbewahrungsfristen -
       bleiben unberührt.
     </p>
-    <h2>5. Plugins und Tools</h2>
-    <h3>Google Fonts (lokales Hosting)</h3>
+    <OnyxHeadline is="h2">5. Plugins und Tools</OnyxHeadline>
+    <OnyxHeadline is="h3">Google Fonts (lokales Hosting)</OnyxHeadline>
     <p>
       Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so
       genannte Google Fonts, die von Google bereitgestellt werden. Die Google
@@ -380,19 +392,14 @@
     </p>
     <p>
       Weitere Informationen zu Google Fonts finden Sie unter
-      <nuxt-link
-        href="https://developers.google.com/fonts/faq"
-        target="_blank"
-        rel="noopener noreferrer"
-        >https://developers.google.com/fonts/faq</nuxt-link
-      >
+      <OnyxLink href="https://developers.google.com/fonts/faq" target="_blank">
+        https://developers.google.com/fonts/faq
+      </OnyxLink>
       und in der Datenschutzerklärung von Google:
-      <nuxt-link
-        href="https://policies.google.com/privacy?hl=de"
-        target="_blank"
-        rel="noopener noreferrer"
-        >https://policies.google.com/privacy?hl=de</nuxt-link
-      >.
+      <OnyxLink href="https://policies.google.com/privacy" target="_blank">
+        https://policies.google.com/privacy
+      </OnyxLink>
+      .
     </p>
   </div>
 </template>

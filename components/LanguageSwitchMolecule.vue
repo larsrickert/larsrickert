@@ -1,31 +1,39 @@
 <script lang="ts" setup>
+import { OnyxIconButton, OnyxSkeleton, OnyxTooltip } from "sit-onyx";
 import deFlag from "svg-country-flags/svg/de.svg";
 import usFlag from "svg-country-flags/svg/us.svg";
 
-const props = defineProps<{
-  modelValue: string;
-}>();
+const modelValue = defineModel<string>();
 
-const emit = defineEmits<{
-  "update:modelValue": [value: string];
-}>();
-
-const flag = computed(() => (props.modelValue === "de" ? deFlag : usFlag));
+const flag = computed(() => (modelValue.value === "de" ? deFlag : usFlag));
 
 const handleClick = () => {
-  const newLocale = props.modelValue === "de" ? "en" : "de";
-  emit("update:modelValue", newLocale);
+  modelValue.value = modelValue.value === "de" ? "en" : "de";
 };
 </script>
 
 <template>
-  <img
-    class="flag"
-    :src="flag"
-    :alt="props.modelValue"
-    :title="$t('global.switchLanguage')"
-    @click="handleClick"
-  />
+  <ClientOnly>
+    <OnyxTooltip :text="$t('global.switchLanguage')" position="bottom">
+      <!-- empty title is needed so it does not show the default title of the OnyxIconButton -->
+      <OnyxIconButton
+        title=""
+        :label="$t('global.switchLanguage')"
+        @click="handleClick"
+      >
+        <img
+          class="flag"
+          :src="flag"
+          :alt="modelValue"
+          :title="$t('global.switchLanguage')"
+        />
+      </OnyxIconButton>
+    </OnyxTooltip>
+
+    <template #fallback>
+      <OnyxSkeleton class="flag" />
+    </template>
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>

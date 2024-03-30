@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@sit-onyx/icons':
+    specifier: 0.1.0-alpha.0
+    version: 0.1.0-alpha.0
   sit-onyx:
     specifier: 1.0.0-alpha.58
     version: 1.0.0-alpha.58(@fontsource-variable/source-code-pro@5.0.18)(@fontsource-variable/source-sans-3@5.0.20)(@sit-onyx/icons@0.1.0-alpha.0)(typescript@5.4.3)(vue@3.4.21)
