@@ -10,16 +10,27 @@ jobs:
     steps:
       - name: Checkout Git repository
         uses: actions/checkout@v4
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
           cache: pnpm
+
       - name: 📦 Install dependencies
         run: pnpm install
+
       - name: ⚒️ Build
         run: pnpm build
+
       - name: ⚒️ Generate static site
         run: pnpm generate
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: .output/public
