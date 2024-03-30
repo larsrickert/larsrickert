@@ -53,7 +53,7 @@ $transition-duration: 0.4s;
     display: block;
     height: 4px;
     width: 100%;
-    border-radius: var(--lr-border-radius);
+    border-radius: var(--onyx-radius-sm);
     background-color: currentColor;
     transition: transform $transition-duration ease-in-out;
 

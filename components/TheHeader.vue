@@ -25,8 +25,8 @@ const localeModel = computed({
 </script>
 
 <template>
-  <header class="header">
-    <div class="header__content">
+  <header class="header onyx-grid onyx-grid-center">
+    <div class="header__content onyx-grid-span-16">
       <nuxt-link :to="localePath('/')">
         <img
           v-if="locale.toLowerCase() === 'de'"
@@ -61,46 +61,42 @@ const localeModel = computed({
   position: sticky;
   left: 0;
   top: 0;
-
-  box-shadow: var(--lr-box-shadow);
-  padding: 16px;
-  background-color: var(--lr-color-background);
-  z-index: 10;
-  max-width: 100vw;
+  box-shadow: var(--onyx-shadow-medium-bottom);
+  padding: var(--onyx-spacing-md);
 
   &__content {
-    max-width: var(--lr-max-page-width);
+    width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 64px;
+    gap: var(--onyx-spacing-3xl);
 
     @include breakpoint(s) {
-      gap: 32px;
+      gap: var(--onyx-spacing-xl);
     }
   }
 
   &__nav {
     display: flex;
-    gap: 64px;
+    gap: var(--onyx-spacing-3xl);
     justify-content: flex-end;
     align-items: center;
 
     @include breakpoint(s) {
-      gap: 32px;
+      gap: var(--onyx-spacing-xl);
     }
   }
 
   &__logo {
-    width: 256px;
+    width: 14rem;
     max-width: 100%;
     height: auto;
     display: block;
 
     @include breakpoint(s) {
-      width: 180px;
+      width: 10rem;
     }
   }
 }

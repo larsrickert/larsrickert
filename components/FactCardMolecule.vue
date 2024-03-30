@@ -21,7 +21,7 @@ const emit = defineEmits<{
 
 .card {
   border: 2px solid var(--lr-color-background-accent);
-  border-radius: var(--lr-border-radius);
+  border-radius: var(--onyx-radius-sm);
   padding: 32px;
 
   &__value {

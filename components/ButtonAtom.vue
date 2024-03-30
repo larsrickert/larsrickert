@@ -22,7 +22,7 @@ const emit = defineEmits<{
 .button {
   background-color: var(--lr-color-primary);
   border: 1px solid var(--lr-color-primary);
-  box-shadow: var(--lr-box-shadow);
+  box-shadow: var(--onyx-shadow-medium-bottom);
   border-radius: 100px;
   padding: 16px 64px;
   cursor: pointer;

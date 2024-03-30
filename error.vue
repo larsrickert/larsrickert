@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { UnwrapRef } from "vue";
+import type { UnwrapRef } from "vue";
 
 const props = defineProps<{
   error: UnwrapRef<ReturnType<typeof useError>>;

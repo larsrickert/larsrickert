@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxtjs/i18n"],
-  css: ["~/assets/styles/index.scss"],
+  css: ["sit-onyx/style.css", "~/assets/styles/index.scss"],
   app: {
     head: {
       title: "Lars Rickert | Webentwicklung",

@@ -31,8 +31,8 @@ $transition-duration: 0.5s;
   background-color: var(--lr-color-background-accent);
   transition: 0.3s;
   position: relative;
-  border-radius: var(--lr-border-radius);
-  box-shadow: var(--lr-box-shadow);
+  border-radius: var(--onyx-radius-sm);
+  box-shadow: var(--onyx-shadow-medium-bottom);
   transition: $transition-duration;
 
   &:hover {
@@ -45,7 +45,7 @@ $transition-duration: 0.5s;
     height: 100%;
     object-fit: cover;
     object-position: top;
-    border-radius: var(--lr-border-radius);
+    border-radius: var(--onyx-radius-sm);
   }
 
   @mixin transition-hidden {
@@ -73,7 +73,7 @@ $transition-duration: 0.5s;
     left: 0;
     top: 0;
     z-index: 1;
-    border-radius: var(--lr-border-radius);
+    border-radius: var(--onyx-radius-sm);
     z-index: 1;
   }
 

@@ -1,11 +1,13 @@
+<script lang="ts" setup>
+import { OnyxAppLayout } from "sit-onyx";
+</script>
+
 <template>
-  <div>
-    <TheHeader />
+  <OnyxAppLayout class="onyx-grid-max-md">
+    <template #navBar> <TheHeader /> </template>
 
-    <main>
+    <NuxtLayout>
       <NuxtPage />
-    </main>
-  </div>
-
-  <TheFooter />
+    </NuxtLayout>
+  </OnyxAppLayout>
 </template>
