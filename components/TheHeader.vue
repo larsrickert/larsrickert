@@ -77,7 +77,7 @@ const localeModel = computed({
 
   &__nav {
     display: flex;
-    gap: var(--onyx-spacing-3xl);
+    gap: var(--onyx-spacing-lg);
     justify-content: flex-end;
     align-items: center;
 
