@@ -18,13 +18,17 @@ const navItems = computed<NavItem[]>(() => {
 <template>
   <footer class="footer">
     <div class="footer__content onyx-grid-center">
-      Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}
+      <span class="footer__copyright">
+        Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}</span
+      >
       <NavigationOrganism :nav-items="navItems" />
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
+@use "~/assets/styles/mixins.scss";
+
 .footer {
   background-color: var(--onyx-color-base-background-blank);
 
@@ -36,7 +40,17 @@ const navItems = computed<NavItem[]>(() => {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: var(--onyx-spacing-md) var(--onyx-spacing-xl);
+    gap: var(--onyx-spacing-xs) var(--onyx-spacing-xl);
+
+    @include mixins.breakpoint(sm, max) {
+      padding: var(--onyx-spacing-md);
+      flex-direction: column;
+      align-items: flex-start;
+
+      .footer__copyright {
+        padding: 0 var(--onyx-spacing-md);
+      }
+    }
   }
 }
 </style>

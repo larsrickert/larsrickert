@@ -19,8 +19,8 @@ const props = defineProps<{
 .headline {
   --height: var(--onyx-spacing-4xl);
 
-  @include breakpoint(m) {
-    --height: var(--onyx-spacing-xl);
+  @include breakpoint(sm) {
+    --height: var(--onyx-spacing-2xl);
   }
 
   text-align: center;

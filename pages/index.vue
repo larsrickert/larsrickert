@@ -189,10 +189,10 @@ const allProjects = [
 @use "@/assets/styles/mixins.scss" as *;
 
 .section {
-  scroll-margin-top: 96px;
+  scroll-margin-top: var(--onyx-spacing-4xl);
 
-  @include breakpoint(l) {
-    scroll-margin-top: 64px;
+  @include breakpoint(md) {
+    scroll-margin-top: var(--onyx-spacing-3xl);
   }
 
   &:nth-child(even) {
@@ -202,43 +202,43 @@ const allProjects = [
 
 .about {
   &__content {
-    margin-top: 64px;
+    margin-top: var(--onyx-spacing-3xl);
     display: grid;
     grid-template-columns: 50% 1fr;
-    gap: 64px;
+    gap: var(--onyx-spacing-3xl);
     white-space: pre-wrap;
 
-    @include breakpoint(l) {
+    @include breakpoint(md) {
       grid-template-columns: 1fr;
     }
   }
 
   &__facts {
     display: flex;
-    gap: 32px;
+    gap: var(--onyx-spacing-xl);
     flex-wrap: wrap;
 
     .card {
-      flex: 1 1 200px;
+      flex: 1 1 12rem;
     }
   }
 }
 
 .cards {
   display: grid;
-  gap: 64px;
-  grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+  gap: var(--onyx-spacing-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 
-  @include breakpoint(m) {
+  @include breakpoint(sm) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: var(--onyx-spacing-xl);
   }
 }
 
 .projects {
   &__dark-switch {
     display: flex;
-    margin: 48px auto;
+    margin: var(--onyx-spacing-2xl) auto;
   }
 }
 </style>

@@ -53,7 +53,7 @@ const swappingWords = [
   align-items: center;
   justify-content: space-between;
 
-  @include breakpoint(xl) {
+  @include breakpoint(lg) {
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -71,7 +71,7 @@ const swappingWords = [
     line-height: 4rem;
     font-weight: 800;
 
-    @include breakpoint(m) {
+    @include breakpoint(sm) {
       font-size: 3rem;
       line-height: 3rem;
     }
@@ -98,7 +98,7 @@ const swappingWords = [
       content: " </> ";
       padding-right: var(--onyx-spacing-2xs);
 
-      @include breakpoint(m) {
+      @include breakpoint(sm) {
         position: absolute;
         top: calc(-100% - var(--onyx-spacing-2xs));
         left: 0;
@@ -114,7 +114,7 @@ const swappingWords = [
   &__actions {
     margin-top: var(--onyx-spacing-xl);
 
-    @include breakpoint(xl) {
+    @include breakpoint(lg) {
       text-align: center;
     }
   }
@@ -125,11 +125,11 @@ const swappingWords = [
     box-shadow: var(--onyx-shadow-soft-right);
     border-radius: var(--onyx-radius-full);
 
-    @include breakpoint(xl) {
+    @include breakpoint(lg) {
       max-height: 18rem;
     }
 
-    @include breakpoint(m) {
+    @include breakpoint(sm) {
       max-height: 12rem;
     }
   }

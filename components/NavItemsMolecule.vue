@@ -54,7 +54,7 @@ const handleNavItemClick = (href: string) => {
   gap: var(--onyx-spacing-md);
   flex-wrap: wrap;
 
-  @include breakpoint(s) {
+  @include breakpoint(xs) {
     gap: var(--onyx-spacing-2xs) var(--onyx-spacing-md);
   }
 

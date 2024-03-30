@@ -60,7 +60,7 @@ const localeModel = computed({
   left: 0;
   top: 0;
   box-shadow: var(--onyx-shadow-medium-bottom);
-  padding: var(--onyx-spacing-md);
+  padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
   max-width: var(--onyx-grid-max-width);
   box-sizing: border-box;
 
@@ -72,7 +72,7 @@ const localeModel = computed({
     justify-content: space-between;
     gap: var(--onyx-spacing-3xl);
 
-    @include breakpoint(s) {
+    @include breakpoint(xs) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -83,7 +83,7 @@ const localeModel = computed({
     justify-content: flex-end;
     align-items: center;
 
-    @include breakpoint(s) {
+    @include breakpoint(xs) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -100,7 +100,7 @@ const localeModel = computed({
       height: 100%;
     }
 
-    @include breakpoint(s) {
+    @include breakpoint(xs) {
       width: 10rem;
     }
 
