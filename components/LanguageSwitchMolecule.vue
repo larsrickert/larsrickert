@@ -16,11 +16,7 @@ const handleClick = () => {
   <ClientOnly>
     <OnyxTooltip :text="$t('global.switchLanguage')" position="bottom">
       <!-- empty title is needed so it does not show the default title of the OnyxIconButton -->
-      <OnyxIconButton
-        title=""
-        :label="$t('global.switchLanguage')"
-        @click="handleClick"
-      >
+      <OnyxIconButton title="" :label="$t('global.switchLanguage')" @click="handleClick">
         <img class="flag" :src="flag" :alt="modelValue" :title="modelValue" />
       </OnyxIconButton>
     </OnyxTooltip>

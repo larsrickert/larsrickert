@@ -23,10 +23,13 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: ⚒️ Build
+      - name: 🔍 Check formatting
+        run: pnpm format:check
+
+      - name: 🛠️ Build
         run: pnpm build
 
-      - name: ⚒️ Generate static site
+      - name: 🛠️ Generate static site
         run: pnpm generate
 
       - name: Upload build artifact

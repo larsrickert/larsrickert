@@ -10,10 +10,7 @@ const props = defineProps<{
 // a docker container, so we extract it here from the message
 const url = computed(() => {
   const errorUrl = props.error && "url" in props.error ? props.error.url : "";
-  const extractedUrl = props.error?.message
-    .split("Page not found: ")
-    .at(1)
-    ?.trim();
+  const extractedUrl = props.error?.message.split("Page not found: ").at(1)?.trim();
   return errorUrl || extractedUrl;
 });
 

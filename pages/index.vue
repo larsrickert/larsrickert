@@ -100,21 +100,13 @@ const allProjects = [
 
         <div class="about__content">
           <div>
-            <i18n-t
-              keypath="home.about.description.text"
-              tag="p"
-              scope="global"
-            >
+            <i18n-t keypath="home.about.description.text" tag="p" scope="global">
               <template #schwarzItLink>
-                <OnyxLink href="https://it.schwarz" target="_blank">
-                  Schwarz IT
-                </OnyxLink>
+                <OnyxLink href="https://it.schwarz" target="_blank">Schwarz IT</OnyxLink>
               </template>
 
               <template #mediaBeesLink>
-                <OnyxLink href="https://mediabees.de" target="_blank">
-                  MediaBees
-                </OnyxLink>
+                <OnyxLink href="https://mediabees.de" target="_blank">MediaBees</OnyxLink>
               </template>
 
               <template #email>
@@ -147,10 +139,7 @@ const allProjects = [
                 :value="allProjects.length"
                 :text="$t('home.about.facts.completedProjects')"
               />
-              <FactCardMolecule
-                :value="2"
-                :text="$t('home.about.facts.artificialIntelligence')"
-              />
+              <FactCardMolecule :value="2" :text="$t('home.about.facts.artificialIntelligence')" />
             </div>
           </div>
         </div>
@@ -159,10 +148,7 @@ const allProjects = [
 
     <section id="projects" class="section projects">
       <div class="page-content">
-        <HeadlineAtom
-          :headline="$t('home.portfolio')"
-          :background-text="$t('home.projects')"
-        />
+        <HeadlineAtom :headline="$t('home.portfolio')" :background-text="$t('home.projects')" />
 
         <OnyxButton
           class="projects__dark-switch"

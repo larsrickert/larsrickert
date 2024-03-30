@@ -35,13 +35,7 @@ const localeModel = computed({
           width="256"
           height="64"
         />
-        <img
-          v-else
-          src="~/assets/images/logo-en.svg"
-          alt="Logo"
-          width="256"
-          height="64"
-        />
+        <img v-else src="~/assets/images/logo-en.svg" alt="Logo" width="256" height="64" />
       </nuxt-link>
 
       <div class="header__nav">

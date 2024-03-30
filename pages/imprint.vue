@@ -20,15 +20,12 @@ import { OnyxHeadline, OnyxLink } from "sit-onyx";
     <OnyxHeadline is="h2">Kontakt</OnyxHeadline>
     <p>
       E-Mail:
-      <OnyxLink href="mailto:info@lars-rickert.de">
-        info@lars-rickert.de
-      </OnyxLink>
+      <OnyxLink href="mailto:info@lars-rickert.de"> info@lars-rickert.de </OnyxLink>
     </p>
 
     <OnyxHeadline is="h2">EU-Streitschlichtung</OnyxHeadline>
     <p>
-      Die Europäische Kommission stellt eine Plattform zur
-      Online-Streitbeilegung (OS) bereit:
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
       <OnyxLink href="https://ec.europa.eu/consumers/odr" target="_blank">
         https://ec.europa.eu/consumers/odr </OnyxLink
       >.
@@ -36,12 +33,10 @@ import { OnyxHeadline, OnyxLink } from "sit-onyx";
       Meine E-Mail-Adresse finden Sie oben im Impressum.
     </p>
 
-    <OnyxHeadline is="h2"
-      >Verbraucherstreitbeilegung / Universalschlichtungsstelle</OnyxHeadline
-    >
+    <OnyxHeadline is="h2">Verbraucherstreitbeilegung / Universalschlichtungsstelle</OnyxHeadline>
     <p>
-      Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
-      einer Verbraucherschlichtungsstelle teilzunehmen.
+      Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle teilzunehmen.
     </p>
   </div>
 </template>
