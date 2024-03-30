@@ -1,16 +1,5 @@
-@use "@fontsource/nunito/latin" as *;
 @use "mixins.scss" as *;
-
-:root {
-  --onyx-font-family: Nunito, sans-serif;
-
-  --app-outline: 0.25rem solid var(--onyx-color-base-primary-200);
-  --app-gradient: linear-gradient(
-    to right,
-    var(--onyx-color-base-primary-500),
-    var(--onyx-color-base-info-500)
-  );
-}
+@use "theme.scss" as *;
 
 body {
   font-family: var(--onyx-font-family);
