@@ -56,10 +56,8 @@ const localeModel = computed({
 @use "@/assets/styles/mixins.scss" as *;
 
 .header {
-  position: sticky;
-  left: 0;
-  top: 0;
   box-shadow: var(--onyx-shadow-soft-right);
+  background-color: var(--onyx-color-base-background-blank);
 
   &__content {
     width: 100%;
