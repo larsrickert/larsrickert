@@ -25,25 +25,17 @@ const localeModel = computed({
 </script>
 
 <template>
-  <header class="header">
+  <header class="header onyx-grid-center">
     <div class="header__content">
-      <nuxt-link :to="localePath('/')">
+      <nuxt-link :to="localePath('/')" class="header__logo">
         <img
           v-if="locale.toLowerCase() === 'de'"
           src="~/assets/images/logo.svg"
           alt="Logo"
-          class="header__logo"
           width="256"
           height="64"
         />
-        <img
-          v-else
-          src="~/assets/images/logo-en.svg"
-          alt="Logo"
-          class="header__logo"
-          width="256"
-          height="64"
-        />
+        <img v-else src="~/assets/images/logo-en.svg" alt="Logo" width="256" height="64" />
       </nuxt-link>
 
       <div class="header__nav">
@@ -58,49 +50,55 @@ const localeModel = computed({
 @use "@/assets/styles/mixins.scss" as *;
 
 .header {
-  position: sticky;
-  left: 0;
-  top: 0;
-
-  box-shadow: var(--lr-box-shadow);
-  padding: 16px;
-  background-color: var(--lr-color-background);
-  z-index: 10;
-  max-width: 100vw;
+  box-shadow: var(--onyx-shadow-soft-right);
+  background-color: var(--onyx-color-base-background-blank);
 
   &__content {
-    max-width: var(--lr-max-page-width);
-    box-sizing: border-box;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 64px;
+    gap: var(--onyx-spacing-3xl);
+    max-width: var(--onyx-grid-max-width);
+    box-sizing: border-box;
+    padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
 
-    @include breakpoint(s) {
-      gap: 32px;
+    @include breakpoint(xs) {
+      gap: var(--onyx-spacing-xl);
     }
   }
 
   &__nav {
     display: flex;
-    gap: 64px;
+    gap: var(--onyx-spacing-lg);
     justify-content: flex-end;
     align-items: center;
 
-    @include breakpoint(s) {
-      gap: 32px;
+    @include breakpoint(xs) {
+      gap: var(--onyx-spacing-xl);
     }
   }
 
   &__logo {
-    width: 256px;
+    width: 14rem;
     max-width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    box-sizing: border-box;
 
-    @include breakpoint(s) {
-      width: 180px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include breakpoint(xs) {
+      width: 10rem;
+    }
+
+    &:focus-visible {
+      outline: var(--app-outline);
+      border-radius: var(--onyx-radius-sm);
     }
   }
 }

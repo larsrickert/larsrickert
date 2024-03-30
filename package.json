@@ -8,12 +8,19 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@sit-onyx/icons": "0.1.0-alpha.0",
+    "sit-onyx": "1.0.0-alpha.58"
   },
   "devDependencies": {
     "@fontsource/nunito": "^5.0.17",
     "@nuxtjs/i18n": "^8.2.0",
     "nuxt": "^3.11.1",
+    "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "svg-country-flags": "^1.2.10"
   }

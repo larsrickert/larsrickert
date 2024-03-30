@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { UnwrapRef } from "vue";
+import { OnyxAppLayout, OnyxButton } from "sit-onyx";
+import type { UnwrapRef } from "vue";
 
 const props = defineProps<{
   error: UnwrapRef<ReturnType<typeof useError>>;
@@ -9,39 +10,35 @@ const props = defineProps<{
 // a docker container, so we extract it here from the message
 const url = computed(() => {
   const errorUrl = props.error && "url" in props.error ? props.error.url : "";
-  const extractedUrl = props.error?.message
-    .split("Page not found: ")
-    .at(1)
-    ?.trim();
+  const extractedUrl = props.error?.message.split("Page not found: ").at(1)?.trim();
   return errorUrl || extractedUrl;
 });
 
-const handleError = () => clearError({ redirect: "/" });
+const handleGoHome = () => clearError({ redirect: "/" });
 </script>
 
 <template>
-  <div>
-    <TheHeader />
+  <OnyxAppLayout class="onyx-grid-max-md">
+    <template #navBar> <TheHeader /> </template>
 
-    <main class="page">
+    <NuxtLayout name="default">
       <template v-if="props.error && 'statusCode' in props.error">
         <h1>{{ $t("notFound.pageName") }}</h1>
         <p>{{ $t("notFound.description", { url }) }}</p>
       </template>
 
-      <ButtonAtom
+      <OnyxButton
         class="action"
-        :text="$t('notFound.goHome')"
-        @click="handleError"
+        :label="$t('notFound.goHome')"
+        mode="outline"
+        @click="handleGoHome"
       />
-    </main>
-  </div>
-
-  <TheFooter />
+    </NuxtLayout>
+  </OnyxAppLayout>
 </template>
 
 <style lang="scss" scoped>
 .action {
-  margin-top: 32px;
+  margin-top: var(--onyx-spacing-xl);
 }
 </style>

@@ -1,12 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { OnyxHeadline, OnyxLink } from "sit-onyx";
+</script>
 
 <template>
-  <div class="page">
-    <h1>{{ $t("imprint.pageName") }}</h1>
+  <div>
+    <OnyxHeadline is="h1">{{ $t("imprint.pageName") }}</OnyxHeadline>
 
     <OnlyGermanNoteAtom />
 
-    <h2>Angaben gemäß § 5 TMG</h2>
+    <OnyxHeadline is="h2">Angaben gemäß § 5 TMG</OnyxHeadline>
 
     <p>
       Lars Rickert<br />
@@ -15,29 +17,26 @@
       74177 Bad Friedrichshall
     </p>
 
-    <h2>Kontakt</h2>
+    <OnyxHeadline is="h2">Kontakt</OnyxHeadline>
     <p>
       E-Mail:
-      <nuxt-link to="mailto:info@lars-rickert.de">
-        info@lars-rickert.de
-      </nuxt-link>
+      <OnyxLink href="mailto:info@lars-rickert.de"> info@lars-rickert.de </OnyxLink>
     </p>
 
-    <h2>EU-Streitschlichtung</h2>
+    <OnyxHeadline is="h2">EU-Streitschlichtung</OnyxHeadline>
     <p>
-      Die Europäische Kommission stellt eine Plattform zur
-      Online-Streitbeilegung (OS) bereit:
-      <nuxt-link to="https://ec.europa.eu/consumers/odr"
-        >https://ec.europa.eu/consumers/odr</nuxt-link
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+      <OnyxLink href="https://ec.europa.eu/consumers/odr" target="_blank">
+        https://ec.europa.eu/consumers/odr </OnyxLink
       >.
       <br />
       Meine E-Mail-Adresse finden Sie oben im Impressum.
     </p>
 
-    <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+    <OnyxHeadline is="h2">Verbraucherstreitbeilegung / Universalschlichtungsstelle</OnyxHeadline>
     <p>
-      Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
-      einer Verbraucherschlichtungsstelle teilzunehmen.
+      Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle teilzunehmen.
     </p>
   </div>
 </template>

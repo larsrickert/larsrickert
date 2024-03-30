@@ -17,10 +17,10 @@ const props = defineProps<{
 @use "~/assets/styles/mixins.scss" as *;
 
 .headline {
-  --height: 6rem;
+  --height: var(--onyx-spacing-4xl);
 
-  @include breakpoint(m) {
-    --height: 2.5rem;
+  @include breakpoint(sm) {
+    --height: var(--onyx-spacing-2xl);
   }
 
   text-align: center;
@@ -49,8 +49,8 @@ const props = defineProps<{
     right: 0;
     margin: 0;
     font-weight: 800;
-    color: rgb(255, 255, 255, 0.07);
-    letter-spacing: 8px;
+    color: var(--onyx-color-base-neutral-200);
+    letter-spacing: var(--onyx-spacing-2xs);
   }
 }
 </style>

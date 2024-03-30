@@ -1,0 +1,38 @@
+@use "@fontsource/nunito/latin" as *;
+
+:root {
+  --onyx-color-themed-primary-100: #ebf8fa;
+  --onyx-color-themed-primary-200: #cceaf0;
+  --onyx-color-themed-primary-300: #aedce6;
+  --onyx-color-themed-primary-400: #7dc2d4;
+  --onyx-color-themed-primary-500: #50a7c2;
+  --onyx-color-themed-primary-600: #4090ad;
+  --onyx-color-themed-primary-700: #2d7091;
+  --onyx-color-themed-primary-800: #1d5475;
+  --onyx-color-themed-primary-900: #103757;
+  --onyx-color-themed-primary-1000: #0b2947;
+  --onyx-color-themed-primary-1100: #061c36;
+  --onyx-color-themed-primary-1200: #020f21;
+
+  --onyx-color-themed-secondary-100: #f7fffd;
+  --onyx-color-themed-secondary-200: #edfcf8;
+  --onyx-color-themed-secondary-300: #e3fcf4;
+  --onyx-color-themed-secondary-400: #cdfae9;
+  --onyx-color-themed-secondary-500: #b7f8db;
+  --onyx-color-themed-secondary-600: #95deba;
+  --onyx-color-themed-secondary-700: #66ba8f;
+  --onyx-color-themed-secondary-800: #419465;
+  --onyx-color-themed-secondary-900: #257043;
+  --onyx-color-themed-secondary-1000: #17592e;
+  --onyx-color-themed-secondary-1100: #0d421e;
+  --onyx-color-themed-secondary-1200: #062b10;
+
+  --onyx-font-family: Nunito, sans-serif;
+
+  --app-outline: 0.25rem solid var(--onyx-color-base-primary-200);
+  --app-gradient: linear-gradient(
+    to right,
+    var(--onyx-color-base-secondary-600),
+    var(--onyx-color-base-primary-600)
+  );
+}

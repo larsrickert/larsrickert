@@ -1,16 +1,17 @@
 /* Breakpoints map for loop access */
 $breakpoints: (
-  s: 576px,
-  m: 768px,
-  l: 992px,
-  xl: 1200px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1440px,
+  xl: 1920px,
 );
 
 /**
  * Breakpoints might be consistently applied via the defined $breakpoints (xs / s / m / l / ...)
  * @param {string} $breakpoint - the (globally defined) breakpoint
  * @param {string} $min-max - Whether to use min-width or max-width, values: min,max default: max
- * @example breakpoint(m, min)
+ * @example breakpoint(sm, min)
  */
 @mixin breakpoint($breakpoint, $min-max: max) {
   @if map-has-key($breakpoints, $breakpoint) {
@@ -21,11 +22,7 @@ $breakpoints: (
 }
 
 @mixin text-gradient {
-  background: linear-gradient(
-    to right,
-    var(--lr-color-secondary),
-    var(--lr-color-primary)
-  );
+  background: var(--app-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   width: max-content;

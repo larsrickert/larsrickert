@@ -18,11 +18,7 @@ const isBurgerOpen = ref(false);
       :nav-items="props.navItems"
     />
 
-    <BurgerMenu
-      v-if="props.hasBurger"
-      class="nav__burger"
-      v-model="isBurgerOpen"
-    >
+    <BurgerMenu v-if="props.hasBurger" class="nav__burger" v-model="isBurgerOpen">
       <NavItemsMolecule
         :nav-items="props.navItems"
         vertical
@@ -36,11 +32,9 @@ const isBurgerOpen = ref(false);
 @use "@/assets/styles/mixins.scss" as *;
 
 .nav {
-  &__items {
-    &--has-burger {
-      @include breakpoint(m) {
-        display: none;
-      }
+  :deep(.nav__items--has-burger) {
+    @include breakpoint(sm, max) {
+      display: none;
     }
   }
 
@@ -48,7 +42,7 @@ const isBurgerOpen = ref(false);
     display: none;
     font-size: 1.25rem;
 
-    @include breakpoint(m, max) {
+    @include breakpoint(sm, max) {
       display: block;
     }
   }

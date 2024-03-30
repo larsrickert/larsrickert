@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import lightBulbShine from "@sit-onyx/icons/light-bulb-shine.svg?raw";
+import lightBulb from "@sit-onyx/icons/light-bulb.svg?raw";
+import { OnyxButton, OnyxLink } from "sit-onyx";
 import budgetAppDark from "~/assets/images/budget-app-dark.webp";
 import budgetAppLight from "~/assets/images/budget-app-light.webp";
 import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.webp";
@@ -8,6 +11,10 @@ import pgHerne from "~/assets/images/pg-herne.webp";
 import schreibmentoren from "~/assets/images/schreibmentoren.webp";
 import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
 import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
+
+definePageMeta({
+  layout: "canvas",
+});
 
 const projects = [
   {
@@ -70,18 +77,22 @@ const allProjects = [
   "Denise Iwanek (MediaBees)",
   "Stapleline (MediaBees)",
   "nginx proxy",
-  "Intersport"
+  "Intersport",
 ];
 </script>
 
 <template>
-  <div>
+  <div class="onyx-grid-span-16">
     <TheHero>
-      <ButtonAtom :text="$t('home.toProjects')" href="#projects" />
+      <OnyxButton
+        :label="$t('home.toProjects')"
+        mode="outline"
+        @click="$router.replace('#projects')"
+      />
     </TheHero>
 
-    <section id="about" class="about">
-      <div class="page">
+    <section id="about" class="section about">
+      <div class="page-content">
         <HeadlineAtom
           :headline="$t('home.about.headline')"
           :background-text="$t('home.about.backgroundHeadline')"
@@ -89,27 +100,19 @@ const allProjects = [
 
         <div class="about__content">
           <div>
-            <i18n-t
-              keypath="home.about.description.text"
-              tag="p"
-              scope="global"
-            >
+            <i18n-t keypath="home.about.description.text" tag="p" scope="global">
               <template #schwarzItLink>
-                <nuxt-link to="https://it.schwarz" target="_blank">
-                  Schwarz IT
-                </nuxt-link>
+                <OnyxLink href="https://it.schwarz" target="_blank">Schwarz IT</OnyxLink>
               </template>
 
               <template #mediaBeesLink>
-                <nuxt-link to="https://mediabees.de" target="_blank">
-                  MediaBees
-                </nuxt-link>
+                <OnyxLink href="https://mediabees.de" target="_blank">MediaBees</OnyxLink>
               </template>
 
               <template #email>
-                <nuxt-link to="mailto:info@lars-rickert.de">
+                <OnyxLink href="mailto:info@lars-rickert.de">
                   {{ $t("home.about.description.emailText") }}
-                </nuxt-link>
+                </OnyxLink>
               </template>
             </i18n-t>
 
@@ -136,38 +139,32 @@ const allProjects = [
                 :value="allProjects.length"
                 :text="$t('home.about.facts.completedProjects')"
               />
-              <FactCardMolecule
-                :value="2"
-                :text="$t('home.about.facts.artificialIntelligence')"
-              />
+              <FactCardMolecule :value="2" :text="$t('home.about.facts.artificialIntelligence')" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="projects">
-      <div class="page">
-        <HeadlineAtom
-          :headline="$t('home.portfolio')"
-          :background-text="$t('home.projects')"
-        />
+    <section id="projects" class="section projects">
+      <div class="page-content">
+        <HeadlineAtom :headline="$t('home.portfolio')" :background-text="$t('home.projects')" />
 
-        <ButtonAtom
+        <OnyxButton
           class="projects__dark-switch"
-          :text="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
+          :label="isProjectsDark ? $t('home.lights.on') : $t('home.lights.off')"
+          mode="outline"
+          :icon="isProjectsDark ? lightBulb : lightBulbShine"
           @click="isProjectsDark = !isProjectsDark"
         />
 
         <div class="cards">
-          <nuxt-link
+          <ProjectCardMolecule
             v-for="project of projects"
             :key="project.name"
-            :href="project.href"
-            target="_blank"
-          >
-            <ProjectCardMolecule v-bind="project" :dark="isProjectsDark" />
-          </nuxt-link>
+            v-bind="project"
+            :dark="isProjectsDark"
+          />
         </div>
       </div>
     </section>
@@ -177,57 +174,57 @@ const allProjects = [
 <style lang="scss" scoped>
 @use "@/assets/styles/mixins.scss" as *;
 
-section {
-  scroll-margin-top: 96px;
+.section {
+  scroll-margin-top: var(--onyx-spacing-4xl);
 
-  @include breakpoint(l) {
-    scroll-margin-top: 64px;
+  @include breakpoint(md) {
+    scroll-margin-top: var(--onyx-spacing-3xl);
   }
 
-  &:nth-child(odd) {
-    background-color: var(--lr-color-background-accent);
+  &:nth-child(even) {
+    background-color: var(--onyx-color-base-background-blank);
   }
 }
 
 .about {
   &__content {
-    margin-top: 64px;
+    margin-top: var(--onyx-spacing-3xl);
     display: grid;
     grid-template-columns: 50% 1fr;
-    gap: 64px;
+    gap: var(--onyx-spacing-3xl);
     white-space: pre-wrap;
 
-    @include breakpoint(l) {
+    @include breakpoint(md) {
       grid-template-columns: 1fr;
     }
   }
 
   &__facts {
     display: flex;
-    gap: 32px;
+    gap: var(--onyx-spacing-xl);
     flex-wrap: wrap;
 
     .card {
-      flex: 1 1 200px;
+      flex: 1 1 12rem;
     }
   }
 }
 
 .cards {
   display: grid;
-  gap: 64px;
-  grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+  gap: var(--onyx-spacing-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 
-  @include breakpoint(m) {
+  @include breakpoint(sm) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: var(--onyx-spacing-xl);
   }
 }
 
 .projects {
   &__dark-switch {
     display: flex;
-    margin: 48px auto;
+    margin: var(--onyx-spacing-2xl) auto;
   }
 }
 </style>

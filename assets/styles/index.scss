@@ -1,55 +1,43 @@
-@use "@fontsource/nunito/latin" as *;
-@use "layouts.scss" as *;
 @use "mixins.scss" as *;
-@use "variables.scss" as *;
-
-html {
-  font-size: 18px;
-  height: 100%;
-}
+@use "theme.scss" as *;
 
 body {
-  font-family: Nunito, sans-serif;
+  font-family: var(--onyx-font-family);
   margin: 0;
-  background-color: var(--lr-color-background);
-  color: var(--lr-color-font);
-  height: 100%;
+  background-color: var(--onyx-color-base-background-tinted);
+  color: var(--onyx-color-text-icons-neutral-intense);
 }
 
-#__nuxt {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
+h1 {
+  margin-bottom: var(--onyx-spacing-md);
+  word-break: break-word;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 32px;
-  margin-bottom: 16px;
+  margin-top: var(--onyx-spacing-xl);
+  margin-bottom: var(--onyx-spacing-md);
   word-break: break-word;
 }
 
-h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
-h2 {
-  font-size: 1.5rem;
+p {
+  margin-top: var(--onyx-spacing-md);
+  margin-bottom: var(--onyx-spacing-md);
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
-p {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
+.page-content {
+  max-width: var(--onyx-grid-max-width);
+  padding: var(--onyx-spacing-xl);
+  margin: 0 auto;
+  box-sizing: border-box;
 
-a {
-  text-decoration: none;
-  color: var(--lr-color-primary);
+  @include breakpoint(md, min) {
+    padding: var(--onyx-spacing-3xl);
+  }
 }

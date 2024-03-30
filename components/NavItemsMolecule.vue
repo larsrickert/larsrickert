@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { OnyxButton } from "sit-onyx";
+
 export type NavItem = {
   label: string;
   href: string;
@@ -13,23 +15,25 @@ const emit = defineEmits<{
   navItemClick: [];
 }>();
 
+const router = useRouter();
 const route = useRoute();
+
+const handleNavItemClick = (href: string) => {
+  emit("navItemClick");
+  return router.push(href);
+};
 </script>
 
 <template>
   <ul class="items" :class="{ 'items--vertical': props.vertical }">
     <li v-for="item of navItems" :key="item.href">
       <ClientOnly>
-        <nuxt-link
-          :to="item.href"
-          class="item"
-          :class="{
-            'item--active': item.href === route.fullPath,
-          }"
-          @click="emit('navItemClick')"
-        >
-          {{ item.label }}
-        </nuxt-link>
+        <OnyxButton
+          :label="item.label"
+          mode="plain"
+          :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
+          @click="handleNavItemClick(item.href)"
+        />
       </ClientOnly>
     </li>
   </ul>
@@ -43,11 +47,11 @@ const route = useRoute();
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 16px 32px;
+  gap: var(--onyx-spacing-md);
   flex-wrap: wrap;
 
-  @include breakpoint(s) {
-    gap: 8px 16px;
+  @include breakpoint(xs) {
+    gap: var(--onyx-spacing-2xs) var(--onyx-spacing-md);
   }
 
   &--vertical {
@@ -55,18 +59,8 @@ const route = useRoute();
   }
 }
 
-.item {
-  color: currentColor;
-  text-decoration: none;
-  transition: all 0.3s;
-
-  &:hover {
-    color: var(--lr-color-primary);
-  }
-
-  &--active {
-    color: var(--lr-color-primary);
-    font-weight: 700;
-  }
+.skeleton {
+  width: 4rem;
+  height: 1.5rem;
 }
 </style>

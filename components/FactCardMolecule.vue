@@ -3,16 +3,12 @@ const props = defineProps<{
   value: number;
   text: string;
 }>();
-
-const emit = defineEmits<{
-  "update:modelValue": [value: unknown];
-}>();
 </script>
 
 <template>
   <div class="card">
     <p class="card__value">{{ props.value }}</p>
-    <p class="card__text">{{ props.text }}</p>
+    <p class="card__text onyx-text--large">{{ props.text }}</p>
   </div>
 </template>
 
@@ -20,9 +16,9 @@ const emit = defineEmits<{
 @use "~/assets/styles/mixins.scss" as *;
 
 .card {
-  border: 2px solid var(--lr-color-background-accent);
-  border-radius: var(--lr-border-radius);
-  padding: 32px;
+  border: 0.125rem solid var(--onyx-color-base-neutral-200);
+  border-radius: var(--onyx-radius-sm);
+  padding: var(--onyx-spacing-xl);
 
   &__value {
     @include text-gradient;
@@ -39,18 +35,18 @@ const emit = defineEmits<{
       line-height: 1.75rem;
       position: absolute;
       top: 0;
-      right: -20px;
+      right: calc(-1 * var(--onyx-spacing-lg));
       font-weight: 600;
     }
   }
 
   &__text {
-    $before-width: 32px;
-    $before-height: 2px;
+    $before-width: var(--onyx-spacing-xl);
+    $before-height: 0.125rem;
 
-    margin-top: 4px;
+    margin-top: var(--onyx-spacing-4xs);
     margin-bottom: 0;
-    padding-left: $before-width + 16px;
+    padding-left: calc($before-width + var(--onyx-spacing-md));
     position: relative;
 
     &::before {
@@ -60,7 +56,7 @@ const emit = defineEmits<{
       top: calc(50% - #{$before-height} / 2);
       width: $before-width;
       height: $before-height;
-      background-color: rgba(255, 255, 255, 0.07);
+      background-color: var(--onyx-color-base-neutral-300);
     }
   }
 }

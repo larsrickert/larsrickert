@@ -1,16 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  modelValue?: boolean;
-}>();
-
-const emit = defineEmits<{
-  "update:modelValue": [value: boolean];
-}>();
-
-const isOpen = computed({
-  get: () => props.modelValue,
-  set: (value) => emit("update:modelValue", value),
-});
+const isOpen = defineModel<boolean>();
 </script>
 
 <template>
@@ -30,35 +19,40 @@ const isOpen = computed({
 </template>
 
 <style lang="scss" scoped>
-$transition-duration: 0.4s;
+$transition-duration: var(--onyx-duration-sm);
 
 .burger {
   &__lines {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
+    gap: var(--onyx-spacing-3xs);
 
     background: none;
     border: none;
     color: currentColor;
     padding: 0;
+
+    &:focus-visible {
+      outline: var(--app-outline);
+      border-radius: var(--onyx-radius-sm);
+    }
   }
 
   &__line {
     display: block;
-    height: 4px;
+    height: var(--onyx-spacing-4xs);
     width: 100%;
-    border-radius: var(--lr-border-radius);
+    border-radius: var(--onyx-radius-sm);
     background-color: currentColor;
     transition: transform $transition-duration ease-in-out;
 
     &:nth-child(2) {
-      transition-duration: calc(#{$transition-duration} / 2);
+      transition-duration: calc($transition-duration / 2);
     }
   }
 
@@ -90,17 +84,17 @@ $transition-duration: 0.4s;
 
   &__content {
     height: 100vh;
-    width: 400px;
+    width: 24rem;
     max-width: 70%;
     transform: translateX(-101%);
     transition: transform $transition-duration ease-in-out;
     z-index: 11;
-    background-color: #fff;
+    background-color: var(--onyx-color-base-background-blank);
     color: var(--lr-color-font-accent);
     position: fixed;
     top: 0;
     left: 0;
-    padding: 32px;
+    padding: var(--onyx-spacing-xl);
     box-sizing: border-box;
   }
 
