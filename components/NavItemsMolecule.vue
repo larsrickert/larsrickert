@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { OnyxButton, OnyxSkeleton } from "sit-onyx";
+import { OnyxButton } from "sit-onyx";
 
 export type NavItem = {
   label: string;
@@ -25,24 +25,16 @@ const handleNavItemClick = (href: string) => {
 </script>
 
 <template>
-  <ClientOnly>
-    <ul class="items" :class="{ 'items--vertical': props.vertical }">
-      <li v-for="item of navItems" :key="item.href">
-        <OnyxButton
-          :label="item.label"
-          mode="plain"
-          :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
-          @click="handleNavItemClick(item.href)"
-        />
-      </li>
-    </ul>
-
-    <template #fallback>
-      <div class="items">
-        <OnyxSkeleton v-for="i in 3" :key="i" class="skeleton" />
-      </div>
-    </template>
-  </ClientOnly>
+  <ul class="items" :class="{ 'items--vertical': props.vertical }">
+    <li v-for="item of navItems" :key="item.href">
+      <OnyxButton
+        :label="item.label"
+        mode="plain"
+        :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
+        @click="handleNavItemClick(item.href)"
+      />
+    </li>
+  </ul>
 </template>
 
 <style lang="scss" scoped>
