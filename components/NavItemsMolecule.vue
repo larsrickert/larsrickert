@@ -27,12 +27,14 @@ const handleNavItemClick = (href: string) => {
 <template>
   <ul class="items" :class="{ 'items--vertical': props.vertical }">
     <li v-for="item of navItems" :key="item.href">
-      <OnyxButton
-        :label="item.label"
-        mode="plain"
-        :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
-        @click="handleNavItemClick(item.href)"
-      />
+      <ClientOnly>
+        <OnyxButton
+          :label="item.label"
+          mode="plain"
+          :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
+          @click="handleNavItemClick(item.href)"
+        />
+      </ClientOnly>
     </li>
   </ul>
 </template>
