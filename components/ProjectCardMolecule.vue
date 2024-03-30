@@ -44,12 +44,12 @@ $transition-duration: var(--onyx-duration-sm);
   background-color: var(--onyx-color-background-blank);
   position: relative;
   border-radius: var(--onyx-radius-sm);
-  box-shadow: var(--onyx-shadow-medium-bottom);
+  box-shadow: var(--onyx-shadow-soft-right);
   transition: $transition-duration;
 
   &:hover,
   &:focus-visible {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &:focus-visible {

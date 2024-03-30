@@ -59,10 +59,7 @@ const localeModel = computed({
   position: sticky;
   left: 0;
   top: 0;
-  box-shadow: var(--onyx-shadow-medium-bottom);
-  padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
-  max-width: var(--onyx-grid-max-width);
-  box-sizing: border-box;
+  box-shadow: var(--onyx-shadow-soft-right);
 
   &__content {
     width: 100%;
@@ -71,6 +68,9 @@ const localeModel = computed({
     align-items: center;
     justify-content: space-between;
     gap: var(--onyx-spacing-3xl);
+    max-width: var(--onyx-grid-max-width);
+    box-sizing: border-box;
+    padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
 
     @include breakpoint(xs) {
       gap: var(--onyx-spacing-xl);

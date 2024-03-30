@@ -36,6 +36,11 @@ $transition-duration: var(--onyx-duration-sm);
     border: none;
     color: currentColor;
     padding: 0;
+
+    &:focus-visible {
+      outline: var(--app-outline);
+      border-radius: var(--onyx-radius-sm);
+    }
   }
 
   &__line {
