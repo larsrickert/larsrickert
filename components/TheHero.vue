@@ -53,7 +53,7 @@ const swappingWords = [
   align-items: center;
   justify-content: space-between;
 
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -114,7 +114,7 @@ const swappingWords = [
   &__actions {
     margin-top: var(--onyx-spacing-xl);
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
       text-align: center;
     }
   }
@@ -125,7 +125,7 @@ const swappingWords = [
     box-shadow: var(--onyx-shadow-soft-right);
     border-radius: var(--onyx-radius-full);
 
-    @include breakpoint(lg) {
+    @include breakpoint(md) {
       max-height: 18rem;
     }
 
