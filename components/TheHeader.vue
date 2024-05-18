@@ -47,7 +47,7 @@ const localeModel = computed({
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .header {
   box-shadow: var(--onyx-shadow-soft-right);
@@ -64,7 +64,7 @@ const localeModel = computed({
     box-sizing: border-box;
     padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, xs) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -75,7 +75,7 @@ const localeModel = computed({
     justify-content: flex-end;
     align-items: center;
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, xs) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -92,7 +92,7 @@ const localeModel = computed({
       height: 100%;
     }
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, xs) {
       width: 10rem;
     }
 

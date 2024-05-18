@@ -27,7 +27,7 @@ const navItems = computed<NavItem[]>(() => {
 </template>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/mixins.scss";
+@use "sit-onyx/breakpoints.scss";
 
 .footer {
   background-color: var(--onyx-color-base-background-blank);
@@ -42,7 +42,7 @@ const navItems = computed<NavItem[]>(() => {
     flex-wrap: wrap;
     gap: var(--onyx-spacing-xs) var(--onyx-spacing-xl);
 
-    @include mixins.breakpoint(sm, max) {
+    @include breakpoints.screen(max, sm) {
       padding: var(--onyx-spacing-md);
       flex-direction: column;
       align-items: flex-start;

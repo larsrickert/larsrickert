@@ -14,14 +14,14 @@
   },
   "dependencies": {
     "@sit-onyx/icons": "0.1.0-alpha.0",
-    "sit-onyx": "1.0.0-alpha.89"
+    "sit-onyx": "1.0.0-alpha.105"
   },
   "devDependencies": {
     "@fontsource/nunito": "^5.0.18",
     "@nuxtjs/i18n": "^8.3.1",
     "nuxt": "^3.11.2",
     "prettier": "^3.2.5",
-    "sass": "^1.76.0",
+    "sass": "^1.77.2",
     "svg-country-flags": "^1.2.10"
   }
 }

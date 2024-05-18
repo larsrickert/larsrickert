@@ -1,4 +1,5 @@
 @use "sit-onyx/style.css";
+@use "sit-onyx/breakpoints.scss";
 @use "mixins.scss" as *;
 @use "theme.scss" as *;
 
@@ -38,7 +39,7 @@ p {
   margin: 0 auto;
   box-sizing: border-box;
 
-  @include breakpoint(md, min) {
+  @include breakpoints.screen(min, md) {
     padding: var(--onyx-spacing-3xl);
   }
 }

@@ -1,26 +1,3 @@
-/* Breakpoints map for loop access */
-$breakpoints: (
-  xs: 576px,
-  sm: 768px,
-  md: 992px,
-  lg: 1440px,
-  xl: 1920px,
-);
-
-/**
- * Breakpoints might be consistently applied via the defined $breakpoints (xs / s / m / l / ...)
- * @param {string} $breakpoint - the (globally defined) breakpoint
- * @param {string} $min-max - Whether to use min-width or max-width, values: min,max default: max
- * @example breakpoint(sm, min)
- */
-@mixin breakpoint($breakpoint, $min-max: max) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (#{$min-max}-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
-    }
-  }
-}
-
 @mixin text-gradient {
   background: var(--app-gradient);
   background-clip: text;

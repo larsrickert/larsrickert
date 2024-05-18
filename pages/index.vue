@@ -172,12 +172,12 @@ const allProjects = [
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .section {
   scroll-margin-top: var(--onyx-spacing-4xl);
 
-  @include breakpoint(md) {
+  @include breakpoints.screen(max, md) {
     scroll-margin-top: var(--onyx-spacing-3xl);
   }
 
@@ -194,7 +194,7 @@ const allProjects = [
     gap: var(--onyx-spacing-3xl);
     white-space: pre-wrap;
 
-    @include breakpoint(md) {
+    @include breakpoints.screen(max, md) {
       grid-template-columns: 1fr;
     }
   }
@@ -215,7 +215,7 @@ const allProjects = [
   gap: var(--onyx-spacing-3xl);
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 
-  @include breakpoint(sm) {
+  @include breakpoints.screen(max, sm) {
     grid-template-columns: 1fr;
     gap: var(--onyx-spacing-xl);
   }

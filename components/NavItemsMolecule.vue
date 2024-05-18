@@ -31,7 +31,7 @@ const handleNavItemClick = (href: string) => {
         <OnyxButton
           :label="item.label"
           mode="plain"
-          :variation="item.href === route.fullPath ? 'primary' : 'secondary'"
+          :color="item.href === route.fullPath ? 'primary' : 'neutral'"
           @click="handleNavItemClick(item.href)"
         />
       </ClientOnly>
@@ -40,7 +40,7 @@ const handleNavItemClick = (href: string) => {
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .items {
   list-style: none;
@@ -50,7 +50,7 @@ const handleNavItemClick = (href: string) => {
   gap: var(--onyx-spacing-md);
   flex-wrap: wrap;
 
-  @include breakpoint(xs) {
+  @include breakpoints.screen(max, xs) {
     gap: var(--onyx-spacing-2xs) var(--onyx-spacing-md);
   }
 

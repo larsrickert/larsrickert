@@ -14,12 +14,12 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 @use "sass:math";
-@use "~/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .headline {
   --height: var(--onyx-spacing-4xl);
 
-  @include breakpoint(sm) {
+  @include breakpoints.screen(max, sm) {
     --height: var(--onyx-spacing-2xl);
   }
 
