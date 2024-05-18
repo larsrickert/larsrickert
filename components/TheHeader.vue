@@ -39,8 +39,8 @@ const localeModel = computed({
       </nuxt-link>
 
       <div class="header__nav">
-        <LanguageSwitchMolecule v-model="localeModel" />
         <NavigationOrganism :nav-items="navItems" has-burger />
+        <LanguageSwitchMolecule v-model="localeModel" />
       </div>
     </div>
   </header>
@@ -63,7 +63,7 @@ const localeModel = computed({
     max-width: var(--onyx-grid-max-width);
     padding: var(--onyx-spacing-md) var(--onyx-grid-margin);
 
-    @include breakpoints.screen(max, xs) {
+    @include breakpoints.screen(max, sm) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -74,8 +74,9 @@ const localeModel = computed({
     justify-content: flex-end;
     align-items: center;
 
-    @include breakpoints.screen(max, xs) {
+    @include breakpoints.screen(max, sm) {
       gap: var(--onyx-spacing-xl);
+      flex-direction: row-reverse;
     }
   }
 
@@ -91,7 +92,7 @@ const localeModel = computed({
       height: 100%;
     }
 
-    @include breakpoints.screen(max, xs) {
+    @include breakpoints.screen(max, sm) {
       width: 10rem;
     }
 
