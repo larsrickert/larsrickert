@@ -11,7 +11,7 @@ const isOpen = defineModel<boolean>();
     </button>
 
     <div class="burger__content">
-      <slot />
+      <slot></slot>
     </div>
 
     <div class="burger__backdrop" @click="isOpen = false"></div>

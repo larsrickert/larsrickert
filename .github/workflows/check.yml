@@ -8,11 +8,9 @@ jobs:
     name: Check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Git repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,6 +21,9 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
+      - name: 🔍 Run eslint
+        run: pnpm lint
+
       - name: 🔍 Check formatting
         run: pnpm format:check
 
@@ -31,9 +32,3 @@ jobs:
 
       - name: 🛠️ Generate static site
         run: pnpm generate
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: .output/public

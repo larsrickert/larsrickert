@@ -7,10 +7,6 @@ const props = defineProps<{
   darkImage?: string;
   dark?: boolean;
 }>();
-
-const emit = defineEmits<{
-  "update:modelValue": [value: unknown];
-}>();
 </script>
 
 <template>

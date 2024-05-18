@@ -28,7 +28,7 @@ const swappingWords = [
       </p>
 
       <div class="hero__actions">
-        <slot />
+        <slot></slot>
       </div>
     </div>
 
