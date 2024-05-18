@@ -35,6 +35,6 @@ p {
 
 .page-content {
   max-width: var(--onyx-grid-max-width);
-  padding: var(--onyx-grid-margin);
+  padding: var(--onyx-spacing-xl) var(--onyx-grid-margin);
   margin-inline: var(--onyx-grid-margin-inline);
 }
