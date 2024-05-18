@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@fontsource/nunito": "^5.0.18",
-    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/eslint": "~0.3.13",
     "@nuxtjs/i18n": "^8.3.1",
     "lint-staged": "^15.2.2",
     "nuxt": "^3.11.2",
