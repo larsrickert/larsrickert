@@ -25,7 +25,7 @@ const localeModel = computed({
 </script>
 
 <template>
-  <header class="header onyx-grid-center">
+  <header class="header">
     <div class="header__content">
       <nuxt-link :to="localePath('/')" class="header__logo">
         <img
@@ -55,14 +55,13 @@ const localeModel = computed({
 
   &__content {
     width: 100%;
-    margin: 0 auto;
+    margin-inline: var(--onyx-grid-margin-inline);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--onyx-spacing-3xl);
     max-width: var(--onyx-grid-max-width);
-    box-sizing: border-box;
-    padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
+    padding: var(--onyx-spacing-md) var(--onyx-grid-margin);
 
     @include breakpoints.screen(max, xs) {
       gap: var(--onyx-spacing-xl);

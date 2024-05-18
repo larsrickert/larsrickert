@@ -35,11 +35,6 @@ p {
 
 .page-content {
   max-width: var(--onyx-grid-max-width);
-  padding: var(--onyx-spacing-xl);
-  margin: 0 auto;
-  box-sizing: border-box;
-
-  @include breakpoints.screen(min, md) {
-    padding: var(--onyx-spacing-3xl);
-  }
+  padding: var(--onyx-grid-margin);
+  margin-inline: var(--onyx-grid-margin-inline);
 }
