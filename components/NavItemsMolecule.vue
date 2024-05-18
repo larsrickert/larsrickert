@@ -1,13 +1,8 @@
 <script lang="ts" setup>
-import { OnyxButton } from "sit-onyx";
-
-export type NavItem = {
-  label: string;
-  href: string;
-};
+import { OnyxNavItem, type OnyxNavItemProps } from "sit-onyx";
 
 const props = defineProps<{
-  navItems: NavItem[];
+  navItems: OnyxNavItemProps[];
   vertical?: boolean;
 }>();
 
@@ -16,7 +11,6 @@ const emit = defineEmits<{
 }>();
 
 const router = useRouter();
-const route = useRoute();
 
 const handleNavItemClick = (href: string) => {
   emit("navItemClick");
@@ -28,11 +22,10 @@ const handleNavItemClick = (href: string) => {
   <ul class="items" :class="{ 'items--vertical': props.vertical }">
     <li v-for="item of navItems" :key="item.href">
       <ClientOnly>
-        <OnyxButton
-          :label="item.label"
-          mode="plain"
-          :color="item.href === route.fullPath ? 'primary' : 'neutral'"
-          @click="handleNavItemClick(item.href)"
+        <OnyxNavItem
+          v-bind="item"
+          :active="item.href === $route.fullPath"
+          @click="handleNavItemClick($event)"
         />
       </ClientOnly>
     </li>
@@ -45,7 +38,7 @@ const handleNavItemClick = (href: string) => {
 .items {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.125rem 0; // ensure nav item underline is displayed
   display: flex;
   gap: var(--onyx-spacing-md);
   flex-wrap: wrap;

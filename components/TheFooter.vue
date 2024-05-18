@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const navItems = computed<NavItem[]>(() => {
+const navItems = computed(() => {
   return [
     { label: t("imprint.pageName"), href: localePath({ name: "imprint" }) },
     {
       label: t("privacyPolicy.pageName"),
       href: localePath({ name: "privacy-policy" }),
     },
-  ];
+  ] satisfies OnyxNavItemProps[];
 });
 </script>
 

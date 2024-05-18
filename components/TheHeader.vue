@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const { t, locale, setLocale } = useI18n();
 const localePath = useLocalePath();
 
-const navItems = computed<NavItem[]>(() => {
+const navItems = computed(() => {
   return [
     { label: t("home.pageName"), href: localePath("/") },
     {
@@ -15,7 +15,7 @@ const navItems = computed<NavItem[]>(() => {
       label: t("home.projects"),
       href: localePath({ path: "/", hash: "#projects" }),
     },
-  ];
+  ] satisfies OnyxNavItemProps[];
 });
 
 const localeModel = computed({

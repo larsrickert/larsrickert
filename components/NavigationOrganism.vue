@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const props = defineProps<{
-  navItems: NavItem[];
+  navItems: OnyxNavItemProps[];
   /** If true, a burger menu will be display on mobile. */
   hasBurger?: boolean;
 }>();
