@@ -3,7 +3,7 @@ import { OnyxAppLayout } from "sit-onyx";
 </script>
 
 <template>
-  <OnyxAppLayout class="onyx-grid-max-md">
+  <OnyxAppLayout class="onyx-grid-max-md onyx-grid-center">
     <template #navBar> <TheHeader /> </template>
 
     <NuxtLayout>

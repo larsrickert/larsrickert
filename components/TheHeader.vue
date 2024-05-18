@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const { t, locale, setLocale } = useI18n();
 const localePath = useLocalePath();
 
-const navItems = computed<NavItem[]>(() => {
+const navItems = computed(() => {
   return [
     { label: t("home.pageName"), href: localePath("/") },
     {
@@ -15,7 +15,7 @@ const navItems = computed<NavItem[]>(() => {
       label: t("home.projects"),
       href: localePath({ path: "/", hash: "#projects" }),
     },
-  ];
+  ] satisfies OnyxNavItemProps[];
 });
 
 const localeModel = computed({
@@ -25,7 +25,7 @@ const localeModel = computed({
 </script>
 
 <template>
-  <header class="header onyx-grid-center">
+  <header class="header">
     <div class="header__content">
       <nuxt-link :to="localePath('/')" class="header__logo">
         <img
@@ -39,15 +39,15 @@ const localeModel = computed({
       </nuxt-link>
 
       <div class="header__nav">
-        <LanguageSwitchMolecule v-model="localeModel" />
         <NavigationOrganism :nav-items="navItems" has-burger />
+        <LanguageSwitchMolecule v-model="localeModel" />
       </div>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .header {
   box-shadow: var(--onyx-shadow-soft-right);
@@ -55,16 +55,15 @@ const localeModel = computed({
 
   &__content {
     width: 100%;
-    margin: 0 auto;
+    margin-inline: var(--onyx-grid-margin-inline);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--onyx-spacing-3xl);
     max-width: var(--onyx-grid-max-width);
-    box-sizing: border-box;
-    padding: var(--onyx-spacing-md) var(--onyx-spacing-lg);
+    padding: var(--onyx-spacing-md) var(--onyx-grid-margin);
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, sm) {
       gap: var(--onyx-spacing-xl);
     }
   }
@@ -75,8 +74,9 @@ const localeModel = computed({
     justify-content: flex-end;
     align-items: center;
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, sm) {
       gap: var(--onyx-spacing-xl);
+      flex-direction: row-reverse;
     }
   }
 
@@ -92,7 +92,7 @@ const localeModel = computed({
       height: 100%;
     }
 
-    @include breakpoint(xs) {
+    @include breakpoints.screen(max, sm) {
       width: 10rem;
     }
 

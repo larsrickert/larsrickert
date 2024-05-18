@@ -43,7 +43,8 @@ const swappingWords = [
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "@/assets/styles/mixins.scss";
+@use "sit-onyx/breakpoints.scss";
 
 .hero {
   // 5.5rem = header height
@@ -53,7 +54,7 @@ const swappingWords = [
   align-items: center;
   justify-content: space-between;
 
-  @include breakpoint(md) {
+  @include breakpoints.screen(max, md) {
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -63,7 +64,7 @@ const swappingWords = [
   }
 
   &__title {
-    @include text-gradient();
+    @include mixins.text-gradient();
     margin: 0;
     -webkit-box-reflect: below calc(-1 * var(--onyx-spacing-md))
       linear-gradient(transparent, rgba(0, 0, 0, 0.1));
@@ -71,7 +72,7 @@ const swappingWords = [
     line-height: 4rem;
     font-weight: 800;
 
-    @include breakpoint(sm) {
+    @include breakpoints.screen(max, sm) {
       font-size: 3rem;
       line-height: 3rem;
     }
@@ -94,11 +95,11 @@ const swappingWords = [
     line-height: $height;
 
     &::before {
-      @include text-gradient();
+      @include mixins.text-gradient();
       content: " </> ";
       padding-right: var(--onyx-spacing-2xs);
 
-      @include breakpoint(sm) {
+      @include breakpoints.screen(max, sm) {
         position: absolute;
         top: calc(-100% - var(--onyx-spacing-2xs));
         left: 0;
@@ -114,7 +115,7 @@ const swappingWords = [
   &__actions {
     margin-top: var(--onyx-spacing-xl);
 
-    @include breakpoint(md) {
+    @include breakpoints.screen(max, md) {
       text-align: center;
     }
   }
@@ -125,11 +126,11 @@ const swappingWords = [
     box-shadow: var(--onyx-shadow-soft-right);
     border-radius: var(--onyx-radius-full);
 
-    @include breakpoint(md) {
+    @include breakpoints.screen(max, md) {
       max-height: 18rem;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoints.screen(max, sm) {
       max-height: 12rem;
     }
   }

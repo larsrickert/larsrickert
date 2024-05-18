@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const props = defineProps<{
-  navItems: NavItem[];
+  navItems: OnyxNavItemProps[];
   /** If true, a burger menu will be display on mobile. */
   hasBurger?: boolean;
 }>();
@@ -29,11 +29,11 @@ const isBurgerOpen = ref(false);
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/styles/mixins.scss" as *;
+@use "sit-onyx/breakpoints.scss";
 
 .nav {
   :deep(.nav__items--has-burger) {
-    @include breakpoint(sm, max) {
+    @include breakpoints.screen(max, sm) {
       display: none;
     }
   }
@@ -42,7 +42,7 @@ const isBurgerOpen = ref(false);
     display: none;
     font-size: 1.25rem;
 
-    @include breakpoint(sm, max) {
+    @include breakpoints.screen(max, sm) {
       display: block;
     }
   }

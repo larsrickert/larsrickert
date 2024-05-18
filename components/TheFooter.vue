@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import type { NavItem } from "./NavItemsMolecule.vue";
+import type { OnyxNavItemProps } from "sit-onyx";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const navItems = computed<NavItem[]>(() => {
+const navItems = computed(() => {
   return [
     { label: t("imprint.pageName"), href: localePath({ name: "imprint" }) },
     {
       label: t("privacyPolicy.pageName"),
       href: localePath({ name: "privacy-policy" }),
     },
-  ];
+  ] satisfies OnyxNavItemProps[];
 });
 </script>
 
 <template>
   <footer class="footer">
-    <div class="footer__content onyx-grid-center">
+    <div class="footer__content">
       <span class="footer__copyright">
         Lars Rickert © 2023 - {{ t("global.allRightsReserved") }}</span
       >
@@ -27,14 +27,15 @@ const navItems = computed<NavItem[]>(() => {
 </template>
 
 <style lang="scss" scoped>
-@use "~/assets/styles/mixins.scss";
+@use "sit-onyx/breakpoints.scss";
 
 .footer {
   background-color: var(--onyx-color-base-background-blank);
 
   &__content {
     max-width: var(--onyx-grid-max-width);
-    padding: var(--onyx-spacing-3xs) var(--onyx-spacing-md);
+    margin-inline: var(--onyx-grid-margin-inline);
+    padding: var(--onyx-spacing-3xs) var(--onyx-grid-margin);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -42,14 +43,9 @@ const navItems = computed<NavItem[]>(() => {
     flex-wrap: wrap;
     gap: var(--onyx-spacing-xs) var(--onyx-spacing-xl);
 
-    @include mixins.breakpoint(sm, max) {
-      padding: var(--onyx-spacing-md);
+    @include breakpoints.screen(max, sm) {
+      padding: var(--onyx-grid-margin);
       flex-direction: column;
-      align-items: flex-start;
-
-      .footer__copyright {
-        padding: 0 var(--onyx-spacing-md);
-      }
     }
   }
 }
