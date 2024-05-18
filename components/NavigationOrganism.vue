@@ -18,7 +18,7 @@ const isBurgerOpen = ref(false);
       :nav-items="props.navItems"
     />
 
-    <BurgerMenu v-if="props.hasBurger" class="nav__burger" v-model="isBurgerOpen">
+    <BurgerMenu v-if="props.hasBurger" v-model="isBurgerOpen" class="nav__burger">
       <NavItemsMolecule
         :nav-items="props.navItems"
         vertical

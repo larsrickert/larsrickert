@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
   <div class="words">
-    <span class="words__item" v-for="word of props.words" :key="word">
+    <span v-for="word of props.words" :key="word" class="words__item">
       {{ word }}
     </span>
   </div>
