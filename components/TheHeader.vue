@@ -30,7 +30,7 @@ const localeModel = computed({
       <nuxt-link :to="localePath('/')" class="header__logo">
         <img
           v-if="locale.toLowerCase() === 'de'"
-          src="~/assets/images/logo.svg"
+          src="~/assets/images/logo-de.svg"
           alt="Logo"
           width="256"
           height="64"
