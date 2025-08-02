@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2025-08-02",
   modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
   css: ["~/assets/styles/index.scss"],
+  typescript: { typeCheck: "build" },
   app: {
     head: {
       title: "Lars Rickert | Webentwicklung",
@@ -17,9 +19,7 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    lazy: true,
     defaultLocale: "de",
-    langDir: "lang",
     detectBrowserLanguage: {
       useCookie: false,
     },
