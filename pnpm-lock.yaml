@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@sit-onyx/flags':
+        specifier: 1.0.0-beta.6
+        version: 1.0.0-beta.6
       '@sit-onyx/icons':
         specifier: 0.1.0-alpha.0
         version: 0.1.0-alpha.0
@@ -42,9 +45,6 @@ importers:
       simple-git-hooks:
         specifier: ^2.13.1
         version: 2.13.1
-      svg-country-flags:
-        specifier: ^1.2.10
-        version: 1.2.10
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -1525,6 +1525,10 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==, tarball: https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz}
     engines: {node: '>=18'}
+
+  '@sit-onyx/flags@1.0.0-beta.6':
+    resolution: {integrity: sha512-xyCzBNaumcXPyM6IbzVNjDhMLfj4XkWgO0eFRw5j2n047J0cjw67OTP86SJw1CyiAngeMwcme4Q1ltTuZhjKmA==, tarball: https://registry.npmjs.org/@sit-onyx/flags/-/flags-1.0.0-beta.6.tgz}
+    engines: {node: '>=20'}
 
   '@sit-onyx/icons@0.1.0-alpha.0':
     resolution: {integrity: sha512-rHMWnPy8GH2jSMPf3yQvqtQAhMSdyTNn+4GLW4Mk/xUcmRaZueO1OZSg5q1cyjj5q1fbFSRMCuscinUdk1Phwg==, tarball: https://registry.npmjs.org/@sit-onyx/icons/-/icons-0.1.0-alpha.0.tgz}
@@ -4420,9 +4424,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==, tarball: https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz}
     engines: {node: '>= 0.4'}
 
-  svg-country-flags@1.2.10:
-    resolution: {integrity: sha512-xrqwo0TYf/h2cfPvGpjdSuSguUbri4vNNizBnwzoZnX0xGo3O5nGJMlbYEp7NOYcnPGBm6LE2axqDWSB847bLw==, tarball: https://registry.npmjs.org/svg-country-flags/-/svg-country-flags-1.2.10.tgz}
-
   svgo@4.0.0:
     resolution: {integrity: sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==, tarball: https://registry.npmjs.org/svgo/-/svgo-4.0.0.tgz}
     engines: {node: '>=16'}
@@ -6476,6 +6477,8 @@ snapshots:
   '@sindresorhus/is@7.0.2': {}
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@sit-onyx/flags@1.0.0-beta.6': {}
 
   '@sit-onyx/icons@0.1.0-alpha.0': {}
 
@@ -9744,8 +9747,6 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  svg-country-flags@1.2.10: {}
 
   svgo@4.0.0:
     dependencies:
