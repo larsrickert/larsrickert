@@ -8,7 +8,6 @@ import discordPlayerPlusDark from "~/assets/images/discord-player-plus-dark.webp
 import discordPlayerPlusLight from "~/assets/images/discord-player-plus-light.webp";
 import friedhofsgaertnereiBell from "~/assets/images/friedhofsgaertnerei-bell.webp";
 import pgHerne from "~/assets/images/pg-herne.webp";
-import schreibmentoren from "~/assets/images/schreibmentoren.webp";
 import vorlesungsplanPlusDark from "~/assets/images/vorlesungsplan-plus-dark.webp";
 import vorlesungsplanPlusLight from "~/assets/images/vorlesungsplan-plus-light.webp";
 
@@ -41,11 +40,6 @@ const projects = [
     href: "https://www.friedhofsgaertnerei-bell.de",
   },
   {
-    name: "Die Schreibmentoren",
-    image: schreibmentoren,
-    href: "https://schreibmentoren.de",
-  },
-  {
     name: "Pestalozzi Gymnasium Herne",
     image: pgHerne,
     href: "https://pgherne.de",
@@ -54,31 +48,6 @@ const projects = [
 
 const isProjectsDark = ref(false);
 const yearsOfExperience = getTimeDiffInYears(new Date(2017, 1, 1));
-
-const allProjects = [
-  "Die Schreibmentoren",
-  "Quaiso (MediaBees)",
-  "Come back (MediaBees)",
-  "h2r Personalberatung (MediaBees)",
-  "Pattberg (MediaBees)",
-  "ZW-eck (MediaBees)",
-  "Budget App",
-  "Discord Player Plus",
-  "Vorlesungsplan+",
-  "Friedhofsgärtnerei Bell",
-  "Pestalozzi Gymnasium Herne",
-  "MH-Solution",
-  "Gitarrenunterricht Helmstadt",
-  "Rauner Stiftung (MediaBees)",
-  "Dental on Tour (MediaBees)",
-  "BoniPlus (MediaBees)",
-  "Goedicke (MediaBees)",
-  "StadtSportBund Herne (MediaBees)",
-  "Denise Iwanek (MediaBees)",
-  "Stapleline (MediaBees)",
-  "nginx proxy",
-  "Intersport",
-];
 </script>
 
 <template>
@@ -105,8 +74,8 @@ const allProjects = [
                 <OnyxLink href="https://it.schwarz" target="_blank">Schwarz IT</OnyxLink>
               </template>
 
-              <template #mediaBeesLink>
-                <OnyxLink href="https://mediabees.de" target="_blank">MediaBees</OnyxLink>
+              <template #onyxLink>
+                <OnyxLink href="https://onyx.schwarz" target="_blank">onyx</OnyxLink>
               </template>
 
               <template #email>
@@ -125,7 +94,6 @@ const allProjects = [
               <li>{{ $t("home.about.services.apps") }}</li>
               <li>{{ $t("home.about.services.componentLibrary") }}</li>
               <li>{{ $t("home.about.services.ciCd") }}</li>
-              <li>{{ $t("home.about.services.consulting") }}</li>
             </ul>
           </div>
 
@@ -134,10 +102,6 @@ const allProjects = [
               <FactCardMolecule
                 :value="yearsOfExperience"
                 :text="$t('home.about.facts.experience')"
-              />
-              <FactCardMolecule
-                :value="allProjects.length"
-                :text="$t('home.about.facts.completedProjects')"
               />
               <FactCardMolecule :value="2" :text="$t('home.about.facts.artificialIntelligence')" />
             </div>

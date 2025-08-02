@@ -16,7 +16,6 @@
     "hero": {
       "words": {
         "position": "Web Developer {'@'}Schwarz IT",
-        "freelancer": "Part time freelancer",
         "technicEnthusiast": "Technic enthusiast",
         "dogLover": "Dog lover",
         "location": "Based in Heilbronn, Germany"
@@ -28,7 +27,7 @@
       "headline": "About",
       "backgroundHeadline": "Resume",
       "description": {
-        "text": "Whether building large scale web applications for Lidl and Kaufland at {schwarzItLink} or developing individual solutions for smaller companies at {mediaBeesLink}. Whether small or big: I'd be happy to guide you along your next project with my expertise as a freelancer.\n\nIf you'd like to collaborate on any of the following services, feel free to {email}:",
+        "text": "I am working at {schwarzItLink} where I am a core team member of {onyxLink}, a Open Source design system written in Vue.js. In my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as freelancer.\n\nIf you'd like to collaborate on any of the following services, feel free to {email}:",
         "emailText": "leave me a message"
       },
       "services": {
@@ -39,8 +38,7 @@
         "wordPress": "WordPress plugin / theme development",
         "apps": "Hybrid Windows / Mac / iOS / Android app development",
         "componentLibrary": "Creating a UI component library",
-        "ciCd": "CI / CD and web hosting",
-        "consulting": "IT consulting"
+        "ciCd": "CI / CD and web hosting"
       },
       "facts": {
         "completedProjects": "Completed projects",
