@@ -19,10 +19,6 @@ const props = defineProps<{
 .headline {
   --height: var(--onyx-spacing-4xl);
 
-  @include breakpoints.screen(max, sm) {
-    --height: var(--onyx-spacing-2xl);
-  }
-
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -31,6 +27,10 @@ const props = defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include breakpoints.screen(max, sm) {
+    --height: var(--onyx-spacing-2xl);
+  }
 
   &__front {
     font-size: calc(var(--height) / 2);
