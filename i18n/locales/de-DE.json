@@ -16,7 +16,6 @@
     "hero": {
       "words": {
         "position": "Webentwickler {'@'}Schwarz IT",
-        "freelancer": "Teilzeit-Freelancer",
         "technicEnthusiast": "Technik-Enthusiast",
         "dogLover": "Hundeliebhaber",
         "location": "Aus Heilbronn, Deutschland"
@@ -28,7 +27,7 @@
       "headline": "Über mich",
       "backgroundHeadline": "Resume",
       "description": {
-        "text": "Ob groß skalierende Webanwendungen für Lidl und Kaufland bei {schwarzItLink} oder Individuallösungen für kleinere Unternehmen bei {mediaBeesLink}. Egal ob Klein oder Groß: Gerne begleite ich Sie mit meiner Expertise als Freelancer bei Ihrem nächsten Projekt.\n\nWenn Sie an einer Zusammenarbeit bei einer der folgenden Services interessiert sind, {email} gerne:",
+        "text": "Ich arbeite bei {schwarzItLink}, wo ich ein Teil des Kernteams von {onyxLink} bin, einem Open Source Vue.js Design-System. In meiner Freizeit setze ich gerne coole und hilfreiche Hobby-Projekte um. In der Vergangenheit habe ich als Nebentätigkeit einige Jahre in einer Werbeagentur sowie als Freelancer gearbeitet.\n\nWenn Sie an einer Zusammenarbeit bei einer der folgenden Services interessiert sind, {email} gerne:",
         "emailText": "kontaktieren Sie mich"
       },
       "services": {
@@ -39,8 +38,7 @@
         "wordPress": "WordPress Plugin-/Theme-Entwicklung",
         "apps": "Hybride Windows / Mac / iOS / Android App-Entwicklung",
         "componentLibrary": "Entwickeln einer UI-Komponentenbibliothek",
-        "ciCd": "CI / CD und Webhosting",
-        "consulting": "IT-Beratung"
+        "ciCd": "CI / CD und Webhosting"
       },
       "facts": {
         "completedProjects": "Abgeschlossene Projekte",

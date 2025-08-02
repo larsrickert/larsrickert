@@ -13,8 +13,6 @@ import { OnyxHeadline, OnyxLink } from "sit-onyx";
     <p>
       Lars Rickert<br />
       Webentwicklung Lars Rickert<br />
-      Panoramastr. 11<br />
-      74177 Bad Friedrichshall
     </p>
 
     <OnyxHeadline is="h2">Kontakt</OnyxHeadline>

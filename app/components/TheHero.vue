@@ -3,7 +3,6 @@ const { t } = useI18n();
 
 const swappingWords = [
   t("home.hero.words.position"),
-  t("home.hero.words.freelancer"),
   t("home.hero.words.technicEnthusiast"),
   t("home.hero.words.location"),
   t("home.hero.words.dogLover"),
