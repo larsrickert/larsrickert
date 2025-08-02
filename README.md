@@ -8,7 +8,7 @@
 
 I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster. My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress. Besides that, I have also experiences in AI / machine learning which was core of my bachelor thesis.
 
-I am working at [Schwarz IT](https://it.schwarz) where I am a core team member of [onyx](https://onyx.schwarz), a Open Source design system written in Vue.js. in my free time, I also enjoy working on some fun and useful personal projects.
+I am working at [Schwarz IT](https://it.schwarz) where I am a core team member of [onyx](https://onyx.schwarz), a Open Source design system written in Vue.js. in my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as a freelancer.
 
 If you'd like to collaborate on any of the following services, feel free to leave me a message to the above email address:
 

@@ -27,7 +27,7 @@
       "headline": "About",
       "backgroundHeadline": "Resume",
       "description": {
-        "text": "I am working at {schwarzItLink} where I am a core team member of {onyxLink}, a Open Source design system written in Vue.js. In my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as freelancer.\n\nIf you'd like to collaborate on any of the following services, feel free to {email}:",
+        "text": "I am working at {schwarzItLink} where I am a core team member of {onyxLink}, a Open Source design system written in Vue.js. In my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as a freelancer.\n\nIf you'd like to collaborate on any of the following services, feel free to {email}:",
         "emailText": "leave me a message"
       },
       "services": {
