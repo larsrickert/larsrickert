@@ -7,5 +7,5 @@ useHead({
 </script>
 
 <template>
-  <OnyxHeadline is="h1">{{ $t("home") }}</OnyxHeadline>
+  <OnyxHeadline is="h1" class="text--gradient">{{ $t("home") }}</OnyxHeadline>
 </template>
