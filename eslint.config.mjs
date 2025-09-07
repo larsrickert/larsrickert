@@ -6,6 +6,7 @@ export default withNuxt([
   {
     files: ["**/*.vue"],
     rules: {
+      // do not use self closing tags for regular HTML tags
       // see https://eslint.vuejs.org/rules/html-self-closing
       "vue/html-self-closing": [
         "error",
