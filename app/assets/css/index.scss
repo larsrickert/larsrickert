@@ -1,5 +1,2 @@
 // global shared app styles here...
-:root {
-  // replace the default Source Sans 3 onyx font with Nunito
-  --onyx-font-family-Source-Sans-3-Variable: "Nunito", sans-serif;
-}
+@use "theme";
