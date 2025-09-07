@@ -1,5 +1,6 @@
 // global shared app styles here...
 @use "theme";
+@use "fonts";
 
 :root {
   --lr-color-gradient: linear-gradient(
@@ -7,15 +8,4 @@
     var(--lr-color-green-600),
     var(--lr-color-blue-600)
   );
-}
-
-.text {
-  &--gradient {
-    background: var(--lr-color-gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: max-content;
-    -webkit-box-reflect: below calc(-1 * var(--onyx-spacing-md))
-      linear-gradient(transparent, var(--onyx-color-opacity-soft));
-  }
 }
