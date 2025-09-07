@@ -3,7 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-09-07",
   devtools: { enabled: true },
   typescript: { typeCheck: "build" },
-  modules: ["@sit-onyx/nuxt", "@nuxtjs/i18n", "@nuxt/eslint", "@nuxtjs/color-mode"],
+  modules: [
+    "@sit-onyx/nuxt",
+    "@nuxtjs/i18n",
+    "@nuxt/eslint",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/google-fonts",
+  ],
   css: ["~/assets/css/index.scss"],
   app: {
     head: {
@@ -20,6 +26,13 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: "",
+  },
+  googleFonts: {
+    download: true,
+    families: {
+      Nunito: true,
+      "Source Code Pro": true,
+    },
   },
   nitro: {
     compressPublicAssets: true,
