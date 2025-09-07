@@ -1,3 +1,10 @@
 {
-  "message": "Hallo Welt"
+  "home": "Startseite",
+  "error": {
+    "backToHome": "Zurück zur Startseite",
+    "technicalDetails": "Technische Fehler-Informationen"
+  },
+  "colorScheme": {
+    "change": "Erscheinungsbild ändern"
+  }
 }

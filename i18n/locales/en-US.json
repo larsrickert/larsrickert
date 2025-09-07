@@ -1,3 +1,10 @@
 {
-  "message": "Hello World"
+  "home": "Home",
+  "error": {
+    "backToHome": "Back to home",
+    "technicalDetails": "Technical error details"
+  },
+  "colorScheme": {
+    "change": "Change color scheme"
+  }
 }

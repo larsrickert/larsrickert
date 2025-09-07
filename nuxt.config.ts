@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-09-07",
   devtools: { enabled: true },
   typescript: { typeCheck: "build" },
-  modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
+  modules: ["@sit-onyx/nuxt", "@nuxtjs/i18n", "@nuxt/eslint", "@nuxtjs/color-mode"],
   css: ["~/assets/css/index.scss"],
   app: {
     head: {
@@ -17,6 +17,9 @@ export default defineNuxtConfig({
       { code: "en-US", file: "en-US.json", name: "English" },
       { code: "de-DE", file: "de-DE.json", name: "Deutsch" },
     ],
+  },
+  colorMode: {
+    classSuffix: "",
   },
   nitro: {
     compressPublicAssets: true,
