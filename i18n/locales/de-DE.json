@@ -1,10 +1,17 @@
 {
-  "home": "Startseite",
+  "home": {
+    "pageName": "Startseite",
+    "hero": {
+      "description": "Seit 2017 arbeite ich als Webentwickler und habe dabei schnell meine Leidenschaft für die Full-Stack-Webentwicklung gefunden. Besonders liebe ich es, an coolen kompletten Projekten zu arbeiten, die Menschen helfen, Dinge schneller zu erledigen. Meine Expertise liegt in Vue.js, TypeScript und CSS/Sass sowie golang, PHP und WordPress."
+    }
+  },
   "error": {
     "backToHome": "Zurück zur Startseite",
     "technicalDetails": "Technische Fehler-Informationen"
   },
   "colorScheme": {
     "change": "Erscheinungsbild ändern"
-  }
+  },
+  "iAmA": "Ich bin",
+  "developer": "Entwickler"
 }
