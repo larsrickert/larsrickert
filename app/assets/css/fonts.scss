@@ -1,0 +1,17 @@
+.text {
+  &--gradient {
+    background: var(--lr-color-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--reflect {
+    -webkit-box-reflect: below calc(-1 * var(--onyx-spacing-md))
+      linear-gradient(transparent, var(--onyx-color-opacity-soft));
+  }
+
+  &--large {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}

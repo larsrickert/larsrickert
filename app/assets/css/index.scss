@@ -1,3 +1,11 @@
-body {
-  margin: 0;
+// global shared app styles here...
+@use "theme";
+@use "fonts";
+
+:root {
+  --lr-color-gradient: linear-gradient(
+    to right,
+    var(--lr-color-green-600),
+    var(--lr-color-blue-600)
+  );
 }

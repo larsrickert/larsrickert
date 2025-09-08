@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <OnyxPageLayout>
     <slot></slot>
-  </main>
+  </OnyxPageLayout>
 </template>

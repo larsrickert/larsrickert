@@ -1,3 +1,17 @@
 {
-  "message": "Hello World"
+  "home": {
+    "pageName": "Home",
+    "hero": {
+      "description": "I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster. My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress."
+    }
+  },
+  "error": {
+    "backToHome": "Back to home",
+    "technicalDetails": "Technical error details"
+  },
+  "colorScheme": {
+    "change": "Change color scheme"
+  },
+  "iAmA": "I am a",
+  "developer": "developer"
 }
