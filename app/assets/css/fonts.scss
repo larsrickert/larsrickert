@@ -10,7 +10,21 @@
       linear-gradient(transparent, var(--onyx-color-opacity-soft));
   }
 
-  &--large {
+  &--soft {
+    color: var(--onyx-color-text-icons-neutral-soft);
+  }
+
+  &--xl {
+    font-size: var(--onyx-font-size-xl);
+    line-height: var(--onyx-font-line-height-xl);
+  }
+
+  &--2xl {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  &--3xl {
     font-size: 4rem;
     line-height: 4rem;
   }

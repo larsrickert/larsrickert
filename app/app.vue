@@ -8,6 +8,8 @@
       <NuxtRouteAnnouncer />
       <!-- using a slot here so we can re-use the app layout inside error.vue -->
       <slot> <NuxtPage /></slot>
+
+      <CursorGlow />
     </NuxtLayout>
   </OnyxAppLayout>
 </template>
