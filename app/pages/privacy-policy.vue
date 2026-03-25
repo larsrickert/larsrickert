@@ -109,20 +109,6 @@ import { OnyxHeadline, OnyxLink } from "sit-onyx";
       E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff
       durch Dritte ist nicht möglich.
     </p>
-    <OnyxHeadline is="h3">Hinweis zur verantwortlichen Stelle</OnyxHeadline>
-    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-    <p>
-      Lars Rickert<br />
-      Panoramastr. 11<br />
-      74177 Bad Friedrichshall
-    </p>
-
-    <p>E-Mail: info@lars-rickert.de</p>
-    <p>
-      Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam
-      mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B.
-      Namen, E-Mail-Adressen o. ä.) entscheidet.
-    </p>
 
     <OnyxHeadline is="h3">Speicherdauer</OnyxHeadline>
     <p>

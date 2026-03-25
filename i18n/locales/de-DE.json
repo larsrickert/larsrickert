@@ -27,8 +27,7 @@
       "headline": "Über mich",
       "backgroundHeadline": "Resume",
       "description": {
-        "text": "Ich arbeite bei {schwarzItLink}, wo ich ein Teil des Kernteams von {onyxLink} bin, einem Open Source Vue.js Design-System. In meiner Freizeit setze ich gerne coole und hilfreiche Hobby-Projekte um. In der Vergangenheit habe ich als Nebentätigkeit einige Jahre in einer Werbeagentur sowie als Freelancer gearbeitet.\n\nWenn Sie an einer Zusammenarbeit bei einer der folgenden Services interessiert sind, {email} gerne:",
-        "emailText": "kontaktieren Sie mich"
+        "text": "Ich arbeite bei {schwarzItLink}, wo ich ein Teil des Kernteams von {onyxLink} bin, einem Open Source Vue.js Design-System. In meiner Freizeit setze ich gerne coole und hilfreiche Hobby-Projekte um. In der Vergangenheit habe ich als Nebentätigkeit einige Jahre in einer Werbeagentur sowie als Freelancer gearbeitet."
       },
       "services": {
         "vue": "Vue.js Frontend-Entwicklung",

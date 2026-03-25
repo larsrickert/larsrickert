@@ -77,12 +77,6 @@ const yearsOfExperience = getTimeDiffInYears(new Date(2017, 1, 1));
               <template #onyxLink>
                 <OnyxLink href="https://onyx.schwarz" target="_blank">onyx</OnyxLink>
               </template>
-
-              <template #email>
-                <OnyxLink href="mailto:info@lars-rickert.de">
-                  {{ $t("home.about.description.emailText") }}
-                </OnyxLink>
-              </template>
             </i18n-t>
 
             <ul>

@@ -10,16 +10,7 @@ import { OnyxHeadline, OnyxLink } from "sit-onyx";
 
     <OnyxHeadline is="h2">Angaben gemäß § 5 TMG</OnyxHeadline>
 
-    <p>
-      Lars Rickert<br />
-      Webentwicklung Lars Rickert<br />
-    </p>
-
-    <OnyxHeadline is="h2">Kontakt</OnyxHeadline>
-    <p>
-      E-Mail:
-      <OnyxLink href="mailto:info@lars-rickert.de"> info@lars-rickert.de </OnyxLink>
-    </p>
+    <p>Lars Rickert<br /></p>
 
     <OnyxHeadline is="h2">EU-Streitschlichtung</OnyxHeadline>
     <p>

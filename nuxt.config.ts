@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   typescript: { typeCheck: "build" },
   app: {
     head: {
-      title: "Lars Rickert | Webentwicklung",
+      title: "Lars Rickert",
       link: [{ rel: "icon", href: "/favicon.svg" }],
       htmlAttrs: {
         class: "dark",
