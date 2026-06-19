@@ -2,36 +2,33 @@
   "name": "larsrickert",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "prepare": "simple-git-hooks",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@sit-onyx/flags": "1.0.0-beta.6",
-    "@sit-onyx/icons": "0.1.0-alpha.0",
-    "sit-onyx": "1.0.0-alpha.105"
+    "@nuxtjs/i18n": "^10.4.0",
+    "nuxt": "^4.4.8",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@fontsource/nunito": "^5.2.6",
-    "@nuxt/eslint": "^1.7.1",
-    "@nuxtjs/i18n": "^10.0.3",
-    "eslint": "^9.32.0",
-    "lint-staged": "^16.1.2",
-    "nuxt": "^4.0.2",
-    "prettier": "^3.6.2",
-    "sass": "^1.89.2",
+    "@nuxt/eslint": "^1.16.0",
+    "eslint": "^10.5.0",
+    "lint-staged": "^17.0.7",
+    "oxfmt": "~0.55.0",
+    "sass-embedded": "^1.100.0",
     "simple-git-hooks": "^2.13.1",
-    "typescript": "~5.8.3",
-    "vue-tsc": "^3.0.5"
+    "typescript": "~6.0.3",
+    "vite": "catalog:",
+    "vue-tsc": "^3.3.5"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -39,7 +36,8 @@
   "lint-staged": {
     "*": [
       "eslint --fix",
-      "prettier --write --ignore-unknown"
+      "oxfmt --no-error-on-unmatched-pattern"
     ]
-  }
+  },
+  "packageManager": "pnpm@11.8.0"
 }

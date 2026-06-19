@@ -1,21 +1,23 @@
 # build stage
-FROM node:22-alpine as build
+FROM node:24-alpine AS build
 WORKDIR /app
 
-COPY pnpm-lock.yaml package.json ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # install pnpm as defined in package.json
-RUN npm i -g $(node -p "require('./package.json').packageManager")
+RUN corepack enable
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 COPY . ./
-RUN pnpm install --frozen-lockfile
-
+RUN pnpm run postinstall
 RUN pnpm build
-RUN pnpm generate
 
 # production stage
-FROM nginx:stable-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM node:24-alpine
+WORKDIR /app
+
+USER node
+COPY --from=build --chown=node:node /app/.output ./.output
+
+EXPOSE 3000
+CMD ["node", ".output/server/index.mjs"]

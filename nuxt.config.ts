@@ -1,42 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-08-02",
-  modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
-  css: ["~/assets/styles/index.scss"],
+  compatibilityDate: "2026-06-19",
+  devtools: { enabled: true },
   typescript: { typeCheck: "build" },
-  app: {
-    head: {
-      title: "Lars Rickert",
-      link: [{ rel: "icon", href: "/favicon.svg" }],
-      htmlAttrs: {
-        class: "dark",
-      },
-    },
-  },
-  router: {
-    options: {
-      scrollBehaviorType: "smooth",
-    },
-  },
+  modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
+  css: ["~/assets/css/index.scss"],
   i18n: {
-    defaultLocale: "de",
-    detectBrowserLanguage: {
-      useCookie: false,
-    },
-    locales: [
-      { code: "de", file: "de-DE.json", name: "Deutsch" },
-      { code: "en", file: "en-US.json", name: "English" },
-    ],
-    customRoutes: "config",
-    pages: {
-      imprint: {
-        de: "/impressum",
-        en: "/imprint",
-      },
-      "privacy-policy": {
-        de: "/datenschutzerklaerung",
-        en: "/privacy-policy",
-      },
-    },
+    defaultLocale: "en-US",
+    locales: [{ code: "en-US", file: "en-US.json", name: "English" }],
+  },
+  nitro: {
+    compressPublicAssets: true,
   },
 });
