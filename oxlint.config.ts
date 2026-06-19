@@ -19,4 +19,8 @@ export default defineConfig({
     },
   ],
   plugins: ["eslint", "typescript", "unicorn", "oxc", "vue"],
+  rules: {
+    "no-ternary": "off",
+    "sort-imports": "off",
+  },
 });

@@ -1,6 +1,15 @@
 <template>
-  <NuxtLayout>
+  <OnyxAppLayout class="onyx-grid-max-lg onyx-grid-center">
+    <template #navBar>
+      <NavBar />
+    </template>
+
     <NuxtRouteAnnouncer />
-    <NuxtPage />
-  </NuxtLayout>
+
+    <NuxtLayout>
+      <slot>
+        <NuxtPage />
+      </slot>
+    </NuxtLayout>
+  </OnyxAppLayout>
 </template>

@@ -8,5 +8,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
-  }
+  },
+  "i18n-ally.keystyle": "nested"
 }

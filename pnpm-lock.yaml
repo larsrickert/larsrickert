@@ -11,12 +11,33 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/inter':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/playfair-display':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/dm-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@nuxtjs/color-mode':
+        specifier: ^4.0.1
+        version: 4.0.1(magicast@0.5.3)
       '@nuxtjs/i18n':
         specifier: ^10.4.0
         version: 10.4.0(@netlify/blobs@9.1.2)(@vue/compiler-dom@3.5.38)(db0@0.3.4)(eslint@10.5.0(jiti@2.7.0))(ioredis@5.11.1)(magicast@0.5.3)(rollup@4.62.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.38(typescript@6.0.3))
+      '@sit-onyx/icons':
+        specifier: ^1.10.1
+        version: 1.10.1
+      '@sit-onyx/nuxt':
+        specifier: ^1.1.0
+        version: 1.1.0(sit-onyx@1.15.0(@sit-onyx/icons@1.10.1)(typescript@6.0.3)(vue@3.5.38(typescript@6.0.3)))
       nuxt:
         specifier: ^4.4.8
         version: 4.4.8(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.6)(@types/node@24.1.0)(@vue/compiler-sfc@3.5.38)(cac@6.7.14)(db0@0.3.4)(esbuild@0.28.1)(eslint@10.5.0(jiti@2.7.0))(ioredis@5.11.1)(magicast@0.5.3)(optionator@0.9.4)(oxlint@1.70.0)(rolldown@1.0.3)(rollup-plugin-visualizer@7.0.1(rolldown@1.0.3)(rollup@4.62.0))(rollup@4.62.0)(sass-embedded@1.100.0)(sass@1.100.0)(srvx@0.11.16)(terser@5.48.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue-tsc@3.3.5(typescript@6.0.3))(yaml@2.9.0)
+      sit-onyx:
+        specifier: ^1.15.0
+        version: 1.15.0(@sit-onyx/icons@1.10.1)(typescript@6.0.3)(vue@3.5.38(typescript@6.0.3))
       vue:
         specifier: ^3.5.38
         version: 3.5.38(typescript@6.0.3)
@@ -587,6 +608,15 @@ packages:
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==, tarball: https://registry.npmjs.org/@fastify/busboy/-/busboy-3.2.0.tgz}
 
+  '@fontsource-variable/inter@5.2.8':
+    resolution: {integrity: sha512-kOfP2D+ykbcX/P3IFnokOhVRNoTozo5/JxhAIVYLpea/UBmCQ/YWPBfWIDuBImXX/15KH+eKh4xpEUyS2sQQGQ==, tarball: https://registry.npmjs.org/@fontsource-variable/inter/-/inter-5.2.8.tgz}
+
+  '@fontsource-variable/playfair-display@5.2.8':
+    resolution: {integrity: sha512-ZzVIXPOrL85yyOvZYoBzUszIJM+xKkHqni4IYn2CVLaGQQdJR8sBeC8yFNgjxSJ7ludTwta8qpULeOFuk5X75A==, tarball: https://registry.npmjs.org/@fontsource-variable/playfair-display/-/playfair-display-5.2.8.tgz}
+
+  '@fontsource/dm-mono@5.2.7':
+    resolution: {integrity: sha512-Ma1az2atTVgQWuOWwjuxx26p/6A6CU9HBNKq1CFV6YKpKhpswnf9ry9Ql4+T6bTZzkdtSfS6tjJvqZOljVzIFQ==, tarball: https://registry.npmjs.org/@fontsource/dm-mono/-/dm-mono-5.2.7.tgz}
+
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==, tarball: https://registry.npmjs.org/@humanfs/core/-/core-0.19.2.tgz}
     engines: {node: '>=18.18.0'}
@@ -847,6 +877,9 @@ packages:
         optional: true
       rollup-plugin-visualizer:
         optional: true
+
+  '@nuxtjs/color-mode@4.0.1':
+    resolution: {integrity: sha512-eiA7hWXi5zNHaYKyJFCGF6i0wFZtuvR7KDXZ6jiSvwxjCpRFwphrw0MOSmNfArTSSsT1wpW+/2H92cejeVfUlg==, tarball: https://registry.npmjs.org/@nuxtjs/color-mode/-/color-mode-4.0.1.tgz}
 
   '@nuxtjs/i18n@10.4.0':
     resolution: {integrity: sha512-GK/3YA/CQ2eZTYopHyxYfXYi2svZALvg01VFmUNJt2l3IMk/m+dDRtI+RQtafz0be0Pq+NSgoBb/oZNcfu0CUg==, tarball: https://registry.npmjs.org/@nuxtjs/i18n/-/i18n-10.4.0.tgz}
@@ -2177,6 +2210,16 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==, tarball: https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-4.0.0.tgz}
     engines: {node: '>=18'}
+
+  '@sit-onyx/icons@1.10.1':
+    resolution: {integrity: sha512-+fyijXfDbYUuAuO5+kr3yH7vNVXrZ/rdcMcKwNs0mpA7lILbTKJCLc2KcndGZokXfbQseI3nEuvaFPztr8x5yQ==, tarball: https://registry.npmjs.org/@sit-onyx/icons/-/icons-1.10.1.tgz}
+    engines: {node: '>=20'}
+
+  '@sit-onyx/nuxt@1.1.0':
+    resolution: {integrity: sha512-rp/1aeaeF1icf4OcbjC7mE1u2VHkOSyoLTnFL9aM/bxkTdJ4Avpj/iavWb0WDSnIPCFA0oWnqPYABQSmfrFLNA==, tarball: https://registry.npmjs.org/@sit-onyx/nuxt/-/nuxt-1.1.0.tgz}
+    engines: {node: '>=20'}
+    peerDependencies:
+      sit-onyx: ^1.15.0
 
   '@speed-highlight/core@1.2.17':
     resolution: {integrity: sha512-Z92FwKpCtfaW1V0jTU/fh3QzYEZN8wDwrzRIBoADCJfn4mJCNcJN/XegifX7BDrQ8/h9Xh/JnbyMchL0FqXrkg==, tarball: https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.17.tgz}
@@ -4463,6 +4506,14 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==, tarball: https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz}
 
+  sit-onyx@1.15.0:
+    resolution: {integrity: sha512-J9k/vWGHf+1t8rjyI7iSUO4ZG4w1lKiI4nXzWNJ7E7mHV0vZp2z8RQhqO5EPYnFPWC/VAQkRmdRP6zq39BZrag==, tarball: https://registry.npmjs.org/sit-onyx/-/sit-onyx-1.15.0.tgz}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@sit-onyx/icons': ^1.10.1
+      typescript: '>= 5.2.2'
+      vue: '>= 3.5.0'
+
   slash@5.1.0:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==, tarball: https://registry.npmjs.org/slash/-/slash-5.1.0.tgz}
     engines: {node: '>=14.16'}
@@ -5528,6 +5579,12 @@ snapshots:
   '@fastify/busboy@3.2.0':
     optional: true
 
+  '@fontsource-variable/inter@5.2.8': {}
+
+  '@fontsource-variable/playfair-display@5.2.8': {}
+
+  '@fontsource/dm-mono@5.2.7': {}
+
   '@humanfs/core@0.19.2':
     dependencies:
       '@humanfs/types': 0.15.0
@@ -6007,6 +6064,16 @@ snapshots:
       - typescript
       - vue-tsc
       - yaml
+
+  '@nuxtjs/color-mode@4.0.1(magicast@0.5.3)':
+    dependencies:
+      '@nuxt/kit': 4.4.8(magicast@0.5.3)
+      exsolve: 1.0.8
+      pathe: 2.0.3
+      pkg-types: 2.3.1
+      semver: 7.8.4
+    transitivePeerDependencies:
+      - magicast
 
   '@nuxtjs/i18n@10.4.0(@netlify/blobs@9.1.2)(@vue/compiler-dom@3.5.38)(db0@0.3.4)(eslint@10.5.0(jiti@2.7.0))(ioredis@5.11.1)(magicast@0.5.3)(rollup@4.62.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.38(typescript@6.0.3))':
     dependencies:
@@ -6794,6 +6861,12 @@ snapshots:
   '@sindresorhus/is@7.2.0': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
+
+  '@sit-onyx/icons@1.10.1': {}
+
+  '@sit-onyx/nuxt@1.1.0(sit-onyx@1.15.0(@sit-onyx/icons@1.10.1)(typescript@6.0.3)(vue@3.5.38(typescript@6.0.3)))':
+    dependencies:
+      sit-onyx: 1.15.0(@sit-onyx/icons@1.10.1)(typescript@6.0.3)(vue@3.5.38(typescript@6.0.3))
 
   '@speed-highlight/core@1.2.17': {}
 
@@ -9494,6 +9567,12 @@ snapshots:
       totalist: 3.0.1
 
   sisteransi@1.0.5: {}
+
+  sit-onyx@1.15.0(@sit-onyx/icons@1.10.1)(typescript@6.0.3)(vue@3.5.38(typescript@6.0.3)):
+    dependencies:
+      '@sit-onyx/icons': 1.10.1
+      typescript: 6.0.3
+      vue: 3.5.38(typescript@6.0.3)
 
   slash@5.1.0: {}
 

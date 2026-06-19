@@ -1,5 +1,5 @@
+<script lang="ts" setup></script>
+
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <OnyxHeadline is="h1">Hello World</OnyxHeadline>
 </template>

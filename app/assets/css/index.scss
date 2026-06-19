@@ -1,3 +1,9 @@
-body {
-  margin: 0;
+:root {
+  --onyx-font-family-Source-Sans-3-Variable: "Inter Variable", sans-serif;
+  --onyx-font-family-Source-Code-Pro-Variable: "DM Mono", monospace;
+  --onyx-font-family-h1:
+    "Playfair Display Variable", var(--onyx-font-family-Source-Sans-3-Variable);
+  --onyx-font-family-h2: var(--onyx-font-family-h1);
+  --onyx-font-family-h3: var(--onyx-font-family-h1);
+  --onyx-font-family-h4: var(--onyx-font-family-h1);
 }
