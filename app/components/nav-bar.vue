@@ -12,3 +12,9 @@ const localePath = useLocalePath();
     </template>
   </OnyxNavBar>
 </template>
+
+<style lang="scss" scoped>
+:deep(.onyx-nav-bar__app) {
+  color: var(--onyx-color-text-icons-primary-intense);
+}
+</style>

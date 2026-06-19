@@ -1,5 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+definePageMeta({ layout: false });
+</script>
 
 <template>
-  <OnyxHeadline is="h1">Hello World</OnyxHeadline>
+  <OnyxPageLayout no-padding>
+    <HeroSection />
+
+    <div class="onyx-grid-layout">
+      <OnyxHeadline is="h1">Hello World</OnyxHeadline>
+    </div>
+  </OnyxPageLayout>
 </template>

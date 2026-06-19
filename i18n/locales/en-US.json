@@ -3,6 +3,13 @@
     "about": "About"
   },
   "projects": {
-    "project": "Project | Projects"
-  }
+    "project": "Project | Projects",
+    "view": "View projects"
+  },
+  "hero": {
+    "subtitle": "Software Engineer · Web Development",
+    "description": "I build thoughtful web experiences — from the pixel to the pipeline. Currently crafting tools that make complex ideas feel effortless."
+  },
+  "learnMore": "Learn more",
+  "scroll": "Scroll"
 }
