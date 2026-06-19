@@ -47,7 +47,7 @@
 
     @starting-style {
       opacity: 0;
-      transform: translateY(1.5rem);
+      transform: translateY(var(--onyx-density-lg));
     }
   }
 
@@ -63,13 +63,11 @@
     line-height: 1.05;
     margin-bottom: var(--onyx-density-xl);
     font-size: clamp(3.5rem, 9vw, 8rem);
-    color: var(--onyx-color-text-icons-neutral-intense);
   }
 
   &__description {
     max-width: 40rem;
     margin-bottom: var(--onyx-density-2xl);
-    font-weight: 300;
     color: var(--onyx-color-text-icons-neutral-soft);
   }
 

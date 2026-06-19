@@ -7,7 +7,7 @@ definePageMeta({ layout: false });
     <HeroSection />
 
     <div class="onyx-grid-layout">
-      <OnyxHeadline is="h1">Hello World</OnyxHeadline>
+      <AboutSection />
     </div>
   </OnyxPageLayout>
 </template>

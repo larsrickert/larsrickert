@@ -10,6 +10,10 @@
   --onyx-radius-component-button: var(--onyx-radius-full);
 }
 
+body {
+  font-weight: 300;
+}
+
 .onyx-button__label {
   font-size: var(--onyx-font-size-sm);
   line-height: var(--onyx-font-line-height-sm);

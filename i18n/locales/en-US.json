@@ -1,6 +1,14 @@
 {
   "about": {
-    "about": "About"
+    "about": "About",
+    "title": "Developing digital experiences",
+    "titleEmphasis": "not just code",
+    "description": {
+      "1": "Hi, I'm Lars — a full-stack web developer based near Heilbronn, Germany. I started my journey in web development back in 2017 and quickly developed a deep passion for crafting complete, functional applications that optimize processes and genuinely the end user.",
+      "2": "Currently, I work at {company}, where I am a proud core team member of {onyx} — an Open Source design system built natively for the Vue.js ecosystem. Prior to this, I honed my skills over several years working in an advertising agency and taking on various challenges as a freelancer.",
+      "3": "When I'm off the clock, I am a dedicated technic enthusiast. I love spending my spare time diving into new tech trends or programming fun and useful personal projects to keep growing as an engineer."
+    },
+    "tools": "Tools I work with"
   },
   "projects": {
     "project": "Project | Projects",
@@ -11,5 +19,8 @@
     "description": "I build thoughtful web experiences — from the pixel to the pipeline. Currently crafting tools that make complex ideas feel effortless."
   },
   "learnMore": "Learn more",
-  "scroll": "Scroll"
+  "scroll": "Scroll",
+  "abount": {
+    "aboutMe": "About me"
+  }
 }
