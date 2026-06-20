@@ -40,10 +40,8 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": [
-      "oxlint --fix",
-      "oxfmt --no-error-on-unmatched-pattern"
-    ]
+    "*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{js,jsx,ts,tsx,mjs,cjs,vue}": "pnpm run lint"
   },
   "packageManager": "pnpm@11.8.0"
 }
