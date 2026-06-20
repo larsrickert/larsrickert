@@ -1,0 +1,16 @@
+title: Onyx Design System
+subtitle: 2024 - today
+description: "A modular, themeable and accessible Open Source design system based on Vue.js and TypeScript created by Schwarz Digits. Including over 52+ advanced and carefully crafted components supporting a light, dark or custom theme. I am one of the core team members and maintainer of the project."
+tags:
+  - Vue
+  - Nuxt
+  - TypeScript
+  - Open Source
+  - Figma
+  - Tiptap
+  - Chart.js
+color: primary
+status: Active
+url: https://onyx.schwarz
+repository: https://github.com/SchwarzIT/onyx
+icon: code

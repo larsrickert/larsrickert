@@ -3,7 +3,7 @@ const technologies = ["Vue", "Nuxt", "TypeScript", "CSS", "HTML", "Go", "PHP", "
 </script>
 
 <template>
-  <section id="about" class="about onyx-grid-layout">
+  <SectionContainer id="about" class="about onyx-grid-layout">
     <div class="about__grid">
       <div class="about__image-frame">
         <img
@@ -49,34 +49,17 @@ const technologies = ["Vue", "Nuxt", "TypeScript", "CSS", "HTML", "Go", "PHP", "
         </div>
       </div>
     </div>
-  </section>
+  </SectionContainer>
 </template>
 
 <style lang="scss" scoped>
 @use "sit-onyx/breakpoints.scss";
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .about {
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--onyx-density-3xl);
-
-    // bind the animation to the viewport tracking timeline
-    animation: fadeIn linear both;
-    animation-timeline: view();
-
-    // start animating the moment the top of the element enters the bottom of the screen (0%)
-    // and finishes when it has fully entered the viewport view (100%).
-    animation-range: entry 0% entry 100%;
 
     @include breakpoints.container(max, sm) {
       grid-template-columns: 1fr;

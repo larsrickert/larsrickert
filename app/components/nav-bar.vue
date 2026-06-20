@@ -7,7 +7,7 @@ const localePath = useLocalePath();
     <OnyxNavItem :label="$t('about.about')" :link="localePath('/#about')" />
     <OnyxNavItem :label="$t('projects.project', 2)" :link="localePath('/#projects')" />
 
-    <template #contextArea>
+    <template #globalContextArea>
       <ColorSchemeSwitch />
     </template>
   </OnyxNavBar>
@@ -16,5 +16,9 @@ const localePath = useLocalePath();
 <style lang="scss" scoped>
 :deep(.onyx-nav-bar__app) {
   color: var(--onyx-color-text-icons-primary-intense);
+}
+
+:deep(.onyx-nav-bar__nav > ul) {
+  justify-content: flex-end;
 }
 </style>

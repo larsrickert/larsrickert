@@ -12,7 +12,9 @@
   },
   "projects": {
     "project": "Project | Projects",
-    "view": "View projects"
+    "view": "View projects",
+    "selectedWork": "Selected work",
+    "thingsIveBuilt": "Things I've built"
   },
   "hero": {
     "subtitle": "Software Engineer · Web Development",
