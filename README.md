@@ -1,6 +1,6 @@
 # Hi 👋 My name is Lars Rickert
 
-## Web Developer [@Schwarz IT](https://it.schwarz)
+## Web Developer [@Schwarz Digits](https://schwarz-digits.de/)
 
 - 🌍 I'm based in Germany
 - 🖥️ See my [Portfolio](https://lars-rickert.de)
@@ -8,7 +8,7 @@
 
 I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster. My expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress. Besides that, I have also experiences in AI / machine learning which was core of my bachelor thesis.
 
-I am working at [Schwarz IT](https://it.schwarz) where I am a core team member of [onyx](https://onyx.schwarz), a Open Source design system written in Vue.js. in my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as a freelancer.
+I am working at [Schwarz Digits](https://schwarz-digits.de/) where I am a core team member of [onyx](https://onyx.schwarz), a Open Source design system written in Vue.js. in my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as a freelancer.
 
 If you'd like to collaborate on any of the following services, feel free to leave me a message to the above email address:
 
@@ -23,7 +23,7 @@ If you'd like to collaborate on any of the following services, feel free to leav
 - [:fire: Budget App](https://budget-app.de) - App for managing personal finances and checking per-day available budget
 - [discord-player-plus](https://discordplayerplus.lars-rickert.de/) - JavaScript/TypeScript library for creating discord music bots with ease
 - [nginx-proxy](https://nginxproxy.lars-rickert.de/) - Documentation and CLI for deploying dockerized applications on your self hosted linux server
-- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my old university DHBW Mosbach. [See it live](https://vorlesungsplan.lars-rickert.de)
+- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my old university DHBW Mosbach
 
 ### Skills
 

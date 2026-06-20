@@ -5,15 +5,15 @@ on:
 
 jobs:
   check:
-    name: Check
+    name: Check code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -29,6 +29,3 @@ jobs:
 
       - name: 🛠️ Build
         run: pnpm build
-
-      - name: 🛠️ Generate static site
-        run: pnpm generate

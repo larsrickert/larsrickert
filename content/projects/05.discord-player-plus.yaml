@@ -1,0 +1,13 @@
+title: Discord Player Plus
+subtitle: Create Discord music bots
+icon: audio
+color: danger
+url: https://discordplayerplus.lars-rickert.de
+repository: https://github.com/larsrickert/discord-player-plus
+description: TypeScript library for easily creating self-hosted discord music bots with ease. Supports Spotify, YouTube and local files.
+tags:
+  - Discord
+  - Spotify
+  - YouTube
+  - Open Source
+  - Self hosted

@@ -1,0 +1,12 @@
+title: Vorlesungsplan+
+subtitle: University lectures & events
+icon: calendar-clock
+color: primary
+repository: https://github.com/larsrickert/vorlesungsplan-plus
+description: Cross-plattform Progressive Web App and API for viewing lectures, events and more at the DHBW Mosbach and Bad Mergentheim university.
+tags:
+  - Vue
+  - Express
+  - TypeScript
+  - Open Source
+  - Self hosted

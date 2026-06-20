@@ -1,0 +1,13 @@
+title: Budget App
+subtitle: Personal finances
+icon: saving-piggy-coin
+color: success
+url: https://budget-app.de
+repository: https://github.com/larsrickert/budget-app
+description: "App for managing personal finances and checking per-day available budget. Supports entering accounts and regular income and expenses to check the monthly budget as well as a forecast of the future budget development. Intended for personal use only."
+tags:
+  - Vue
+  - Nuxt
+  - TypeScript
+  - Open Source
+  - Self hosted

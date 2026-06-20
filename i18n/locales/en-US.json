@@ -1,59 +1,28 @@
 {
-  "notFound": {
-    "description": "Ups! The page \"{url}\" does not exist. Are you looking for something else?",
-    "pageName": "Page not found",
-    "goHome": "Take me home"
-  },
-  "home": {
-    "toProjects": "See my projects",
-    "portfolio": "Portfolio",
-    "projects": "Projects",
-    "lights": {
-      "on": "Turn the lights ON",
-      "off": "Turn the lights OFF"
+  "about": {
+    "about": "About",
+    "title": "Developing digital experiences",
+    "titleEmphasis": "not just code",
+    "description": {
+      "1": "Hi, I'm Lars — a full-stack web developer based near Heilbronn, Germany. I started my journey in web development back in 2017 and quickly developed a deep passion for crafting complete, functional applications that optimize processes and genuinely the end user.",
+      "2": "Currently, I work at {company}, where I am a proud core team member of {onyx} — an Open Source design system built natively for the Vue.js ecosystem. Prior to this, I honed my skills over several years working in an advertising agency and taking on various challenges as a freelancer.",
+      "3": "When I'm off the clock, I am a dedicated technic enthusiast. I love spending my spare time diving into new tech trends or programming fun and useful personal projects to keep growing as an engineer."
     },
-    "pageName": "Home",
-    "hero": {
-      "words": {
-        "position": "Web Developer {'@'}Schwarz IT",
-        "technicEnthusiast": "Technic enthusiast",
-        "dogLover": "Dog lover",
-        "location": "Based in Heilbronn, Germany"
-      },
-      "subtitle": "Hello, I'm",
-      "description": "I've started with web development in 2017 and have quickly found my passion for full-stack web development. Especially, I love working on cool complete projects that help people get things done faster.\n\nMy expertise is in Vue.js, TypeScript and CSS/Sass as well as golang, PHP and WordPress."
-    },
-    "about": {
-      "headline": "About",
-      "backgroundHeadline": "Resume",
-      "description": {
-        "text": "I am working at {schwarzItLink} where I am a core team member of {onyxLink}, a Open Source design system written in Vue.js. In my free time, I also enjoy working on some fun and useful personal projects. In the past, I've worked several years part-time in an advertising agency and as a freelancer."
-      },
-      "services": {
-        "vue": "Vue.js frontend development",
-        "api": "API development",
-        "webdesign": "Webdesign / Custom web applications (standalone or integrated in e.g. an existing WordPress website)",
-        "onlineShops": "Online Shops",
-        "wordPress": "WordPress plugin / theme development",
-        "apps": "Hybrid Windows / Mac / iOS / Android app development",
-        "componentLibrary": "Creating a UI component library",
-        "ciCd": "CI / CD and web hosting"
-      },
-      "facts": {
-        "completedProjects": "Completed projects",
-        "experience": "Years of experience",
-        "artificialIntelligence": "Works about artificial intelligence"
-      }
-    }
+    "tools": "Tools I work with"
   },
-  "imprint": {
-    "pageName": "Imprint"
+  "projects": {
+    "project": "Project | Projects",
+    "view": "View project | View projects",
+    "selectedWork": "Selected work",
+    "thingsIveBuilt": "Things I've built"
   },
-  "privacyPolicy": {
-    "pageName": "Privacy policy"
+  "hero": {
+    "subtitle": "Software Engineer · Web Development",
+    "description": "From pixel to platform — I craft thoughtful web experiences that translate complex concepts into intuitive tools and applications."
   },
-  "global": {
-    "allRightsReserved": "All rights reserved",
-    "switchLanguage": "Change language"
+  "learnMore": "Learn more",
+  "scroll": "Scroll",
+  "abount": {
+    "aboutMe": "About me"
   }
 }
