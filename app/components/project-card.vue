@@ -164,7 +164,6 @@ const { icon } = useIcon(computed(() => project.icon));
   }
 
   &__description {
-    font-weight: 300;
     color: var(--onyx-color-text-icons-neutral-medium);
     flex-grow: 1;
   }
