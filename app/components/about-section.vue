@@ -1,5 +1,16 @@
 <script lang="ts" setup>
-const technologies = ["Vue", "Nuxt", "TypeScript", "CSS", "HTML", "Go", "PHP", "WordPress"];
+const technologies = [
+  "Vue",
+  "Nuxt",
+  "TypeScript",
+  "CSS",
+  "HTML",
+  "Go",
+  "PHP",
+  "WordPress",
+  "Docker",
+  "CI/CD",
+];
 </script>
 
 <template>
