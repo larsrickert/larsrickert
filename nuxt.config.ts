@@ -13,11 +13,15 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Lars Rickert - Software Engineer",
+      link: [{ rel: "icon", href: "/favicon.svg" }],
     },
   },
   i18n: {
     defaultLocale: "en-US",
     locales: [{ code: "en-US", file: "en-US.json", name: "English" }],
+  },
+  colorMode: {
+    preference: "dark",
   },
   content: {
     experimental: { sqliteConnector: "native" },
