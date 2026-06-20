@@ -1,0 +1,14 @@
+title: Planning Poker
+subtitle: Project management
+icon: file-clock
+color: info
+url: https://planning.lars-rickert.de
+repository: https://github.com/larsrickert/planning-poker
+description: A project planning tool for agile teams that supports to estimate tasks and plan sprints. Connected to GitHub for easy issue tracking.
+tags:
+  - Vue
+  - Nuxt
+  - GitHub
+  - TypeScript
+  - Open Source
+  - Self hosted

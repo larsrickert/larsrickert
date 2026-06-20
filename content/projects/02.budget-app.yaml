@@ -1,5 +1,9 @@
 title: Budget App
-subtitle: 2020 - today
+subtitle: Personal finances
+icon: saving-piggy-coin
+color: success
+url: https://budget-app.de
+repository: https://github.com/larsrickert/budget-app
 description: "App for managing personal finances and checking per-day available budget. Supports entering accounts and regular income and expenses to check the monthly budget as well as a forecast of the future budget development. Intended for personal use only."
 tags:
   - Vue
@@ -7,8 +11,3 @@ tags:
   - TypeScript
   - Open Source
   - Self hosted
-color: success
-status: Active
-url: https://budget-app.de
-repository: https://github.com/larsrickert/budget-app
-icon: saving-piggy-coin

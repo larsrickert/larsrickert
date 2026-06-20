@@ -21,11 +21,7 @@ const { icon } = useIcon(computed(() => project.icon));
     <div class="project__content">
       <div class="project__header">
         <div class="project__title-container">
-          <div class="project__meta">
-            <p class="project__subtitle onyx-text--small">{{ project.subtitle }}</p>
-            <OnyxTag :label="project.status" :color="project.color" />
-          </div>
-
+          <p class="project__subtitle onyx-text--small">{{ project.subtitle }}</p>
           <OnyxHeadline is="h3" show-as="h1"> {{ project.title }} </OnyxHeadline>
         </div>
 
@@ -40,28 +36,31 @@ const { icon } = useIcon(computed(() => project.icon));
         <OnyxTag v-for="tag in project.tags" :key="tag" class="project__tag" :label="tag" />
       </div>
 
-      <OnyxSeparator />
+      <template v-if="project.url || project.repository">
+        <OnyxSeparator />
 
-      <div class="project__footer">
-        <OnyxLink
-          class="project__link"
-          :href="project.url"
-          target="_blank"
-          :with-external-icon="false"
-        >
-          <OnyxIcon :icon="iconExpandWindow" size="inline" /> View project
-        </OnyxLink>
+        <div class="project__footer">
+          <OnyxLink
+            v-if="project.url"
+            class="project__link"
+            :href="project.url"
+            target="_blank"
+            :with-external-icon="false"
+          >
+            <OnyxIcon :icon="iconExpandWindow" size="inline" /> {{ $t("projects.view") }}
+          </OnyxLink>
 
-        <OnyxLink
-          v-if="project.repository"
-          class="project__link project__link--neutral"
-          :href="project.repository"
-          target="_blank"
-          :with-external-icon="false"
-        >
-          <OnyxIcon :icon="iconGitHub" size="inline" /> GitHub
-        </OnyxLink>
-      </div>
+          <OnyxLink
+            v-if="project.repository"
+            class="project__link project__link--neutral"
+            :href="project.repository"
+            target="_blank"
+            :with-external-icon="false"
+          >
+            <OnyxIcon :icon="iconGitHub" size="inline" /> GitHub
+          </OnyxLink>
+        </div>
+      </template>
     </div>
   </OnyxCard>
 </template>
@@ -143,13 +142,6 @@ const { icon } = useIcon(computed(() => project.icon));
     display: flex;
     flex-direction: column;
     gap: var(--onyx-density-2xs);
-  }
-
-  &__meta {
-    display: flex;
-    align-items: center;
-    gap: var(--onyx-density-md);
-    flex-wrap: wrap;
   }
 
   &__subtitle {

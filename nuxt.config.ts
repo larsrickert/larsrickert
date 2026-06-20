@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     "@fontsource-variable/inter",
     "@fontsource/dm-mono",
   ],
+  app: {
+    head: {
+      title: "Lars Rickert - Software Engineer",
+    },
+  },
   i18n: {
     defaultLocale: "en-US",
     locales: [{ code: "en-US", file: "en-US.json", name: "English" }],

@@ -12,7 +12,12 @@
 
       <div class="hero__buttons onyx-density-cozy">
         <OnyxButton :label="$t('learnMore')" link="#about" />
-        <OnyxButton :label="$t('projects.view')" color="neutral" mode="outline" link="#projects" />
+        <OnyxButton
+          :label="$t('projects.view', 2)"
+          color="neutral"
+          mode="outline"
+          link="#projects"
+        />
       </div>
     </div>
 

@@ -1,0 +1,12 @@
+title: Nginx Proxy
+subtitle: Self host anything
+icon: docker
+color: warning
+url: https://nginxproxy.lars-rickert.de
+repository: https://github.com/larsrickert/nginx-proxy
+description: Combination of Open Source tools that enable you to easily deploy any (web) application that runs with Docker on your own linux server with automatically managed SSL certificates. Includes documentation / examples for common applications such as web applications, mailserver, WordPress and more.
+tags:
+  - Docker
+  - SSL certificates
+  - Open Source
+  - Self hosted
