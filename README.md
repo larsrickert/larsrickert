@@ -23,7 +23,7 @@ If you'd like to collaborate on any of the following services, feel free to leav
 - [:fire: Budget App](https://budget-app.de) - App for managing personal finances and checking per-day available budget
 - [discord-player-plus](https://discordplayerplus.lars-rickert.de/) - JavaScript/TypeScript library for creating discord music bots with ease
 - [nginx-proxy](https://nginxproxy.lars-rickert.de/) - Documentation and CLI for deploying dockerized applications on your self hosted linux server
-- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my old university DHBW Mosbach. [See it live](https://vorlesungsplan.lars-rickert.de)
+- [Vorlesungsplan+](https://github.com/larsrickert/vorlesungsplan-plus) - App for viewing lectures and events at my old university DHBW Mosbach
 
 ### Skills
 
