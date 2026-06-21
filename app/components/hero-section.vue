@@ -28,7 +28,7 @@
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--onyx-nav-bar-height));
+  min-height: calc(100dvh - var(--onyx-nav-bar-height));
   display: flex;
   flex-direction: column;
   align-items: center;

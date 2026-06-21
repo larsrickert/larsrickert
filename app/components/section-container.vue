@@ -22,7 +22,6 @@ const { id } = defineProps<{
 
 .section {
   padding-block: var(--onyx-grid-margin-vertical);
-  scroll-margin-top: var(--onyx-grid-margin-vertical);
 
   // bind the animation to the viewport tracking timeline
   animation: fadeIn linear both;
