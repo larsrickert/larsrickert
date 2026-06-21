@@ -39,6 +39,8 @@ const localePath = useLocalePath();
 }
 
 :deep(.onyx-nav-bar__mobile-global-context) {
+  padding-right: var(--onyx-spacing-2xs);
+
   .onyx-separator {
     height: var(--onyx-separator-min-size);
     width: var(--onyx-separator-size);

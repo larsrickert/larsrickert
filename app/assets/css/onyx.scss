@@ -15,3 +15,8 @@
   font-size: var(--onyx-font-size-sm);
   line-height: var(--onyx-font-line-height-sm);
 }
+
+.onyx-nav-button {
+  flex-grow: 0;
+  align-self: center;
+}
