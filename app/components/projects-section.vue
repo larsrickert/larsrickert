@@ -5,10 +5,8 @@ const { data: projects } = await useAsyncData("projects", () => queryCollection(
 <template>
   <SectionContainer id="projects" class="projects">
     <div class="projects__header">
-      <p class="projects__subtitle">{{ $t("projects.selectedWork") }}</p>
-      <OnyxHeadline class="projects__title" is="h2">
-        {{ $t("projects.thingsIveBuilt") }}
-      </OnyxHeadline>
+      <p class="projects__subtitle app__subtitle">{{ $t("projects.selectedWork") }}</p>
+      <OnyxHeadline class="app__h2" is="h2"> {{ $t("projects.thingsIveBuilt") }} </OnyxHeadline>
     </div>
 
     <div class="onyx-grid">
@@ -29,16 +27,8 @@ const { data: projects } = await useAsyncData("projects", () => queryCollection(
   }
 
   &__subtitle {
-    font-family: var(--onyx-font-family-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    margin-bottom: var(--onyx-radius-lg);
     color: var(--onyx-color-text-icons-warning-intense);
-  }
-
-  &__title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1;
+    margin-bottom: var(--onyx-radius-lg);
   }
 }
 </style>

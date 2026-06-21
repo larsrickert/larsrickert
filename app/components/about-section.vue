@@ -14,7 +14,7 @@ const technologies = [
 </script>
 
 <template>
-  <SectionContainer id="about" class="about onyx-grid-layout">
+  <SectionContainer id="about" class="about">
     <div class="about__grid">
       <div class="about__image-frame">
         <img
@@ -25,16 +25,15 @@ const technologies = [
       </div>
 
       <div class="about__content">
-        <p class="about__subtitle">{{ $t("abount.aboutMe") }}</p>
-        <OnyxHeadline is="h2" class="about__title">
+        <p class="about__subtitle app__subtitle">{{ $t("abount.aboutMe") }}</p>
+        <OnyxHeadline is="h2" class="about__title app__h2">
           {{ $t("about.title") }},
           <em class="about__title-emphasis">{{ $t("about.titleEmphasis") }}</em>
         </OnyxHeadline>
 
         <div class="about__body">
-          <p>
-            {{ $t("about.description.1") }}
-          </p>
+          <p>{{ $t("about.description.1") }}</p>
+
           <i18n-t keypath="about.description.2" scope="global" tag="p">
             {{ $t("about.description.2") }}
 
@@ -45,13 +44,12 @@ const technologies = [
               <OnyxLink href="https://onyx.schwarz" target="_blank">onyx</OnyxLink>
             </template>
           </i18n-t>
-          <p>
-            {{ $t("about.description.3") }}
-          </p>
+
+          <p>{{ $t("about.description.3") }}</p>
         </div>
 
         <div class="about__tech">
-          <p class="about__tech-title onyx-text--small">{{ $t("about.tools") }}</p>
+          <p class="about__tech-title app__subtitle onyx-text--small">{{ $t("about.tools") }}</p>
           <div class="about__tech-list">
             <OnyxBadge v-for="tech in technologies" :key="tech" density="compact">
               {{ tech }}
@@ -110,17 +108,12 @@ const technologies = [
   }
 
   &__subtitle {
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    margin-bottom: var(--onyx-density-md);
-    font-family: var(--onyx-font-family-mono);
     color: var(--onyx-color-text-icons-warning-intense);
+    margin-bottom: var(--onyx-density-md);
   }
 
   &__title {
     margin-bottom: var(--onyx-density-lg);
-    line-height: 1.25;
-    font-size: clamp(2rem, 4vw, 3rem);
   }
 
   &__title-emphasis {
@@ -142,11 +135,8 @@ const technologies = [
   }
 
   &__tech-title {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: var(--onyx-density-sm);
-    font-family: var(--onyx-font-family-mono);
     color: var(--onyx-color-text-icons-neutral-soft);
+    margin-bottom: var(--onyx-density-sm);
   }
 
   &__tech-list {

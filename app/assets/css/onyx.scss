@@ -1,0 +1,17 @@
+// onyx-specific overrides
+:root {
+  --onyx-font-family-Source-Sans-3-Variable: "Inter Variable", sans-serif;
+  --onyx-font-family-Source-Code-Pro-Variable: "DM Mono", monospace;
+  --onyx-font-family-h1:
+    "Playfair Display Variable", var(--onyx-font-family-Source-Sans-3-Variable);
+  --onyx-font-family-h2: var(--onyx-font-family-h1);
+  --onyx-font-family-h3: var(--onyx-font-family-h1);
+  --onyx-font-family-h4: var(--onyx-font-family-h1);
+
+  --onyx-radius-component-button: var(--onyx-radius-full);
+}
+
+.onyx-button__label {
+  font-size: var(--onyx-font-size-sm);
+  line-height: var(--onyx-font-line-height-sm);
+}

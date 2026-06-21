@@ -8,9 +8,6 @@ definePageMeta({ layout: false });
 
     <div class="onyx-grid-layout">
       <AboutSection />
-    </div>
-
-    <div class="onyx-grid-layout">
       <ProjectsSection />
     </div>
   </OnyxPageLayout>

@@ -21,7 +21,7 @@ const { icon } = useIcon(computed(() => project.icon));
     <div class="project__content">
       <div class="project__header">
         <div class="project__title-container">
-          <p class="project__subtitle onyx-text--small">{{ project.subtitle }}</p>
+          <p class="project__subtitle app__subtitle onyx-text--small">{{ project.subtitle }}</p>
           <OnyxHeadline is="h3" show-as="h1"> {{ project.title }} </OnyxHeadline>
         </div>
 
@@ -39,7 +39,7 @@ const { icon } = useIcon(computed(() => project.icon));
       <template v-if="project.url || project.repository">
         <OnyxSeparator />
 
-        <div class="project__footer">
+        <div class="project__footer onyx-text--small">
           <OnyxLink
             v-if="project.url"
             class="project__link"
@@ -145,9 +145,6 @@ const { icon } = useIcon(computed(() => project.icon));
   }
 
   &__subtitle {
-    font-family: var(--onyx-font-family-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
     color: var(--onyx-color-text-icons-neutral-soft);
   }
 
@@ -182,8 +179,6 @@ const { icon } = useIcon(computed(() => project.icon));
   }
 
   &__link {
-    font-size: var(--onyx-font-size-sm);
-    line-height: var(--onyx-line-height-sm);
     text-decoration: none;
     color: var(--project-button-color);
 
