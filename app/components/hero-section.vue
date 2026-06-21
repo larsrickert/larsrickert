@@ -5,7 +5,7 @@
 
     <div class="hero__content onyx-grid-layout">
       <p class="hero__subtitle">{{ $t("hero.subtitle") }}</p>
-      <OnyxHeadline class="hero__title" is="h1">Lars Rickert</OnyxHeadline>
+      <OnyxHeadline class="hero__title app__h1" is="h1">Lars Rickert</OnyxHeadline>
       <p class="hero__description onyx-text--large">
         {{ $t("hero.description") }}
       </p>
@@ -28,7 +28,7 @@
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--onyx-nav-bar-height));
+  min-height: calc(100dvh - var(--onyx-nav-bar-height));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,9 +65,7 @@
   }
 
   &__title {
-    line-height: 1.05;
     margin-bottom: var(--onyx-density-xl);
-    font-size: clamp(3.5rem, 9vw, 8rem);
   }
 
   &__description {
