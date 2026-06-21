@@ -181,6 +181,7 @@ const { icon } = useIcon(computed(() => project.icon));
   &__link {
     text-decoration: none;
     color: var(--project-button-color);
+    transition: color var(--onyx-duration-sm) ease-in-out;
 
     &:hover {
       color: var(--project-button-color-hover);

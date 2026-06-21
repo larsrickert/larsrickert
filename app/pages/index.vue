@@ -1,14 +1,16 @@
 <script lang="ts" setup>
+import DefaultLayout from "~/layouts/default.vue";
+
 definePageMeta({ layout: false });
 </script>
 
 <template>
-  <OnyxPageLayout no-padding>
+  <DefaultLayout no-padding>
     <HeroSection />
 
     <div class="onyx-grid-layout">
       <AboutSection />
       <ProjectsSection />
     </div>
-  </OnyxPageLayout>
+  </DefaultLayout>
 </template>
