@@ -135,7 +135,7 @@ const technologies = [
   }
 
   &__tech-title {
-    color: var(--onyx-color-text-icons-neutral-soft);
+    color: var(--onyx-color-text-icons-neutral-medium);
     margin-bottom: var(--onyx-density-sm);
   }
 

@@ -145,7 +145,7 @@ const { icon } = useIcon(computed(() => project.icon));
   }
 
   &__subtitle {
-    color: var(--onyx-color-text-icons-neutral-soft);
+    color: var(--onyx-color-text-icons-neutral-medium);
   }
 
   &__icon-container {
