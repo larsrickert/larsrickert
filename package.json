@@ -14,28 +14,28 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.2.8",
-    "@fontsource-variable/playfair-display": "^5.2.8",
-    "@fontsource/dm-mono": "^5.2.7",
-    "@nuxt/content": "^3.14.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@fontsource/dm-mono": "^5.3.0",
+    "@nuxt/content": "^3.16.2",
     "@nuxtjs/color-mode": "^4.0.1",
-    "@nuxtjs/i18n": "^10.4.0",
-    "@sit-onyx/icons": "^1.10.1",
-    "@sit-onyx/nuxt": "^1.1.0",
-    "nuxt": "^4.4.8",
-    "sit-onyx": "^1.15.0",
-    "vue": "^3.5.38",
-    "vue-router": "^5.1.0"
+    "@nuxtjs/i18n": "^10.6.0",
+    "@sit-onyx/icons": "^1.12.0",
+    "@sit-onyx/nuxt": "^1.1.2",
+    "nuxt": "^4.6.2",
+    "sit-onyx": "^1.21.0",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
   },
   "devDependencies": {
-    "lint-staged": "^17.0.7",
-    "oxfmt": "~0.55.0",
-    "oxlint": "^1.70.0",
-    "sass-embedded": "^1.100.0",
-    "simple-git-hooks": "^2.13.1",
+    "lint-staged": "^17.6.0",
+    "oxfmt": "~0.74.0",
+    "oxlint": "^1.89.0",
+    "sass-embedded": "^1.106.1",
+    "simple-git-hooks": "^2.14.0",
     "typescript": "~6.0.3",
-    "vite": "catalog:",
-    "vue-tsc": "^3.3.5"
+    "vite": "^8.3.5",
+    "vue-tsc": "^3.3.13"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -44,5 +44,5 @@
     "*": "oxfmt --no-error-on-unmatched-pattern",
     "*.{js,jsx,ts,tsx,mjs,cjs,vue}": "pnpm run lint"
   },
-  "packageManager": "pnpm@11.8.0"
+  "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61"
 }

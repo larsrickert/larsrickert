@@ -31,7 +31,7 @@ import { iconArrowSmallDown } from "@sit-onyx/icons";
   flex-direction: column;
   align-items: center;
   gap: var(--onyx-density-xs);
-  color: var(--onyx-color-text-icons-neutral-soft);
+  color: var(--onyx-color-text-icons-neutral-medium);
 
   opacity: 0.5;
   transition: opacity var(--onyx-duration-lg) ease var(--onyx-duration-lg);

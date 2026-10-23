@@ -71,7 +71,7 @@
   &__description {
     max-width: 40rem;
     margin-bottom: var(--onyx-density-2xl);
-    color: var(--onyx-color-text-icons-neutral-soft);
+    color: var(--onyx-color-text-icons-neutral-medium);
   }
 
   &__buttons {

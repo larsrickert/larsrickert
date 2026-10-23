@@ -38,7 +38,7 @@ const currentYear = new Date().getFullYear();
 <style lang="scss" scoped>
 .footer {
   border-top: var(--onyx-1px-in-rem) solid var(--onyx-color-component-border-neutral);
-  color: var(--onyx-color-text-icons-neutral-soft);
+  color: var(--onyx-color-text-icons-neutral-medium);
   text-align: center;
 
   &__content {
