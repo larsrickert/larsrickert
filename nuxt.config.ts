@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2026-06-19",
+  compatibilityDate: "2026-11-21",
   devtools: { enabled: true },
   typescript: { typeCheck: "build" },
   modules: ["@sit-onyx/nuxt", "@nuxtjs/i18n", "@nuxtjs/color-mode", "@nuxt/content"],
